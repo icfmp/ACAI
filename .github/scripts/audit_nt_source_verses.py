@@ -1,4 +1,4 @@
-"""Find ACAI New Testament references absent from pinned SBLGNT source verses.
+"""Find ACAI verse references absent from the selected pinned source edition.
 
 This is a source-compatibility audit, not a biblical-versification validator:
 absent source verses may reflect another edition, a longer textual reading,
@@ -39,7 +39,7 @@ def inspect(root: Path, source_tsv: Path, *, corpus: str = "nt") -> dict:
                 book = int(verse[:2])
                 if not first_book <= book <= last_book:
                     continue
-                stats["nt_record_reference_entries"] += 1
+                stats["record_reference_entries"] += 1
                 if verse not in source_verses:
                     stats["record_reference_entries_absent_from_source"] += 1
                     occurrences[verse].append({"entity": data["id"], "category": category,
@@ -55,8 +55,8 @@ def inspect(root: Path, source_tsv: Path, *, corpus: str = "nt") -> dict:
             "entities":[x["entity"] for x in items],
         })
     return {"summary": {
-        "nt_source_verses":len(source_verses),
-        "nt_record_reference_entries":stats["nt_record_reference_entries"],
+        "source_verses":len(source_verses),
+        "record_reference_entries":stats["record_reference_entries"],
         "record_reference_entries_absent_from_source":stats["record_reference_entries_absent_from_source"],
         "distinct_referenced_verses_absent_from_source":len(report),
         "invalid_reference_format":stats["invalid_reference_format"],
