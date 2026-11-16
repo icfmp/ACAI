@@ -1,6 +1,6 @@
 {
   "id": "place:Syria",
-  "primary_id": "place:Edom",
+  "primary_id": "place:Syria",
   "alternate_sources": {
     "aquifer": [
       "8685|Syria, Syrians|TyndaleBibleDictionary",
@@ -196,8 +196,7 @@
     }
   },
   "referred_to_as": [
-    "place:Aram",
-    "place:Edom"
+    "place:Aram"
   ],
   "tribal_area": "group:Edom",
   "associated_places": [
