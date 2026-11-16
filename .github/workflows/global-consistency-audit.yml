@@ -14,6 +14,7 @@ on:
       - '.github/scripts/audit_macula_hebrew_ids.py'
       - '.github/scripts/audit_macula_greek_ids.py'
       - '.github/scripts/triage_missing_hebrew_subjects.py'
+      - '.github/scripts/audit_homonym_context.py'
       - '.github/workflows/global-consistency-audit.yml'
       - '**/json/*.json'
 
@@ -71,6 +72,8 @@ jobs:
       - name: Prioritize conflicting original-language token assignments
         if: always()
         run: python3 -I .github/scripts/audit_collision_priorities.py --input audit-results.json --top 40
+      - name: Report homonym collisions against original words
+        run: python3 -I .github/scripts/audit_homonym_context.py --hebrew macula-hebrew/WLC/tsv/macula-hebrew.tsv --greek macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv --top 20
       - name: Upload full findings
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
