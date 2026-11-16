@@ -15,12 +15,16 @@ from pathlib import Path
 CATEGORIES = ("people", "places", "groups", "deities", "fauna", "flora", "realia", "keyterms")
 
 
-def inspect(root: Path, source_tsv: Path) -> dict:
+def inspect(root: Path, source_tsv: Path, *, corpus: str = "nt") -> dict:
+    if corpus not in ("nt", "ot"):
+        raise ValueError("corpus must be nt or ot")
+    prefix = "n" if corpus == "nt" else "o"
+    first_book, last_book = (40, 66) if corpus == "nt" else (1, 39)
     source_verses = set()
     with source_tsv.open(encoding="utf-8-sig", newline="") as handle:
         for row in csv.DictReader(handle, delimiter="\t"):
             word = row.get("xml:id", "")
-            if len(word) >= 9 and word.startswith("n") and word[1:9].isdigit():
+            if len(word) >= 9 and word.startswith(prefix) and word[1:9].isdigit():
                 source_verses.add(word[1:9])
 
     occurrences = collections.defaultdict(list)
@@ -33,7 +37,7 @@ def inspect(root: Path, source_tsv: Path) -> dict:
                     stats["invalid_reference_format"] += 1
                     continue
                 book = int(verse[:2])
-                if not 40 <= book <= 66:
+                if not first_book <= book <= last_book:
                     continue
                 stats["nt_record_reference_entries"] += 1
                 if verse not in source_verses:
@@ -62,15 +66,16 @@ def inspect(root: Path, source_tsv: Path) -> dict:
 def main() -> int:
     parser=argparse.ArgumentParser()
     parser.add_argument("--root",type=Path,default=Path(__file__).resolve().parents[2])
-    parser.add_argument("--greek",type=Path,required=True)
+    parser.add_argument("--source",type=Path,required=True)
+    parser.add_argument("--corpus",choices=("nt","ot"),default="nt")
     parser.add_argument("--output",type=Path,default=Path("nt-source-verse-compatibility.json"))
     parser.add_argument("--top",type=int,default=80)
     args=parser.parse_args()
-    result=inspect(args.root,args.greek)
+    result=inspect(args.root,args.source,corpus=args.corpus)
     args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print("NT_SOURCE_VERSE_COMPATIBILITY_SUMMARY "+json.dumps(result["summary"],sort_keys=True))
+    print(args.corpus.upper()+"_SOURCE_VERSE_COMPATIBILITY_SUMMARY "+json.dumps(result["summary"],sort_keys=True))
     for item in result["verses_absent_from_pinned_source"][:args.top]:
-        print("NT_SOURCE_VERSE_ABSENCE "+json.dumps(item,sort_keys=True))
+        print(args.corpus.upper()+"_SOURCE_VERSE_ABSENCE "+json.dumps(item,sort_keys=True))
     print("Missing source verse is NOT evidence that the verse should be added to or removed from any edition.")
     return 0
 
