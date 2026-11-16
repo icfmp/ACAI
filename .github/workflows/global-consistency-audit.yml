@@ -8,6 +8,8 @@ on:
       - '.github/scripts/test_audit_consistency.py'
       - '.github/scripts/editorial_read_batch.py'
       - '.github/scripts/audit_collision_priorities.py'
+      - '.github/scripts/audit_reference_alignment.py'
+      - '.github/scripts/test_audit_reference_alignment.py'
       - '.github/workflows/global-consistency-audit.yml'
       - '**/json/*.json'
 
@@ -23,9 +25,13 @@ jobs:
           persist-credentials: false
       - name: Check audit rules
         run: python3 -I .github/scripts/test_audit_consistency.py
+      - name: Test reference-alignment rules
+        run: python3 -I .github/scripts/test_audit_reference_alignment.py
       - name: Scan entire dataset
         if: always()
         run: python3 -I .github/scripts/audit_consistency.py --output audit-results.json
+      - name: Audit Bible references and exact word alignments
+        run: python3 -I .github/scripts/audit_reference_alignment.py --top 25
       - name: Export canonical editorial reading secondary records 0-943
         run: python3 -I .github/scripts/editorial_read_batch.py --secondary-only --start 0 --limit 944
       - name: Prioritize conflicting original-language token assignments
@@ -36,5 +42,7 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: global-consistency-findings
-          path: audit-results.json
+          path: |
+            audit-results.json
+            reference-alignment-results.json
           if-no-files-found: warn
