@@ -1,6 +1,6 @@
 {
   "id": "person:Sargon",
-  "primary_id": "person:Sennacherib",
+  "primary_id": "person:Sargon",
   "alternate_sources": {
     "aquifer": [
       "8150|Sargon|TyndaleBibleDictionary"
@@ -14,11 +14,6 @@
   },
   "type": "person",
   "gender": "male",
-  "offspring": [
-    "person:Adrammelech.2",
-    "person:Sharezer",
-    "person:Esarhaddon"
-  ],
   "roles": [
     "King"
   ],
@@ -204,9 +199,6 @@
       ]
     }
   },
-  "referred_to_as": [
-    "person:Sennacherib"
-  ],
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
   "lemmas": {

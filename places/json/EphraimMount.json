@@ -1,6 +1,6 @@
 {
   "id": "place:EphraimMount",
-  "primary_id": "place:EbalMount",
+  "primary_id": "place:EphraimMount",
   "alternate_sources": {
     "ubsdbh": [
       "000615001001000"
@@ -203,9 +203,6 @@
       ]
     }
   },
-  "referred_to_as": [
-    "place:EbalMount"
-  ],
   "tribal_area": "group:Ephraim",
   "subregion_of": [
     "place:TerritoryOfEphraim"

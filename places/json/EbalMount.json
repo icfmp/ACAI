@@ -205,8 +205,7 @@
   },
   "referred_to_as": [
     "place:ZalmonMount",
-    "place:Zalmon",
-    "place:EphraimMount"
+    "place:Zalmon"
   ],
   "associated_places": [
     "place:GerizimMount"
@@ -253,8 +252,7 @@
     "06008030",
     "06008033",
     "07009048",
-    "19068015",
-    "24004015"
+    "19068015"
   ],
   "explicit_instances": {
     "wlc": [
@@ -278,9 +276,6 @@
       ],
       [
         "o190680150062"
-      ],
-      [
-        "o240040150081"
       ]
     ]
   }
