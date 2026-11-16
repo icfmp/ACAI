@@ -199,5 +199,15 @@
   },
   "key_references": [
     "06015060"
-  ]
+  ],
+  "references": [
+    "06015060"
+  ],
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060150600063"
+      ]
+    ]
+  }
 }

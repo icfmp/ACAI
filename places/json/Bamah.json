@@ -1,6 +1,6 @@
 {
   "id": "place:Bamah",
-  "primary_id": "place:Gibeon",
+  "primary_id": "place:Bamah",
   "alternate_sources": {
     "aquifer": [
       "3986|Bamah|TyndaleBibleDictionary"
@@ -198,9 +198,6 @@
       ]
     }
   },
-  "referred_to_as": [
-    "place:Gibeon"
-  ],
   "mentioned_in_bible": true,
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,

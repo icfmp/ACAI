@@ -1,6 +1,6 @@
 {
   "id": "place:Rabbah",
-  "primary_id": "place:Ammon",
+  "primary_id": "place:Rabbah",
   "alternate_sources": {
     "aquifer": [
       "7893|Rabbah|TyndaleBibleDictionary",
@@ -205,9 +205,6 @@
       ]
     }
   },
-  "referred_to_as": [
-    "place:Ammon"
-  ],
   "subregion_of": [
     "place:Ammon"
   ],
@@ -247,7 +244,6 @@
   "references": [
     "05003011",
     "06013025",
-    "06015060",
     "10011001",
     "10012026",
     "10012027",
@@ -271,9 +267,6 @@
       ],
       [
         "o060130250171"
-      ],
-      [
-        "o060150600063"
       ],
       [
         "o100110010231"
