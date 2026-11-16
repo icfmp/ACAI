@@ -7,12 +7,6 @@ Other forms include:
 
 
 
-**Familial Relationships of Adrammelech**
-
-
-* Gender: male
-
-
 **OT Distribution of References**
 
 ▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁

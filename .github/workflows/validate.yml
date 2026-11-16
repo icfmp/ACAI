@@ -19,3 +19,8 @@ jobs:
         run: python3 -I .github/scripts/test_validate_duplicate_groups.py
       - name: Validate records
         run: python3 -I .github/scripts/validate.py
+      - name: Validate retired entity-ID migrations
+        run: |
+          python3 -I .github/scripts/audit_entity_links.py \
+            --targets-file .github/deprecated-entity-ids.txt \
+            --fail-any

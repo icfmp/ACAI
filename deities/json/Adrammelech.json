@@ -1,6 +1,6 @@
 {
-  "id": "person:Adrammelech",
-  "primary_id": "person:Adrammelech",
+  "id": "deity:Adrammelech",
+  "primary_id": "deity:Adrammelech",
   "alternate_sources": {
     "aquifer": [
       "3398|Adrammelech|TyndaleBibleDictionary"
@@ -15,8 +15,8 @@
       "rec1Jy11w5ci4P7Hj"
     ]
   },
-  "type": "person",
-  "gender": "male",
+  "type": "deity",
+  "deity_type": "deity",
   "ubsdbh": [
     "000152001001000"
   ],
@@ -30,7 +30,7 @@
         {
           "source": "acai",
           "gloss": "Adrammelech",
-          "article": "person:Adrammelech",
+          "article": "deity:Adrammelech",
           "description": "A deity worshipped by the people of Sepharvaim, mentioned during the time of the divided kingdom."
         }
       ]
