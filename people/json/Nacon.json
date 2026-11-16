@@ -12,10 +12,6 @@
   },
   "type": "person",
   "gender": "male",
-  "father": "person:Serug",
-  "offspring": [
-    "person:Terah"
-  ],
   "localizations": {
     "eng": {
       "preferred_label": "Nacon",
