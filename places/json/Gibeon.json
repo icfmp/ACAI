@@ -213,8 +213,7 @@
   "referred_to_as": [
     "group:Gibeon",
     "place:Geba.2",
-    "place:Gibbar",
-    "place:Bamah"
+    "place:Gibbar"
   ],
   "tribal_area": "group:Benjamin",
   "associated_places": [
@@ -308,8 +307,7 @@
     "23028021",
     "24028001",
     "24041012",
-    "24041016",
-    "26020029"
+    "24041016"
   ],
   "explicit_instances": {
     "wlc": [
@@ -453,12 +451,6 @@
       ],
       [
         "o240410160362"
-      ],
-      [
-        "o260200290042"
-      ],
-      [
-        "o260200290111"
       ]
     ]
   },
