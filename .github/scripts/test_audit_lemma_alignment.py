@@ -29,6 +29,7 @@ class LemmaAuditTests(unittest.TestCase):
                 ("groups", "Mixed", ["פֶּלֶת", "פְּלִשְׁתִּי"], [["o2"]]),
                 ("groups", "Correct", ["בָּנִי"], [["o3"]]),
                 ("people", "Unanchored", ["יעקב"], []),
+                ("places", "Compound", ["עֵין תַּפּוּחַ"], [["o4", "o5"]]),
             )
             for folder, name, lemmas, groups in items:
                 record = {"id": folder + ":" + name,
@@ -40,16 +41,18 @@ class LemmaAuditTests(unittest.TestCase):
             hebrew.write_text("xml:id\tref\tlemma\ttext\n"
                               "o1\tJOS 15:34!1\tעֵין גַּנִּים\tעֵין־גנים\n"
                               "o2\tGEN 10:14!8\tפְּלִשְׁתִּי\tפלשתים\n"
-                              "o3\tNEH 9:4!6\tבָּנִי\tבני\n", encoding="utf-8")
+                              "o3\tNEH 9:4!6\tבָּנִי\tבני\n"
+                              "o4\tJOS 17:7!16\tעַיִן\tעין\n"
+                              "o5\tJOS 17:7!17\tתַּפּוּחַ\tתפוח\n", encoding="utf-8")
             greek = root / "greek.tsv"
             greek.write_text("xml:id\tref\tlemma\n", encoding="utf-8")
             result = module.audit(root, hebrew, greek)
             counts = result["summary"]
-            self.assertEqual(counts["records_scanned"], 4)
+            self.assertEqual(counts["records_scanned"], 5)
             self.assertEqual(counts["without_explicit_source_ids"], 1)
             self.assertEqual(counts["zero_exact_lemma_overlap"], 1)
             self.assertEqual(counts["partial_exact_lemma_overlap"], 1)
-            self.assertEqual(counts["all_declared_lemmas_found"], 1)
+            self.assertEqual(counts["all_declared_lemmas_found"], 2)
             finding = next(x for x in result["findings"] if x["id"] == "groups:Mixed")
             self.assertEqual(finding["unmatched_declared_lemmas"], ["פֶּלֶת"])
 
