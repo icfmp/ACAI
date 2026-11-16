@@ -1,6 +1,6 @@
 {
   "id": "person:Shallum",
-  "primary_id": "person:Jehoiachin",
+  "primary_id": "person:Jehoahaz.3",
   "alternate_sources": {
     "aquifer": [
       "8266|Shallum|TyndaleBibleDictionary"
@@ -14,12 +14,8 @@
   },
   "type": "person",
   "gender": "male",
-  "father": "person:Jehoiakim",
-  "mother": "person:Nehushta",
-  "offspring": [
-    "person:Zedekiah.4",
-    "person:Shealtiel.2"
-  ],
+  "father": "person:Josiah",
+  "mother": "person:Hamutal",
   "roles": [
     "King"
   ],
@@ -206,7 +202,7 @@
     }
   },
   "referred_to_as": [
-    "person:Jehoiachin"
+    "person:Jehoahaz.3"
   ],
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
