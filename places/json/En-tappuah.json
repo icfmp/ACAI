@@ -1,6 +1,6 @@
 {
   "id": "place:En-tappuah",
-  "primary_id": "place:Tappuah",
+  "primary_id": "place:En-tappuah",
   "alternate_sources": {
     "aquifer": [
       "5095|En-Tappuah|TyndaleBibleDictionary"
@@ -198,17 +198,8 @@
       ]
     }
   },
-  "possibly_same_as": [
-    "place:Tappuah"
-  ],
-  "referred_to_as": [
-    "place:Tappuah"
-  ],
   "nearby_places": [
     "place:Tappuah"
-  ],
-  "subregion_of": [
-    "place:Shephelah"
   ],
   "mentioned_in_bible": true,
   "only_mentioned_in_apocrypha": false,
@@ -218,8 +209,7 @@
   "added_entry": false,
   "lemmas": {
     "he": [
-      "עֵינַיִם",
-      "עֵינָם"
+      "עֵין תַּפּוּחַ"
     ]
   },
   "place_types": {
@@ -247,8 +237,7 @@
     "06017007"
   ],
   "references": [
-    "06017007",
-    "06017009"
+    "06017007"
   ],
   "explicit_instances": {
     "wlc": [
