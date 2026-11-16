@@ -25,8 +25,8 @@ jobs:
       - name: Scan entire dataset
         if: always()
         run: python3 -I .github/scripts/audit_consistency.py --output audit-results.json
-      - name: Export canonical editorial reading batch 5000-5699
-        run: python3 -I .github/scripts/editorial_read_batch.py --start 5000 --limit 700
+      - name: Export canonical editorial reading secondary records 0-943
+        run: python3 -I .github/scripts/editorial_read_batch.py --secondary-only --start 0 --limit 944
       - name: Upload full findings
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
