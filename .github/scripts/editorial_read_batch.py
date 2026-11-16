@@ -14,13 +14,17 @@ def main():
     p.add_argument("--start", type=int, default=0)
     p.add_argument("--limit", type=int, default=250)
     p.add_argument("--all-records", action="store_true")
+    p.add_argument("--secondary-only", action="store_true")
     args = p.parse_args()
     root = Path(__file__).resolve().parents[2]
     records = []
     for category in CATEGORIES:
         for path in sorted((root / category / "json").glob("*.json")):
             record = json.loads(path.read_text(encoding="utf-8"))
-            if not args.all_records and record.get("id") != record.get("primary_id"):
+            is_primary = record.get("id") == record.get("primary_id")
+            if args.secondary_only and is_primary:
+                continue
+            if not args.secondary_only and not args.all_records and not is_primary:
                 continue
             eng = record.get("localizations", {}).get("eng", {})
             descriptions = [x.get("description", "") for x in eng.get("descriptions", []) if isinstance(x, dict)]
