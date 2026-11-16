@@ -8,7 +8,7 @@ import csv
 import json
 from pathlib import Path
 
-VERSES = {"43001028", "44020015", "54006021", "45016027"}
+VERSES = {"43001028", "44020015", "54006021", "45016027", "45016023", "45016024", "45016025", "45014024"}
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--greek",type=Path,required=True)
