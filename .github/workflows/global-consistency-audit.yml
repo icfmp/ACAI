@@ -96,7 +96,7 @@ jobs:
       - name: Classify unanchored entity references for editorial review
         run: python3 -I .github/scripts/triage_unanchored_refs.py --top 35
       - name: Classify duplicate lexical word groups
-        run: python3 -I .github/scripts/audit_duplicate_word_groups.py --top 30
+        run: python3 -I .github/scripts/audit_duplicate_word_groups.py --top 100
       - name: Upload full findings
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
