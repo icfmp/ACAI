@@ -1,0 +1,115 @@
+name: Global consistency audit
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/scripts/audit_consistency.py'
+      - '.github/scripts/test_audit_consistency.py'
+      - '.github/scripts/editorial_read_batch.py'
+      - '.github/scripts/audit_collision_priorities.py'
+      - '.github/scripts/audit_reference_alignment.py'
+      - '.github/scripts/test_audit_reference_alignment.py'
+      - '.github/scripts/check_macula_joash.py'
+      - '.github/scripts/audit_macula_hebrew_ids.py'
+      - '.github/scripts/audit_macula_greek_ids.py'
+      - '.github/scripts/triage_missing_hebrew_subjects.py'
+      - '.github/scripts/audit_homonym_context.py'
+      - '.github/scripts/audit_epistle_endings.py'
+      - '.github/scripts/probe_nt_source_verses.py'
+      - '.github/scripts/audit_nt_source_verses.py'
+      - '.github/scripts/triage_unanchored_refs.py'
+      - '.github/scripts/audit_duplicate_word_groups.py'
+      - '.github/scripts/test_audit_duplicate_word_groups.py'
+      - '.github/scripts/test_audit_nt_source_verses.py'
+      - '.github/workflows/global-consistency-audit.yml'
+      - '**/json/*.json'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Check out pinned original-language Macula Hebrew
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: Clear-Bible/macula-hebrew
+          ref: 47db250bd55d0d8577f2a94fba114ef16c35b23c
+          path: macula-hebrew
+          sparse-checkout: WLC/tsv
+          lfs: true
+          persist-credentials: false
+      - name: Check out pinned original-language Macula Greek
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: Clear-Bible/macula-greek
+          ref: 8423afe47b9e8f24b7772e808af45c7159a6fe7e
+          path: macula-greek
+          sparse-checkout: |
+            TSV
+            SBLGNT
+          lfs: true
+          persist-credentials: false
+      - name: List Greek source TSV files
+        run: find macula-greek -type f \( -iname '*.tsv' -o -iname '*.tsv.gz' \) -printf '%p %s bytes\\n' | head -30
+      - name: Check audit rules
+        run: python3 -I .github/scripts/test_audit_consistency.py
+      - name: Test reference-alignment rules
+        run: python3 -I .github/scripts/test_audit_reference_alignment.py
+      - name: Test source-edition verse compatibility rules
+        run: python3 -I .github/scripts/test_audit_nt_source_verses.py
+      - name: Test duplicate-group classification
+        run: python3 -I .github/scripts/test_audit_duplicate_word_groups.py
+      - name: Scan entire dataset
+        if: always()
+        run: python3 -I .github/scripts/audit_consistency.py --output audit-results.json
+      - name: Verify homonymous Joash tokens against Macula WLC
+        run: python3 -I .github/scripts/check_macula_joash.py --tsv macula-hebrew/WLC/tsv/macula-hebrew.tsv
+      - name: Verify all Hebrew word IDs in pinned Macula WLC
+        run: python3 -I .github/scripts/audit_macula_hebrew_ids.py --tsv macula-hebrew/WLC/tsv/macula-hebrew.tsv
+      - name: Inspect neighbors of missing Hebrew subject IDs
+        run: python3 -I .github/scripts/triage_missing_hebrew_subjects.py --tsv macula-hebrew/WLC/tsv/macula-hebrew.tsv
+      - name: Verify all Greek word IDs in pinned Macula SBLGNT
+        run: python3 -I .github/scripts/audit_macula_greek_ids.py --tsv macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+      - name: Audit Bible references and exact word alignments
+        run: python3 -I .github/scripts/audit_reference_alignment.py --top 25
+      - name: Export canonical editorial reading secondary records 0-943
+        run: python3 -I .github/scripts/editorial_read_batch.py --secondary-only --start 0 --limit 944
+      - name: Prioritize conflicting original-language token assignments
+        if: always()
+        run: python3 -I .github/scripts/audit_collision_priorities.py --input audit-results.json --top 40
+      - name: Report homonym collisions against original words
+        run: python3 -I .github/scripts/audit_homonym_context.py --hebrew macula-hebrew/WLC/tsv/macula-hebrew.tsv --greek macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv --top 100
+      - name: Audit unanchored epistle ending references
+        run: python3 -I .github/scripts/audit_epistle_endings.py --greek macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+      - name: Probe textual variant verses and epistle source endings
+        run: python3 -I .github/scripts/probe_nt_source_verses.py --greek macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+      - name: Audit absent source-verse references across NT
+        run: python3 -I .github/scripts/audit_nt_source_verses.py --source macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv --corpus nt
+      - name: Audit absent source-verse references across Old Testament
+        run: python3 -I .github/scripts/audit_nt_source_verses.py --source macula-hebrew/WLC/tsv/macula-hebrew.tsv --corpus ot --output ot-source-verse-compatibility.json
+      - name: Classify unanchored entity references for editorial review
+        run: python3 -I .github/scripts/triage_unanchored_refs.py --top 35
+      - name: Classify duplicate lexical word groups
+        run: python3 -I .github/scripts/audit_duplicate_word_groups.py --top 100
+      - name: Upload full findings
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: global-consistency-findings
+          path: |
+            audit-results.json
+            reference-alignment-results.json
+            macula-hebrew-existence.json
+            macula-greek-existence.json
+            epistle-ending-review.json
+            nt-source-verse-compatibility.json
+            ot-source-verse-compatibility.json
+            unanchored-triage.json
+            duplicate-word-groups.json
+          if-no-files-found: warn
