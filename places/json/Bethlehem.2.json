@@ -12,7 +12,7 @@
       "000961001002000"
     ],
     "geonames": [
-      "http://sws.geonames.org/284315"
+      "http://sws.geonames.org/295453"
     ],
     "tipnr": [
       "Bethlehem@Jos.19.15"
@@ -234,10 +234,6 @@
     "obi": {
       "lat": "32.735379",
       "lon": "35.189704"
-    },
-    "recogito": {
-      "lat": "31.70487",
-      "lon": "35.20376"
     },
     "vizbible": {
       "lat": "32.735379",
