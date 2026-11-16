@@ -12,6 +12,7 @@ on:
       - '.github/scripts/test_audit_reference_alignment.py'
       - '.github/scripts/check_macula_joash.py'
       - '.github/scripts/audit_macula_hebrew_ids.py'
+      - '.github/scripts/audit_macula_greek_ids.py'
       - '.github/workflows/global-consistency-audit.yml'
       - '**/json/*.json'
 
@@ -58,6 +59,8 @@ jobs:
         run: python3 -I .github/scripts/check_macula_joash.py --tsv macula-hebrew/WLC/tsv/macula-hebrew.tsv
       - name: Verify all Hebrew word IDs in pinned Macula WLC
         run: python3 -I .github/scripts/audit_macula_hebrew_ids.py --tsv macula-hebrew/WLC/tsv/macula-hebrew.tsv
+      - name: Verify all Greek word IDs in pinned Macula SBLGNT
+        run: python3 -I .github/scripts/audit_macula_greek_ids.py --tsv macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
       - name: Audit Bible references and exact word alignments
         run: python3 -I .github/scripts/audit_reference_alignment.py --top 25
       - name: Export canonical editorial reading secondary records 0-943
@@ -74,4 +77,5 @@ jobs:
             audit-results.json
             reference-alignment-results.json
             macula-hebrew-existence.json
+            macula-greek-existence.json
           if-no-files-found: warn
