@@ -1,6 +1,6 @@
 {
   "id": "person:Shimei",
-  "primary_id": "person:Obed-edom",
+  "primary_id": "person:Shimei",
   "alternate_sources": {
     "aquifer": [
       "8407|Shimei|TyndaleBibleDictionary",
@@ -19,16 +19,6 @@
   "type": "person",
   "gender": "male",
   "father": "person:Jeduthun",
-  "offspring": [
-    "person:Shemaiah.9",
-    "person:Jehozabad.2",
-    "person:Joah.3",
-    "person:Sachar",
-    "person:Nethanel.5",
-    "person:Ammiel.3",
-    "person:Issachar.2",
-    "person:Peullethai"
-  ],
   "siblings": [
     "person:Mattithiah.2",
     "person:Gedaliah.4",
@@ -222,9 +212,6 @@
       ]
     }
   },
-  "referred_to_as": [
-    "person:Obed-edom"
-  ],
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
   "lemmas": {
