@@ -34,6 +34,19 @@ jobs:
           sparse-checkout: WLC/tsv
           lfs: true
           persist-credentials: false
+      - name: Check out pinned original-language Macula Greek
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: Clear-Bible/macula-greek
+          ref: 8423afe47b9e8f24b7772e808af45c7159a6fe7e
+          path: macula-greek
+          sparse-checkout: |
+            TSV
+            SBLGNT
+          lfs: true
+          persist-credentials: false
+      - name: List Greek source TSV files
+        run: find macula-greek -type f \( -iname '*.tsv' -o -iname '*.tsv.gz' \) -printf '%p %s bytes\\n' | head -30
       - name: Check audit rules
         run: python3 -I .github/scripts/test_audit_consistency.py
       - name: Test reference-alignment rules
