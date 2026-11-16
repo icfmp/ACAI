@@ -49,13 +49,13 @@ def audit(root: Path, hebrew: Path, greek: Path) -> dict:
             explicit = record.get("explicit_instances") or {}
             if not isinstance(lemmas, dict) or not isinstance(explicit, dict):
                 continue
-            by_corpus = collections.defaultdict(set)
+            by_corpus = collections.defaultdict(list)
             for corpus, groups in explicit.items():
                 if not isinstance(groups, list):
                     continue
                 for group in groups:
                     if isinstance(group, list):
-                        by_corpus[corpus.lower()].update(t for t in group if isinstance(t, str))
+                        by_corpus[corpus.lower()].append(tuple(t for t in group if isinstance(t, str)))
             for language, values in lemmas.items():
                 corpus = LANGUAGES.get(language.lower())
                 if corpus is None or not isinstance(values, list):
@@ -63,14 +63,15 @@ def audit(root: Path, hebrew: Path, greek: Path) -> dict:
                 declared = sorted(set(x for x in values if isinstance(x, str) and normalize(x)))
                 if not declared:
                     continue
-                ids = by_corpus[corpus]
-                records.append((category, record["id"], language, corpus, declared, ids))
+                groups = by_corpus[corpus]
+                ids = set(t for group in groups for t in group)
+                records.append((category, record["id"], language, corpus, declared, ids, groups))
                 wanted[corpus].update(ids)
     indexes = {"wlc": source_index(hebrew, wanted["wlc"]),
                "sblgnt": source_index(greek, wanted["sblgnt"])}
     summary = collections.Counter(records_scanned=len(records))
     findings = []
-    for category, entity, language, corpus, declared, ids in records:
+    for category, entity, language, corpus, declared, ids, groups in records:
         summary["language_" + language] += 1
         if not ids:
             summary["without_explicit_source_ids"] += 1
@@ -81,6 +82,13 @@ def audit(root: Path, hebrew: Path, greek: Path) -> dict:
             continue
         summary["with_source_words"] += 1
         known = {normalize(s["lemma"]) for s in source if normalize(s["lemma"])}
+        # A compound proper name is often represented by a group of adjacent
+        # original-language words; compare its ordered lemma phrase as well.
+        for group in groups:
+            if group and all(t in indexes[corpus] for t in group):
+                phrase = normalize(" ".join(indexes[corpus][t]["lemma"] for t in group))
+                if phrase:
+                    known.add(phrase)
         normalized_declared = {d: normalize(d) for d in declared}
         matched = [d for d, norm in normalized_declared.items() if norm in known]
         if len(matched) == len(declared):
@@ -113,8 +121,10 @@ def main() -> int:
     result = audit(args.root, args.hebrew, args.greek)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("LEMMA_ALIGNMENT_SUMMARY " + json.dumps(result["summary"], sort_keys=True))
-    for item in result["findings"][:args.top]:
-        print("LEMMA_ALIGNMENT_CANDIDATE " + json.dumps(item, ensure_ascii=False, sort_keys=True))
+    for rule in ("zero_exact_lemma_overlap", "partial_exact_lemma_overlap"):
+        selected = [x for x in result["findings"] if x["rule"] == rule][:args.top]
+        for item in selected:
+            print("LEMMA_ALIGNMENT_CANDIDATE " + json.dumps(item, ensure_ascii=False, sort_keys=True))
     return 0
 
 
