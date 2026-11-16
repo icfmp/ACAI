@@ -1,6 +1,6 @@
 {
   "id": "place:Aram",
-  "primary_id": "place:Paddan-aram",
+  "primary_id": "place:Aram",
   "alternate_sources": {
     "aquifer": [
       "3701|Aram (Place)|TyndaleBibleDictionary",
@@ -206,7 +206,6 @@
     }
   },
   "referred_to_as": [
-    "place:Paddan-aram",
     "place:Syria"
   ],
   "subregion_of": [
