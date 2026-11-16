@@ -36,7 +36,7 @@ class VerseCompatibilityTests(unittest.TestCase):
                 "id":"person:Test","primary_id":"person:Test",
                 "references":["01001001","01001002","44001001"]}))
             tsv=root/"source.tsv"
-            tsv.write_text("xml:id\\tref\\n"+"o01001001001\\tGEN 1:1!1\\n")
+            tsv.write_text("xml:id\tref\n"+"o01001001001\tGEN 1:1!1\n")
             result=module.inspect(root,tsv,corpus="ot")
             self.assertEqual(result["summary"]["record_reference_entries"],2)
             self.assertEqual(result["summary"]["record_reference_entries_absent_from_source"],1)
