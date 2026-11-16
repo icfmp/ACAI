@@ -85,7 +85,9 @@ jobs:
       - name: Probe textual variant verses and epistle source endings
         run: python3 -I .github/scripts/probe_nt_source_verses.py --greek macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
       - name: Audit absent source-verse references across NT
-        run: python3 -I .github/scripts/audit_nt_source_verses.py --greek macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+        run: python3 -I .github/scripts/audit_nt_source_verses.py --source macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv --corpus nt
+      - name: Audit absent source-verse references across Old Testament
+        run: python3 -I .github/scripts/audit_nt_source_verses.py --source macula-hebrew/WLC/tsv/macula-hebrew.tsv --corpus ot --output ot-source-verse-compatibility.json
       - name: Upload full findings
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -98,4 +100,5 @@ jobs:
             macula-greek-existence.json
             epistle-ending-review.json
             nt-source-verse-compatibility.json
+            ot-source-verse-compatibility.json
           if-no-files-found: warn
