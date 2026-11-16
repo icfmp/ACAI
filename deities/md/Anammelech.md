@@ -7,12 +7,6 @@ Other forms include:
 
 
 
-**Familial Relationships of Anammelech**
-
-
-* Gender: male
-
-
 **OT Distribution of References**
 
 ▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁

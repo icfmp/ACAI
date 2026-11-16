@@ -17,8 +17,8 @@ jobs:
           persist-credentials: false
       - name: Validate records
         run: python3 -I .github/scripts/validate.py
-      - name: Audit proposed entity-ID migration links
+      - name: Validate retired entity-ID migrations
         run: |
           python3 -I .github/scripts/audit_entity_links.py \
-            --target person:Anammelech \
-            --target person:Adrammelech
+            --targets-file .github/deprecated-entity-ids.txt \
+            --fail-any

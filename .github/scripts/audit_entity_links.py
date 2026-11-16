@@ -49,25 +49,37 @@ def scan(root: Path, target_ids: set[str]) -> list[dict[str, str]]:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2])
-    ap.add_argument("--target", action="append", required=True,
+    ap.add_argument("--target", action="append",
                     help="Exact entity ID to find; repeat for multiple entities.")
+    ap.add_argument("--targets-file", type=Path,
+                    help="UTF-8 file of retired IDs, one per line; blank lines and # comments ignored.")
     ap.add_argument("--fail-structured", action="store_true",
                     help="Exit nonzero when structural references to any target remain.")
+    ap.add_argument("--fail-any", action="store_true",
+                    help="Exit nonzero when any exact ID matches, including localized metadata.")
     args = ap.parse_args()
-    result = scan(args.root, set(args.target))
+    targets = set(args.target or [])
+    if args.targets_file:
+        targets.update(
+            line.strip() for line in args.targets_file.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        )
+    if not targets:
+        ap.error("Supply at least one --target or --targets-file containing an ID")
+    result = scan(args.root, targets)
     for match in result:
         print("ENTITY_ID_REFERENCE " + json.dumps(match, sort_keys=True, ensure_ascii=False))
     structured = sum(1 for x in result if x["kind"] == "structured")
     localizations = sum(1 for x in result if x["kind"] == "localization")
     provenance = sum(1 for x in result if x["kind"] == "provenance")
     print("ENTITY_ID_AUDIT " + json.dumps({
-        "targets": sorted(set(args.target)),
+        "targets": sorted(targets),
         "structured": structured,
         "localization": localizations,
         "provenance": provenance,
         "matches": len(result),
     }, sort_keys=True))
-    return int(args.fail_structured and structured > 0)
+    return int((args.fail_structured and structured > 0) or (args.fail_any and bool(result)))
 
 
 if __name__ == "__main__":

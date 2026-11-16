@@ -1,6 +1,6 @@
 {
-  "id": "person:Anammelech",
-  "primary_id": "person:Anammelech",
+  "id": "deity:Anammelech",
+  "primary_id": "deity:Anammelech",
   "alternate_sources": {
     "aquifer": [
       "3590|Anammelech|TyndaleBibleDictionary"
@@ -15,8 +15,8 @@
       "recgRnwO1BQPmGHim"
     ]
   },
-  "type": "person",
-  "gender": "male",
+  "type": "deity",
+  "deity_type": "deity",
   "ubsdbh": [
     "005553001001000"
   ],
@@ -30,7 +30,7 @@
         {
           "source": "acai",
           "gloss": "Anammelech",
-          "article": "person:Anammelech",
+          "article": "deity:Anammelech",
           "description": "A deity worshiped by the people of Sepharvaim, mentioned in 2 Kings 17:31."
         }
       ]

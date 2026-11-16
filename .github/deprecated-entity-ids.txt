@@ -1,0 +1,4 @@
+# Stable record of retired entity IDs; do not reintroduce these IDs.
+# Historical migrations are documented in the PR that added each ID.
+person:Adrammelech
+person:Anammelech
