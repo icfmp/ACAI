@@ -204,8 +204,7 @@
   },
   "referred_to_as": [
     "group:Ammon",
-    "place:Ham",
-    "place:Rabbah"
+    "place:Ham"
   ],
   "mentioned_in_bible": true,
   "only_mentioned_in_apocrypha": false,
@@ -238,7 +237,6 @@
     "06012002",
     "06013010",
     "06013025",
-    "06015060",
     "07003013",
     "07010006",
     "07010007",
@@ -402,9 +400,6 @@
       ],
       [
         "o060130250171"
-      ],
-      [
-        "o060150600063"
       ],
       [
         "o070030130051"
