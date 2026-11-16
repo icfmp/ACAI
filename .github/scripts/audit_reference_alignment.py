@@ -144,6 +144,9 @@ def main():
         items = [x for x in result["findings"] if x["rule"] == rule]
         for finding in items[:args.top]:
             print("REFERENCE_AUDIT_CANDIDATE " + json.dumps(finding, sort_keys=True))
+    for item in result["findings"]:
+        if item["rule"] == "secondary_name_not_in_primary" and item["category"] in ("place", "deity", "person", "group"):
+            print("REFERENCE_AUDIT_PROPER_NAME_GAP " + json.dumps(item, sort_keys=True))
     print("This is not a source-language semantic verification.")
     return 0
 
