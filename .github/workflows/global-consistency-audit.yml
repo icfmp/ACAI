@@ -10,6 +10,7 @@ on:
       - '.github/scripts/audit_collision_priorities.py'
       - '.github/scripts/audit_reference_alignment.py'
       - '.github/scripts/test_audit_reference_alignment.py'
+      - '.github/scripts/check_macula_joash.py'
       - '.github/workflows/global-consistency-audit.yml'
       - '**/json/*.json'
 
@@ -23,6 +24,15 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
+      - name: Check out pinned original-language Macula Hebrew
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: Clear-Bible/macula-hebrew
+          ref: 47db250bd55d0d8577f2a94fba114ef16c35b23c
+          path: macula-hebrew
+          sparse-checkout: WLC/tsv
+          lfs: true
+          persist-credentials: false
       - name: Check audit rules
         run: python3 -I .github/scripts/test_audit_consistency.py
       - name: Test reference-alignment rules
@@ -30,6 +40,8 @@ jobs:
       - name: Scan entire dataset
         if: always()
         run: python3 -I .github/scripts/audit_consistency.py --output audit-results.json
+      - name: Verify homonymous Joash tokens against Macula WLC
+        run: python3 -I .github/scripts/check_macula_joash.py --tsv macula-hebrew/WLC/tsv/macula-hebrew.tsv
       - name: Audit Bible references and exact word alignments
         run: python3 -I .github/scripts/audit_reference_alignment.py --top 25
       - name: Export canonical editorial reading secondary records 0-943
