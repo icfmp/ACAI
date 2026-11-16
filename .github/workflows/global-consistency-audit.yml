@@ -73,7 +73,7 @@ jobs:
         if: always()
         run: python3 -I .github/scripts/audit_collision_priorities.py --input audit-results.json --top 40
       - name: Report homonym collisions against original words
-        run: python3 -I .github/scripts/audit_homonym_context.py --hebrew macula-hebrew/WLC/tsv/macula-hebrew.tsv --greek macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv --top 20
+        run: python3 -I .github/scripts/audit_homonym_context.py --hebrew macula-hebrew/WLC/tsv/macula-hebrew.tsv --greek macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv --top 100
       - name: Upload full findings
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
