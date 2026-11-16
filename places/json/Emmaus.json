@@ -11,9 +11,6 @@
     "ubsdgnt": [
       "93.467"
     ],
-    "geonames": [
-      "http://sws.geonames.org/563481"
-    ],
     "tipnr": [
       "Emmaus@Luk.24.13"
     ],
@@ -237,10 +234,6 @@
     "obi": {
       "lat": "31.83945022",
       "lon": "34.98952933"
-    },
-    "recogito": {
-      "lat": "56.78055",
-      "lon": "36.115"
     },
     "vizbible": {
       "lat": "31.83945022",
