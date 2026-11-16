@@ -71,6 +71,30 @@ def load_records(errors: list[str]) -> dict[str, dict]:
     return records
 
 
+
+def lint_repeated_explicit_groups(records: dict[str, dict], errors: list[str]) -> None:
+    """Reject identical original-language word groups repeated in one entity.
+
+    Repeated exact groups carry no additional lexical information, whereas
+    different overlapping multiword groups may reflect distinct expressions
+    and are intentionally left untouched by this check.
+    """
+    for record in records.values():
+        for corpus, groups in record.get("explicit_instances", {}).items():
+            seen: dict[tuple[str, ...], int] = {}
+            for number, group in enumerate(groups, start=1):
+                if not isinstance(group, list) or not all(isinstance(t, str) for t in group):
+                    continue  # Shape is outside the scope of this duplication invariant.
+                signature = tuple(group)
+                if signature in seen:
+                    errors.append(
+                        f"{record['_path']}: explicit_instances.{corpus} group "
+                        f"{number} repeats group {seen[signature]}: {signature!r}"
+                    )
+                else:
+                    seen[signature] = number
+
+
 def lint_links(records: dict[str, dict]) -> dict[str, str]:
     """Return {content_id: reason} for Aquifer links that look wrong.
 
@@ -119,6 +143,7 @@ def main() -> int:
 
     errors: list[str] = []
     records = load_records(errors)
+    lint_repeated_explicit_groups(records, errors)
     findings = lint_links(records)
 
     if args.write_baseline:
