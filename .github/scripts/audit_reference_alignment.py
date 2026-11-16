@@ -78,6 +78,8 @@ def inspect(root: Path) -> dict:
                     "rule": "reference_without_any_word_or_referent",
                     "id": entity, "count": len(completely_unanchored),
                     "examples": completely_unanchored[:12], "category": category,
+                    "declared_reference_count": len(declared),
+                    "has_any_explicit_tokens": bool(explicit),
                 })
             if missing:
                 stats["refs_covered_by_only_indirect_tokens"] += len(missing)-len(completely_unanchored)
@@ -144,6 +146,11 @@ def main():
         items = [x for x in result["findings"] if x["rule"] == rule]
         for finding in items[:args.top]:
             print("REFERENCE_AUDIT_CANDIDATE " + json.dumps(finding, sort_keys=True))
+    for item in result["findings"]:
+        if (item["rule"] == "reference_without_any_word_or_referent"
+            and item["category"] in ("people", "places")
+            and item.get("declared_reference_count", 9999) <= 3):
+            print("REFERENCE_AUDIT_SMALL_UNANCHORED " + json.dumps(item, sort_keys=True))
     for item in result["findings"]:
         if item["rule"] == "secondary_name_not_in_primary" and item["category"] in ("place", "deity", "person", "group"):
             print("REFERENCE_AUDIT_PROPER_NAME_GAP " + json.dumps(item, sort_keys=True))
