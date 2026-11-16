@@ -30,6 +30,13 @@ def inspect(root: Path) -> dict:
             declared = set(refs)
             explicit = set()
             token_rows = []
+            indirect = set()
+            for field in ("pronominal_referents", "subject_referents"):
+                for groups in data.get(field, {}).values():
+                    for group in groups:
+                        for token in group:
+                            if isinstance(token, str) and len(token) >= 9:
+                                indirect.add(token[1:9])
             for corpus, groups in data.get("explicit_instances", {}).items():
                 for group in groups:
                     for token in group:
@@ -51,6 +58,7 @@ def inspect(root: Path) -> dict:
                 secondary.append((entity, primary, declared, set(token_rows)))
                 stats["secondary_records"] += 1
             missing = sorted(declared - explicit)
+            completely_unanchored = sorted(declared - explicit - indirect)
             extra = sorted(explicit - declared)
             if not token_rows and refs:
                 stats["records_without_explicit_tokens"] += 1
@@ -63,6 +71,16 @@ def inspect(root: Path) -> dict:
                     "examples": missing[:12],
                     "category": category,
                 })
+            if completely_unanchored:
+                stats["records_with_no_token_at_verse"] += 1
+                stats["references_without_any_token"] += len(completely_unanchored)
+                findings.append({
+                    "rule": "reference_without_any_word_or_referent",
+                    "id": entity, "count": len(completely_unanchored),
+                    "examples": completely_unanchored[:12], "category": category,
+                })
+            if missing:
+                stats["refs_covered_by_only_indirect_tokens"] += len(missing)-len(completely_unanchored)
             if extra:
                 stats["records_with_unlisted_explicit_verses"] += 1
                 stats["unlisted_explicit_verses"] += len(extra)
@@ -93,6 +111,7 @@ def inspect(root: Path) -> dict:
         missing_tokens = sorted(tokens - ctok)
         if missing_refs or missing_tokens:
             stats["secondary_with_primary_alignment_gaps"] += 1
+            stats["secondary_gap_records_" + entity.split(":", 1)[0]] += 1
             stats["secondary_refs_absent_from_primary"] += len(missing_refs)
             stats["secondary_tokens_absent_from_primary"] += len(missing_tokens)
             findings.append({
