@@ -18,6 +18,7 @@ on:
       - '.github/scripts/audit_epistle_endings.py'
       - '.github/scripts/probe_nt_source_verses.py'
       - '.github/scripts/audit_nt_source_verses.py'
+      - '.github/scripts/triage_unanchored_refs.py'
       - '.github/scripts/test_audit_nt_source_verses.py'
       - '.github/workflows/global-consistency-audit.yml'
       - '**/json/*.json'
@@ -88,6 +89,8 @@ jobs:
         run: python3 -I .github/scripts/audit_nt_source_verses.py --source macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv --corpus nt
       - name: Audit absent source-verse references across Old Testament
         run: python3 -I .github/scripts/audit_nt_source_verses.py --source macula-hebrew/WLC/tsv/macula-hebrew.tsv --corpus ot --output ot-source-verse-compatibility.json
+      - name: Classify unanchored entity references for editorial review
+        run: python3 -I .github/scripts/triage_unanchored_refs.py --top 35
       - name: Upload full findings
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -101,4 +104,5 @@ jobs:
             epistle-ending-review.json
             nt-source-verse-compatibility.json
             ot-source-verse-compatibility.json
+            unanchored-triage.json
           if-no-files-found: warn
