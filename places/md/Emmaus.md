@@ -60,7 +60,6 @@ Return to [Index](00-Index.md)
 
 * OpenBible.info: lat 31.83945022; lon 34.98952933
 
-* Recogito: lat 56.78055; lon 36.115
 
 * VizBible: lat 31.83945022; lon 34.98952933
 
@@ -71,7 +70,6 @@ Return to [Index](00-Index.md)
 ### Alternate Sources
 
 * [OpenBible.info](https://www.openbible.info/geo/ancient/ae7274b)
-* [GeoNames](http://sws.geonames.org/563481)
 * [Wikidata](http://www.wikidata.org/entity/Q165887)
 
 
