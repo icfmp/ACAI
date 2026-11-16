@@ -1,6 +1,6 @@
 {
   "id": "place:Baal-gad",
-  "primary_id": "place:HermonMount",
+  "primary_id": "place:Baal-gad",
   "alternate_sources": {
     "aquifer": [
       "3932|Baal-Gad|TyndaleBibleDictionary"
@@ -197,9 +197,6 @@
       ]
     }
   },
-  "referred_to_as": [
-    "place:HermonMount"
-  ],
   "nearby_places": [
     "place:HermonMount"
   ],
