@@ -20,6 +20,7 @@ on:
       - '.github/scripts/audit_nt_source_verses.py'
       - '.github/scripts/triage_unanchored_refs.py'
       - '.github/scripts/audit_duplicate_word_groups.py'
+      - '.github/scripts/test_audit_duplicate_word_groups.py'
       - '.github/scripts/test_audit_nt_source_verses.py'
       - '.github/workflows/global-consistency-audit.yml'
       - '**/json/*.json'
@@ -62,6 +63,8 @@ jobs:
         run: python3 -I .github/scripts/test_audit_reference_alignment.py
       - name: Test source-edition verse compatibility rules
         run: python3 -I .github/scripts/test_audit_nt_source_verses.py
+      - name: Test duplicate-group classification
+        run: python3 -I .github/scripts/test_audit_duplicate_word_groups.py
       - name: Scan entire dataset
         if: always()
         run: python3 -I .github/scripts/audit_consistency.py --output audit-results.json
