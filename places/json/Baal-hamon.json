@@ -1,6 +1,6 @@
 {
   "id": "place:Baal-hamon",
-  "primary_id": "place:HermonMount",
+  "primary_id": "place:Baal-hamon",
   "alternate_sources": {
     "aquifer": [
       "3933|Baal-Hamon|TyndaleBibleDictionary"
@@ -197,9 +197,6 @@
       ]
     }
   },
-  "referred_to_as": [
-    "place:HermonMount"
-  ],
   "mentioned_in_bible": true,
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
