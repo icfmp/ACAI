@@ -120,6 +120,7 @@ def audit(root: Path, hebrew: Path, greek: Path) -> dict:
                     }
         if surface_matches:
             summary["candidates_with_exact_surface_overlap"] += 1
+            summary[rule + "_with_exact_surface_overlap"] += 1
             summary["unmatched_lemmas_attested_as_surface_forms"] += len(surface_matches)
         # Preserve one exact source-word ID for each distinct lemma. The first six
         # word examples below may hide a rare anomalous lemma in large records.
