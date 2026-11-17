@@ -207,6 +207,28 @@ def scan(root: Path) -> dict:
                 report("duplicate_reference", rid, f"{rel}#/references/{i}", ref, "error")
             seen.add(ref)
 
+        # Lexical alternatives may be different spellings or genuine variants.
+        # Only report *exactly identical* values repeated within one language.
+        # Preserve the published data; a report is not a removal permission.
+        lemmas = record.get("lemmas", {})
+        if isinstance(lemmas, dict):
+            has_duplicate_lemma = False
+            for language, values in lemmas.items():
+                if not isinstance(values, list):
+                    continue  # Validation handles malformed lexical metadata.
+                seen_lemmas = set()
+                for index, value in enumerate(values):
+                    if not isinstance(value, str):
+                        continue
+                    if value in seen_lemmas:
+                        report("duplicate_exact_lemma", rid,
+                               f"{rel}#/lemmas/{language}/{index}", value)
+                        counts["duplicate_exact_lemma_entries"] += 1
+                        has_duplicate_lemma = True
+                    seen_lemmas.add(value)
+            if has_duplicate_lemma:
+                counts["records_with_duplicate_exact_lemmas"] += 1
+
         for field in RELATION_FIELDS:
             values = record.get(field, [])
             if isinstance(values, str):
