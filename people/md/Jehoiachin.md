@@ -23,8 +23,8 @@ Jehoiachin is also referred to as:
 
 **OT Distribution of References**
 
-▁▁▁▁▁▁▁▁▁▁▁▅▂▂▁▁▂▁▁▁▁▁▁█▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: 2 Kings: 6; 1 Chronicles: 2; 2 Chronicles: 2; Esther: 1; Jeremiah: 10; Ezekiel: 1
+▁▁▁▁▁▁▁▁▁▁▁▆▃▃▁▁▂▁▁▁▁▁▁█▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: 2 Kings: 6; 1 Chronicles: 2; 2 Chronicles: 2; Esther: 1; Jeremiah: 9; Ezekiel: 1
 
 **NT Distribution of References**
 
@@ -47,7 +47,7 @@ Jehoiachin is also referred to as:
 
 
 In the Old Testament (BSB), words representing “Jehoiachin” are translated as 
-*Jehoiachin* (10x), *Jeconiah* (6x), *of Jeconiah* (1x), *Shallum* (1x), *Jehoiakim king* (1x), *Coniah* (1x), *Coniah son* (1x), *of Jehoiachin* (1x). 
+*Jehoiachin* (10x), *Jeconiah* (6x), *of Jeconiah* (1x), *Jehoiakim king* (1x), *Coniah* (1x), *Coniah son* (1x), *of Jehoiachin* (1x). 
 
 
 In the New Testament (BSB), words representing “Jehoiachin” are translated as 
@@ -66,8 +66,6 @@ Return to [Index](00-Index.md)
 
 * of Jeconiah (1CH 3:17)
 
-* Shallum (JER 22:11)
-
 * Jehoiakim king (JER 22:24)
 
 * Coniah (JER 22:28)
@@ -75,7 +73,6 @@ Return to [Index](00-Index.md)
 * Coniah son (JER 37:1)
 
 * of Jehoiachin (JER 52:31)
-
 
 
 ### NT Instances (BSB)
@@ -136,7 +133,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 2KI 24:6; 2KI 24:8; 2KI 24:12; 2KI 24:15; 2KI 25:27; 1CH 3:16; 1CH 3:17; 2CH 36:8; 2CH 36:9; EST 2:6; JER 22:11; JER 22:24; JER 22:28; JER 24:1; JER 27:20; JER 28:4; JER 29:2; JER 37:1; JER 52:31; EZK 1:2; MAT 1:11; MAT 1:12
+* 2KI 24:6; 2KI 24:8; 2KI 24:12; 2KI 24:15; 2KI 25:27; 1CH 3:16; 1CH 3:17; 2CH 36:8; 2CH 36:9; EST 2:6; JER 22:24; JER 22:28; JER 24:1; JER 27:20; JER 28:4; JER 29:2; JER 37:1; JER 52:31; EZK 1:2; MAT 1:11; MAT 1:12
 
 
 

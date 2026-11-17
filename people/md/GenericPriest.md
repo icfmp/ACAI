@@ -5,15 +5,15 @@ An unnamed priest participating in a passage (clear).
 
 **NT Distribution of References**
 
-▃▄█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Matthew: 1; Mark: 2; Luke: 4
+█▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Matthew: 1; Luke: 1
 
 
 
 
 
 In the New Testament (BSB), words representing “A Priest” are translated as 
-** (4x), *scribes* (2x), *scribe* (1x). 
+** (1x), *scribes* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -52,12 +52,9 @@ Return to [Index](00-Index.md)
 
 ### NT Instances (BSB)
 
-*  (MAT 2:5; LUK 10:27; LUK 10:29; LUK 10:37)
+*  (MAT 2:5)
 
-* scribes (MRK 12:28; LUK 20:39)
-
-* scribe (MRK 12:32)
-
+* scribes (LUK 20:39)
 
 
 ### NT Subject Referents (BSB)
@@ -84,7 +81,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* MAT 2:5; MRK 12:28; MRK 12:32; LUK 10:27; LUK 10:29; LUK 10:37; LUK 20:39
+* MAT 2:5; LUK 20:39
 
 
 

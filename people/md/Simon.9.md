@@ -16,7 +16,7 @@ Other forms include:
 **NT Distribution of References**
 
 ▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Acts: 6
+* References: Acts: 4
 
 
 
@@ -27,7 +27,7 @@ ACT 9:43, ACT 10:6, ACT 10:32.
 
 
 In the New Testament (BSB), words representing “Simon” are translated as 
-*Simon* (3x), *named Simon* (1x), *Simon’s* (1x), *of Simon* (1x). 
+*Simon* (1x), *named Simon* (1x), *Simon’s* (1x), *of Simon* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -36,14 +36,13 @@ Return to [Index](00-Index.md)
 
 ### NT Instances (BSB)
 
-* Simon (ACT 8:13; ACT 10:6; ACT 10:32)
+* Simon (ACT 10:6)
 
 * named Simon (ACT 9:43)
 
 * Simon’s (ACT 10:17)
 
 * of Simon (ACT 10:32)
-
 
 
 ### NT Pronominal Referents (BSB)
@@ -72,7 +71,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* ACT 8:13; ACT 9:43; ACT 10:6; ACT 10:17; ACT 10:32
+* ACT 9:43; ACT 10:6; ACT 10:17; ACT 10:32
 
 
 
