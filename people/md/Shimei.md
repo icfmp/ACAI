@@ -19,7 +19,6 @@ Shimei (Obed-edom) is a subentry. The primary entry is
 * Gender: male
 * Tribe/Nationality: [Tribe of Levi](../../../groups/md/acai/Levi.md)
 * Father: [Jeduthun](Jeduthun.md)
-* Offspring: [Shemaiah (1 Chronicles 26:4)](Shemaiah.9.md), [Jehozabad (1 Chronicles 26:4)](Jehozabad.2.md), [Joah (1 Chronicles 26:4)](Joah.3.md), [Sachar](Sachar.md), [Nethanel (1 Chronicles 26:4)](Nethanel.5.md), [Ammiel (1 Chronicles 26:5)](Ammiel.3.md), [Issachar (1 Chronicles 26:5)](Issachar.2.md), [Peullethai](Peullethai.md)
 * Sibling(s): [Mattithiah](Mattithiah.2.md), [Gedaliah (1 Chronicles 25:3)](Gedaliah.4.md), [Zeri](Zeri.md), [Jeshaiah (1 Chronicles 25:3)](Jeshaiah.3.md), [Hashabiah (1 Chronicles 25:3)](Hashabiah.3.md)
 
 

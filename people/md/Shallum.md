@@ -18,9 +18,8 @@ Shallum (Jehoiachin) is a subentry. The primary entry is
 
 * Gender: male
 * Tribe/Nationality: [Tribe of Judah](../../../groups/md/acai/Judah.md)
-* Father: [Jehoiakim](Jehoiakim.md)
-* Mother: [Nehushta](Nehushta.md)
-* Offspring: [Zedekiah (1 Chronicles 3:16)](Zedekiah.4.md), [Shealtiel](Shealtiel.2.md)
+* Father: [Josiah](Josiah.md)
+* Mother: [Hamutal](Hamutal.md)
 
 
 **OT Distribution of References**
