@@ -12,7 +12,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 TYPE_DIRS = ("people", "places", "groups", "deities", "fauna", "flora", "realia", "keyterms")
-RELATION_FIELDS = ("father", "mother", "partners", "offspring", "referred_to_as")
+RELATION_FIELDS = ("father", "mother", "partners", "offspring", "siblings", "referred_to_as")
 OCCURRENCE_FIELDS = ("explicit_instances", "pronominal_referents", "subject_referents")
 BCV8 = re.compile(r"^[0-9]{8}$")
 TOKEN = re.compile(r"^[on][0-9]{11,}$")
@@ -77,6 +77,21 @@ def scan(root: Path) -> dict:
             for index, value in enumerate(values):
                 if isinstance(value, str) and re.match(r"^[a-z]+:", value) and value not in records:
                     report("dangling_relationship", rid, f"{rel}#/{field}/{index}", value)
+
+        # A relationship must not identify one canonical person simultaneously
+        # as this person's parent and sibling. Keep this as a review finding:
+        # investigate historical/figurative kinship before altering source data.
+        if rid.startswith("person:"):
+            siblings = record.get("siblings", [])
+            if isinstance(siblings, list):
+                for parent_field in ("father", "mother"):
+                    parent_id = record.get(parent_field)
+                    if isinstance(parent_id, str) and parent_id in siblings:
+                        report(
+                            "parent_sibling_identity_conflict", rid,
+                            f"{rel}#/{parent_field}",
+                            f"{parent_id} is also present in siblings",
+                        )
 
         for field in OCCURRENCE_FIELDS:
             corpus_map = record.get(field, {})

@@ -44,6 +44,28 @@ class GlobalAuditTests(unittest.TestCase):
             result = module.scan(root)
             self.assertEqual(result["summary"]["cross_entity_token_collisions"], 0)
 
+    def test_parent_sibling_conflict_requires_review(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            p = root / "people" / "json"
+            p.mkdir(parents=True)
+            for name, fields in (
+                ("Parent", {}),
+                ("Sibling", {}),
+                ("Conflicted", {"father": "person:Parent",
+                                "siblings": ["person:Parent"]}),
+                ("Consistent", {"father": "person:Parent",
+                                "siblings": ["person:Sibling"]}),
+            ):
+                (p / (name + ".json")).write_text(json.dumps(
+                    {"id": "person:" + name,
+                     "primary_id": "person:" + name, **fields}))
+            issues = [x for x in module.scan(root)["findings"]
+                      if x["rule"] == "parent_sibling_identity_conflict"]
+            self.assertEqual(len(issues), 1)
+            self.assertEqual(issues[0]["entity"], "person:Conflicted")
+            self.assertEqual(issues[0]["severity"], "review")
+
     def test_conflicting_flags_and_missing_relation(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
