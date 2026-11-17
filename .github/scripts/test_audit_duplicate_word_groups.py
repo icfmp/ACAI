@@ -24,6 +24,28 @@ class GroupTests(unittest.TestCase):
             self.assertEqual(result["summary"]["exact_duplicate_groups"],1)
             self.assertEqual(result["summary"]["word_ids_in_different_groups"],1)
             self.assertEqual(result["findings"][0]["id"],"fauna:X")
+    def test_indirect_referent_groups_are_reported_independently(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            folder=root/"people"/"json"
+            folder.mkdir(parents=True)
+            data={"id":"person:X","primary_id":"person:X",
+                  "explicit_instances":{"wlc":[["o010010010011"]]},
+                  "pronominal_referents":{"wlc":[["o010010010021"],
+                                                  ["o010010010021"]]},
+                  "subject_referents":{"wlc":[["o010010010031"],
+                                               ["o010010010031"],
+                                               ["o010010010031","o010010010041"]]}}
+            (folder/"X.json").write_text(json.dumps(data))
+            result=m.inspect(root)
+            self.assertEqual(result["summary"]["records_with_any_repeat"],1)
+            self.assertEqual(result["summary"]["occurrence_fields_with_any_repeat"],2)
+            self.assertEqual(result["summary"]["exact_duplicate_groups"],2)
+            self.assertEqual(result["summary"]["word_ids_in_different_groups"],1)
+            self.assertEqual({x["occurrence_field"] for x in result["findings"]},
+                             {"pronominal_referents","subject_referents"})
+            self.assertTrue(all(x["corpus"]=="wlc" for x in result["findings"]))
+
     def test_no_duplicates(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
