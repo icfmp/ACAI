@@ -16,7 +16,7 @@
     ]
   },
   "type": "person",
-  "gender": "male",
+  "gender": "female",
   "father": "person:Sheshan",
   "partners": [
     "person:Jarha"
