@@ -18,8 +18,8 @@ _Apostle_, _Disciple_, _Martyr_.
 
 **NT Distribution of References**
 
-▃█▄▁▄▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Matthew: 3; Mark: 11; Luke: 5; Acts: 4
+▃█▄▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Matthew: 3; Mark: 11; Luke: 5; Acts: 2
 
 
 
@@ -39,7 +39,7 @@ MAT 4:21, MAT 20:20, MRK 1:19, MRK 3:17, MRK 10:35, ACT 12:1, ACT 12:2.
 
 
 In the New Testament (BSB), words representing “James” are translated as 
-*James* (17x), *James and* (1x), *his* (1x), *of James* (2x), *James son* (1x), *He had James* (1x). 
+*James* (17x), *James and* (1x), *his* (1x), *of James* (1x), *He had James* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -78,9 +78,7 @@ Return to [Index](00-Index.md)
 
 * his (MRK 3:17)
 
-* of James (MRK 5:37; ACT 1:13)
-
-* James son (ACT 1:13)
+* of James (MRK 5:37)
 
 * He had James (ACT 12:2)
 

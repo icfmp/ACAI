@@ -16,8 +16,8 @@ _Apostle_, _Disciple_.
 
 **NT Distribution of References**
 
-▃▃▆▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Matthew: 1; Mark: 1; Luke: 2; Acts: 3
+▅▅█▁▅▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Matthew: 1; Mark: 1; Luke: 2; Acts: 1
 
 
 
@@ -28,7 +28,7 @@ MAT 10:3, MRK 3:18, ACT 1:13.
 
 
 In the New Testament (BSB), words representing “James” are translated as 
-*James* (4x), *of James* (2x), *James son* (1x). 
+*James* (3x), *of James* (1x), *James son* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -37,9 +37,9 @@ Return to [Index](00-Index.md)
 
 ### NT Instances (BSB)
 
-* James (MAT 10:3; MRK 3:18; LUK 6:15; ACT 1:13)
+* James (MAT 10:3; MRK 3:18; LUK 6:15)
 
-* of James (LUK 6:16; ACT 1:13)
+* of James (LUK 6:16)
 
 * James son (ACT 1:13)
 

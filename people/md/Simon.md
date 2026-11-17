@@ -24,8 +24,8 @@ Simon (Peter) is a subentry. The primary entry is
 
 **NT Distribution of References**
 
-▃▃▄█▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Matthew: 5; Mark: 7; Luke: 11; John: 22; Acts: 5
+▃▃▅█▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Matthew: 5; Mark: 7; Luke: 11; John: 22; Acts: 4
 
 
 
@@ -36,7 +36,7 @@ MAT 16:16, LUK 6:14, JHN 1:42, 2PE 1:1.
 
 
 In the New Testament (BSB), words representing “Simon (Peter)” are translated as 
-*Simon* (40x), *his* (2x), *of Simon* (3x), *Simon’s* (1x), *whose* (1x), *to Simon* (2x), *Simon Simon* (1x). 
+*Simon* (40x), *his* (2x), *of Simon* (2x), *Simon’s* (1x), *whose* (1x), *to Simon* (2x), *Simon Simon* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -49,7 +49,7 @@ Return to [Index](00-Index.md)
 
 * his (MRK 1:16; LUK 5:10)
 
-* of Simon (MRK 1:29; LUK 4:38; ACT 10:32)
+* of Simon (MRK 1:29; LUK 4:38)
 
 * Simon’s (MRK 1:30)
 

@@ -19,8 +19,8 @@ Judas is also referred to as:
 
 **NT Distribution of References**
 
-▄▄█▄▄▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Matthew: 1; Mark: 1; Luke: 2; John: 1; Acts: 1
+█████▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Matthew: 1; Mark: 1; Luke: 1; John: 1; Acts: 1
 
 
 
@@ -31,7 +31,7 @@ MAT 10:3, LUK 6:16, JHN 14:22.
 
 
 In the New Testament (BSB), words representing “Judas” are translated as 
-*Thaddaeus* (2x), *Judas son* (2x), *Judas* (2x). 
+*Thaddaeus* (2x), *Judas son* (2x), *Judas* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -50,7 +50,7 @@ Return to [Index](00-Index.md)
 
 * Judas son (LUK 6:16; ACT 1:13)
 
-* Judas (LUK 6:16; JHN 14:22)
+* Judas (JHN 14:22)
 
 
 

@@ -23,7 +23,7 @@ Peter is also referred to as:
 **NT Distribution of References**
 
 ▄▄▄▆█▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Matthew: 27; Mark: 24; Luke: 29; John: 42; Acts: 62; 1 Corinthians: 4; Galatians: 6; 1 Peter: 1; 2 Peter: 1
+* References: Matthew: 27; Mark: 24; Luke: 29; John: 42; Acts: 61; 1 Corinthians: 4; Galatians: 6; 1 Peter: 1; 2 Peter: 1
 
 
 
@@ -34,7 +34,7 @@ MAT 16:16, LUK 22:61, JHN 21:15, ACT 2:14.
 
 
 In the New Testament (BSB), words representing “Peter” are translated as 
-*Simon* (22x), *Peter* (116x), *Peter’s* (3x), *Simon Peter* (17x), *Simon son of Jonah* (1x), *to Peter* (6x), *his* (2x), *of Simon* (3x), *Simon’s* (1x), *him* (1x), *whose* (1x), *to Simon* (2x), *Simon Simon* (1x), *Simon Peter’s* (2x), *Cephas* (6x), *Peter in* (1x), *he* (1x), *John* (1x), *when Peter* (1x), *of Peter* (1x), *Peter replied* (1x), *While Peter* (1x), *follow Cephas* (1x), *to Cephas* (2x), *Peter had been to the* (1x), *in Peter’s* (1x). 
+*Simon* (22x), *Peter* (116x), *Peter’s* (3x), *Simon Peter* (17x), *Simon son of Jonah* (1x), *to Peter* (6x), *his* (2x), *of Simon* (2x), *Simon’s* (1x), *him* (1x), *whose* (1x), *to Simon* (2x), *Simon Simon* (1x), *Simon Peter’s* (2x), *Cephas* (6x), *Peter in* (1x), *he* (1x), *John* (1x), *when Peter* (1x), *of Peter* (1x), *Peter replied* (1x), *While Peter* (1x), *follow Cephas* (1x), *to Cephas* (2x), *Peter had been to the* (1x), *in Peter’s* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -229,7 +229,7 @@ Return to [Index](00-Index.md)
 
 * his (MRK 1:16; LUK 5:10)
 
-* of Simon (MRK 1:29; LUK 4:38; ACT 10:32)
+* of Simon (MRK 1:29; LUK 4:38)
 
 * Simon’s (MRK 1:30)
 
