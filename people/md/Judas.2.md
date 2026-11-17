@@ -21,7 +21,7 @@ Judas is also referred to as:
 **NT Distribution of References**
 
 ▄▃▄█▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Matthew: 6; Mark: 3; Luke: 6; John: 13; Acts: 2
+* References: Matthew: 6; Mark: 3; Luke: 5; John: 13; Acts: 2
 
 
 
@@ -32,7 +32,7 @@ MAT 10:4, MAT 26:14, LUK 22:3.
 
 
 In the New Testament (BSB), words representing “Judas” are translated as 
-*Judas* (15x), *Iscariot* (6x), *Judas Iscariot* (4x), *Judas son* (1x), *about Judas* (1x), *of Judas* (1x), *to Judas* (1x), ** (1x). 
+*Judas* (15x), *Iscariot* (6x), *Judas Iscariot* (4x), *about Judas* (1x), *of Judas* (1x), *to Judas* (1x), ** (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -68,8 +68,6 @@ Return to [Index](00-Index.md)
 * Iscariot (MAT 10:4; LUK 22:3; JHN 6:71; JHN 12:4; JHN 13:2; JHN 13:26)
 
 * Judas Iscariot (MAT 26:14; MRK 3:19; MRK 14:10; LUK 6:16)
-
-* Judas son (LUK 6:16)
 
 * about Judas (JHN 6:71)
 
