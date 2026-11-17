@@ -18,8 +18,7 @@
   "type": "person",
   "gender": "male",
   "offspring": [
-    "person:James.2",
-    "person:Judas"
+    "person:James.2"
   ],
   "ubsdgnt": [
     "93.19a"

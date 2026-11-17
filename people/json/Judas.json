@@ -18,10 +18,6 @@
   },
   "type": "person",
   "gender": "male",
-  "father": "person:James.2",
-  "siblings": [
-    "person:James.2"
-  ],
   "roles": [
     "Apostle",
     "Disciple"
