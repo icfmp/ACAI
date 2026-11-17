@@ -133,6 +133,47 @@ class GroupTests(unittest.TestCase):
                 self.assertEqual(record["pronominal_referents"][corpus],
                                  [[pronoun], [pronoun]])
 
+    def test_primary_only_pronoun_matches_are_not_treated_as_own_links(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "keyterms" / "json"
+            folder.mkdir(parents=True)
+            entries = (
+                ("Parent", "keyterm:Parent", "n40001001001", []),
+                ("Secondary", "keyterm:Parent", "n40001001003",
+                 [["n40001001002"], ["n40001001002"]]),
+            )
+            for name, primary, explicit, pronouns in entries:
+                (folder / (name + ".json")).write_text(json.dumps({
+                    "id": "keyterm:" + name,
+                    "primary_id": primary,
+                    "explicit_instances": {"SBLGNT": [[explicit]]},
+                    "pronominal_referents": {"SBLGNT": pronouns},
+                }), encoding="utf-8")
+            hebrew = root / "wlc.tsv"
+            hebrew.write_text("xml:id\tref\tsubjref\tframe\n", encoding="utf-8")
+            greek = root / "sblgnt.tsv"
+            greek.write_text(
+                "xml:id\tref\tsubjref\tframe\treferent\n"
+                "n40001001002\tMAT 1:1!2\t\t\tn40001001001\n",
+                encoding="utf-8",
+            )
+            result = m.inspect(root, hebrew=hebrew, greek=greek)
+            finding = result["findings"][0]
+            self.assertEqual(finding["id"], "keyterm:Secondary")
+            provenance = finding["source_provenance"]
+            self.assertEqual(provenance["source_referent_linked_groups"], 0)
+            self.assertEqual(provenance["source_referent_primary_only_groups"], 1)
+            self.assertEqual(provenance["source_referent_unconfirmed_groups"], 0)
+            self.assertEqual(provenance["primary_only_examples"][0]["primary_id"],
+                             "keyterm:Parent")
+            self.assertEqual(result["summary"]["pronominal_primary_only_source_linked"], 1)
+            # Parent-only source support is not a declaration of synonymy
+            # and cannot authorize changing either record's associations.
+            record = json.loads((folder / "Secondary.json").read_text())
+            self.assertEqual(record["pronominal_referents"]["SBLGNT"],
+                             [["n40001001002"], ["n40001001002"]])
+
     def test_macula_referent_parser_never_matches_partial_ids(self):
         self.assertEqual(
             m._source_ids("A0:160090040062; A1:160090040111;", "wlc"),

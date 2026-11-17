@@ -52,7 +52,8 @@ def _source_annotations(path, wanted):
     return rows
 
 
-def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary):
+def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary,
+                                       explicit_by_id, primary_by_id):
     """Trace repeated indirect groups to recorded source attributes, read-only.
 
     Parallel subjref/frame mentions suggest why subject links can repeat.
@@ -67,10 +68,17 @@ def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary)
     for finding, corpus, repeats, explicit_ids in pending:
         source = sources[corpus.lower()]
         matched_groups = []
+        primary_only_groups = []
         unmatched_groups = []
         subject = finding["occurrence_field"] == "subject_referents"
+        primary = primary_by_id.get(finding["id"])
+        # An aggregate's exact tokens are evidence of indexing inheritance,
+        # not proof that a secondary keyterm has the same lexical meaning.
+        primary_ids = (explicit_by_id.get(primary, set()) - explicit_ids
+                       if primary != finding["id"] else set())
         for group in repeats:
             linked = []
+            parent_linked = []
             for token in group:
                 row = source.get(token)
                 if row is None:
@@ -85,10 +93,16 @@ def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary)
                     referenced = (_source_ids(row["referent"], corpus)
                                   | _source_ids(row["participantref"], corpus))
                     supported = bool(referenced & explicit_ids)
+                    if not supported and referenced & primary_ids:
+                        parent_linked.append(token)
                 if supported:
                     linked.append(token)
             if linked:
                 matched_groups.append({"group": list(group), "source_tokens": linked})
+            elif parent_linked and not subject:
+                primary_only_groups.append(
+                    {"group": list(group), "source_tokens": parent_linked,
+                     "primary_id": primary})
             else:
                 unmatched_groups.append(list(group))
         if subject:
@@ -105,12 +119,16 @@ def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary)
             finding["source_provenance"] = {
                 "repeated_groups_examined": len(repeats),
                 "source_referent_linked_groups": len(matched_groups),
+                "source_referent_primary_only_groups": len(primary_only_groups),
                 "source_referent_unconfirmed_groups": len(unmatched_groups),
-                "note": "Matching a referent confirms an anchor, not why a group repeats.",
+                "note": ("A parent-only match indicates indexing inheritance, "
+                         "not semantic identity or proof of necessary multiplicity."),
                 "examples": matched_groups[:5],
+                "primary_only_examples": primary_only_groups[:5],
             }
             summary["pronominal_repeated_groups_examined"] += len(repeats)
             summary["pronominal_source_referent_linked"] += len(matched_groups)
+            summary["pronominal_primary_only_source_linked"] += len(primary_only_groups)
             summary["pronominal_source_referent_unconfirmed"] += len(unmatched_groups)
 
 def inspect(root, hebrew=None, greek=None):
@@ -118,9 +136,16 @@ def inspect(root, hebrew=None, greek=None):
     results=[]
     flagged_records=set()
     pending=[]
+    explicit_by_id={}
+    primary_by_id={}
     for category in CATEGORIES:
         for path in sorted((root/category/"json").glob("*.json")):
             data=json.loads(path.read_text(encoding="utf-8"))
+            explicit_by_id[data["id"]]=set(
+                token for groups in data.get("explicit_instances", {}).values()
+                for group in groups for token in group
+            )
+            primary_by_id[data["id"]]=data.get("primary_id")
             for field in OCCURRENCE_FIELDS:
                 corpus_map=data.get(field,{})
                 if not isinstance(corpus_map,dict):
@@ -156,13 +181,12 @@ def inspect(root, hebrew=None, greek=None):
                             and corpus.lower() in ("wlc", "sblgnt")):
                         repeated=[group for group, n in
                                   collections.Counter(group_tuples).items() if n > 1]
-                        explicit=set(token for groups in
-                                     data.get("explicit_instances", {}).values()
-                                     for group in groups for token in group)
-                        pending.append((result, corpus, repeated, explicit))
+                        pending.append(
+                            (result, corpus, repeated, explicit_by_id[data["id"]]))
     summary["records_with_any_repeat"]=len(flagged_records)
     if hebrew is not None and greek is not None:
-        _trace_indirect_source_annotations(results, pending, hebrew, greek, summary)
+        _trace_indirect_source_annotations(
+            results, pending, hebrew, greek, summary, explicit_by_id, primary_by_id)
     results.sort(key=lambda x:(-x["duplicate_groups"],-x["cross_group_word_ids"],
                                x["id"],x["occurrence_field"],x["corpus"]))
     return {"summary":dict(summary),"findings":results}
