@@ -205,10 +205,7 @@
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
   "lemmas": {
-    "he": [
-      "עִדֹּו",
-      "עִדּוֹ"
-    ]
+    "he": ["עָדָה"]
   },
   "key_references": [
     "01004019",
