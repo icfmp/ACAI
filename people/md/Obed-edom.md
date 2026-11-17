@@ -23,8 +23,8 @@ Obed-edom is also referred to as:
 
 **OT Distribution of References**
 
-▁▁▁▁▁▁▁▁▁▃▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: 2 Samuel: 5; 1 Chronicles: 15; 2 Chronicles: 1
+▁▁▁▁▁▁▁▁▁▄▁▁█▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: 2 Samuel: 5; 1 Chronicles: 14; 2 Chronicles: 1
 
 
 
@@ -33,7 +33,7 @@ Obed-edom is also referred to as:
 
 
 In the Old Testament (BSB), words representing “Obed-edom” are translated as 
-*of Obed-edom* (7x), *him* (1x), *Obed-edom into* (1x), *his* (1x), *Obed-edom* (4x), *also* (1x), *along with Obed-edom* (1x), *relatives son* (1x), *to Shimei* (1x), *And Obed-edom* (1x), *in all from Obed-edom* (1x), *fell to Obed-edom* (1x). 
+*of Obed-edom* (7x), *him* (1x), *Obed-edom into* (1x), *his* (1x), *Obed-edom* (4x), *also* (1x), *along with Obed-edom* (1x), *relatives son* (1x), *And Obed-edom* (1x), *in all from Obed-edom* (1x), *fell to Obed-edom* (1x). 
 
 
 
@@ -60,14 +60,11 @@ Return to [Index](00-Index.md)
 
 * relatives son (1CH 16:38)
 
-* to Shimei (1CH 25:17)
-
 * And Obed-edom (1CH 26:4)
 
 * in all from Obed-edom (1CH 26:8)
 
 * fell to Obed-edom (1CH 26:15)
-
 
 
 ### OT Subject Referents (BSB)
@@ -78,7 +75,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 2SA 6:10; 2SA 6:11; 2SA 6:12; 1CH 13:13; 1CH 13:14; 1CH 15:18; 1CH 15:21; 1CH 15:24; 1CH 15:25; 1CH 16:5; 1CH 16:38; 1CH 25:17; 1CH 26:4; 1CH 26:8; 1CH 26:15; 2CH 25:24
+* 2SA 6:10; 2SA 6:11; 2SA 6:12; 1CH 13:13; 1CH 13:14; 1CH 15:18; 1CH 15:21; 1CH 15:24; 1CH 15:25; 1CH 16:5; 1CH 16:38; 1CH 26:4; 1CH 26:8; 1CH 26:15; 2CH 25:24
 
 
 

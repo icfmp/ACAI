@@ -21,8 +21,8 @@ Sennacherib is also referred to as:
 
 **OT Distribution of References**
 
-▁▁▁▁▁▁▁▁▁▁▁▇▁█▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: 2 Kings: 4; 2 Chronicles: 5; Isaiah: 5
+▁▁▁▁▁▁▁▁▁▁▁▇▁█▁▁▁▁▁▁▁▁▇▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: 2 Kings: 4; 2 Chronicles: 5; Isaiah: 4
 
 
 
@@ -31,7 +31,7 @@ Sennacherib is also referred to as:
 
 
 In the Old Testament (BSB), words representing “Sennacherib” are translated as 
-*Sennacherib* (8x), *king* (2x), *So Sennacherib* (2x), *as Sennacherib* (1x), *by Sargon* (1x). 
+*Sennacherib* (8x), *king* (2x), *So Sennacherib* (2x), *as Sennacherib* (1x). 
 
 
 
@@ -59,9 +59,6 @@ Return to [Index](00-Index.md)
 * So Sennacherib (2KI 19:36; ISA 37:37)
 
 * as Sennacherib (2CH 32:9)
-
-* by Sargon (ISA 20:1)
-
 
 
 ### OT Pronominal Referents (BSB)
@@ -148,7 +145,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 2KI 18:13; 2KI 19:16; 2KI 19:20; 2KI 19:36; 2CH 32:1; 2CH 32:2; 2CH 32:9; 2CH 32:10; 2CH 32:22; ISA 20:1; ISA 36:1; ISA 37:17; ISA 37:21; ISA 37:37
+* 2KI 18:13; 2KI 19:16; 2KI 19:20; 2KI 19:36; 2CH 32:1; 2CH 32:2; 2CH 32:9; 2CH 32:10; 2CH 32:22; ISA 36:1; ISA 37:17; ISA 37:21; ISA 37:37
 
 
 

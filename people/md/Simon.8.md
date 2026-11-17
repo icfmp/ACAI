@@ -16,7 +16,7 @@ Other forms include:
 **NT Distribution of References**
 
 ▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Acts: 3
+* References: Acts: 4
 
 
 
@@ -27,7 +27,7 @@ ACT 8:9, ACT 8:18, ACT 8:24.
 
 
 In the New Testament (BSB), words representing “Simon (Acts 8:9)” are translated as 
-*Simon* (3x). 
+*Simon* (4x). 
 
 
 Return to [Index](00-Index.md)
@@ -44,8 +44,7 @@ Return to [Index](00-Index.md)
 
 ### NT Instances (BSB)
 
-* Simon (ACT 8:9; ACT 8:18; ACT 8:24)
-
+* Simon (ACT 8:9; ACT 8:13; ACT 8:18; ACT 8:24)
 
 
 ### NT Pronominal Referents (BSB)
@@ -88,7 +87,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* ACT 8:9; ACT 8:18; ACT 8:24
+* ACT 8:9; ACT 8:13; ACT 8:18; ACT 8:24
 
 
 

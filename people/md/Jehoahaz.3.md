@@ -23,8 +23,8 @@ Jehoahaz is also referred to as:
 
 **OT Distribution of References**
 
-▁▁▁▁▁▁▁▁▁▁▁█▃█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: 2 Kings: 3; 1 Chronicles: 1; 2 Chronicles: 3
+▁▁▁▁▁▁▁▁▁▁▁█▃█▁▁▁▁▁▁▁▁▁▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: 2 Kings: 3; 1 Chronicles: 1; 2 Chronicles: 3; Jeremiah: 1
 
 
 
@@ -42,7 +42,7 @@ Jehoahaz is also referred to as:
 
 
 In the Old Testament (BSB), words representing “Jehoahaz” are translated as 
-*Jehoahaz* (6x), *Johanan* (1x). 
+*Jehoahaz* (6x), *Johanan* (1x), *Shallum* (1x). 
 
 
 
@@ -57,6 +57,7 @@ Return to [Index](00-Index.md)
 
 * Johanan (1CH 3:15)
 
+* Shallum (JER 22:11)
 
 
 ### OT Subject Referents (BSB)
@@ -73,7 +74,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 2KI 23:30; 2KI 23:31; 2KI 23:34; 1CH 3:15; 2CH 36:1; 2CH 36:2; 2CH 36:4
+* 2KI 23:30; 2KI 23:31; 2KI 23:34; 1CH 3:15; 2CH 36:1; 2CH 36:2; 2CH 36:4; JER 22:11
 
 
 
