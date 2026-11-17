@@ -210,10 +210,7 @@
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
   "lemmas": {
-    "he": [
-      "צֶרֶת הַשַּׁחַר",
-      "צֶרֶת הַשַּׁ֫חַר"
-    ]
+    "he": ["צֶרֶת"]
   },
   "key_references": [
     "13004007"
