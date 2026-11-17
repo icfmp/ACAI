@@ -25,7 +25,9 @@ def _source_ids(value, corpus):
     if not isinstance(value, str):
         return set()
     prefix = "o" if corpus.lower() == "wlc" else "n"
-    return {prefix + word for word in re.findall(r"(?:[on])?([0-9]{11,})", value)}
+    digits = 12 if corpus.lower() == "wlc" else 11
+    pattern = rf"(?<![A-Za-z0-9])(?:[on])?([0-9]{{{digits},}})(?![0-9])"
+    return {prefix + word for word in re.findall(pattern, value)}
 
 
 def _source_annotations(path, wanted):
