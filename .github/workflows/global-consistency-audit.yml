@@ -26,6 +26,7 @@ on:
       - '.github/scripts/test_audit_nt_source_verses.py'
       - '.github/workflows/global-consistency-audit.yml'
       - '**/json/*.json'
+      - '**/md/*.md'
 
 permissions:
   contents: read

@@ -17,8 +17,8 @@ _Disciple_, _Relative of Jesus_.
 
 **NT Distribution of References**
 
-▆█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Matthew: 4; Mark: 6
+██▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Matthew: 3; Mark: 3; Luke: 1
 
 
 
@@ -29,7 +29,7 @@ MAT 27:56, MRK 15:40, MRK 16:1.
 
 
 In the New Testament (BSB), words representing “Mary” are translated as 
-*Mary* (10x). 
+*Mary* (7x). 
 
 
 Return to [Index](00-Index.md)
@@ -44,7 +44,7 @@ Return to [Index](00-Index.md)
 
 ### NT Instances (BSB)
 
-* Mary (MAT 27:56; MAT 27:56; MAT 27:61; MAT 28:1; MRK 15:40; MRK 15:40; MRK 15:47; MRK 15:47; MRK 16:1; MRK 16:1)
+* Mary (MAT 27:56; MAT 27:61; MAT 28:1; MRK 15:40; MRK 15:47; MRK 16:1; LUK 24:10)
 
 
 
@@ -116,7 +116,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* MAT 27:56; MAT 27:61; MAT 28:1; MRK 15:40; MRK 15:47; MRK 16:1
+* MAT 27:56; MAT 27:61; MAT 28:1; MRK 15:40; MRK 15:47; MRK 16:1; LUK 24:10
 
 
 

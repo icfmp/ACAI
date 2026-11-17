@@ -20,7 +20,7 @@ _Relative of Jesus_.
 **NT Distribution of References**
 
 ▄▂█▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Matthew: 5; Mark: 1; Luke: 14; Acts: 1
+* References: Matthew: 5; Mark: 1; Luke: 12; Acts: 1
 
 
 
@@ -31,7 +31,7 @@ MAT 1:18, LUK 1:27, ACT 1:14.
 
 
 In the New Testament (BSB), words representing “Mary (Mother of Jesus)” are translated as 
-*of Mary* (2x), *Mary* (17x), *was Mary* (1x), *Mary’s* (1x). 
+*of Mary* (2x), *Mary* (15x), *was Mary* (1x), *Mary’s* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -58,7 +58,7 @@ Return to [Index](00-Index.md)
 
 * of Mary (MAT 1:16; MRK 6:3)
 
-* Mary (MAT 1:18; MAT 1:20; MAT 2:11; MAT 13:55; LUK 1:30; LUK 1:34; LUK 1:38; LUK 1:39; LUK 1:46; LUK 1:56; LUK 2:5; LUK 2:16; LUK 2:19; LUK 2:34; LUK 24:10; LUK 24:10; ACT 1:14)
+* Mary (MAT 1:18; MAT 1:20; MAT 2:11; MAT 13:55; LUK 1:30; LUK 1:34; LUK 1:38; LUK 1:39; LUK 1:46; LUK 1:56; LUK 2:5; LUK 2:16; LUK 2:19; LUK 2:34; ACT 1:14)
 
 * was Mary (LUK 1:27)
 
@@ -172,7 +172,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* MAT 1:16; MAT 1:18; MAT 1:20; MAT 2:11; MAT 13:55; MRK 6:3; LUK 1:27; LUK 1:30; LUK 1:34; LUK 1:38; LUK 1:39; LUK 1:41; LUK 1:46; LUK 1:56; LUK 2:5; LUK 2:16; LUK 2:19; LUK 2:34; LUK 24:10; ACT 1:14
+* MAT 1:16; MAT 1:18; MAT 1:20; MAT 2:11; MAT 13:55; MRK 6:3; LUK 1:27; LUK 1:30; LUK 1:34; LUK 1:38; LUK 1:39; LUK 1:41; LUK 1:46; LUK 1:56; LUK 2:5; LUK 2:16; LUK 2:19; LUK 2:34; ACT 1:14
 
 
 
