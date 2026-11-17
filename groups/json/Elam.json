@@ -206,10 +206,7 @@
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
   "lemmas": {
-    "he": [
-      "עַלְמֹן דִּבְלָתָיְמָה",
-      "ה"
-    ],
+    "he": ["עֵלָמִי"],
     "el": [
       "Ἐλαμίτης"
     ]
