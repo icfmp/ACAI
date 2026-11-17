@@ -10,8 +10,38 @@ spec = importlib.util.spec_from_file_location("audit_consistency", FILE)
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
+HOMONYM_FILE = Path(__file__).with_name("audit_homonym_context.py")
+homonym_spec = importlib.util.spec_from_file_location("audit_homonym_context", HOMONYM_FILE)
+homonym_module = importlib.util.module_from_spec(homonym_spec)
+homonym_spec.loader.exec_module(homonym_module)
+
 
 class GlobalAuditTests(unittest.TestCase):
+    def test_homonym_source_sense_evidence_is_review_only(self):
+        # In real data the son of Seir and son of Anah called Dishon have
+        # distinct SDBH senses; the scanner must expose both, never choose one.
+        seir = homonym_module.source_word_evidence({
+            "ref": "1CH 1:38!7", "text": "דִּישׁוֹן",
+            "lemma": "דִּישֹׁון", "stronglemma": "דִּישֹׁון",
+            "sdbh": "001642002001000",
+        })
+        anah = homonym_module.source_word_evidence({
+            "ref": "1CH 1:41!5", "text": "דִּישׁוֹן",
+            "lemma": "דִּישֹׁון", "sdbh": "001642002002000",
+        })
+        self.assertEqual(
+            homonym_module.distinct_source_senses([seir, anah]),
+            ["001642002001000", "001642002002000"],
+        )
+        self.assertEqual(
+            homonym_module.distinct_source_senses([anah, anah]), 
+            ["001642002002000"],
+        )
+        self.assertEqual(homonym_module.distinct_source_senses([{}]), [])
+        self.assertEqual(anah["word"], "דִּישׁוֹן")
+        self.assertEqual(seir["stronglemma"], "דִּישֹׁון")
+
+
     def test_exact_lemma_duplicates_are_reviewed_without_conflating_variants(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
