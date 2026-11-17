@@ -9,7 +9,7 @@ A man living during the New Testament, father of the disciple James and perhaps 
 
 
 * Gender: male
-* Offspring: [James](James.2.md), [Judas](Judas.md)
+* Offspring: [James](James.2.md)
 
 
 **NT Distribution of References**
