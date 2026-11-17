@@ -16,7 +16,7 @@ _Priest_.
 **OT Distribution of References**
 
 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁██▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Ezra: 2; Nehemiah: 2
+* References: Ezra: 1; Nehemiah: 1
 
 
 
@@ -25,7 +25,7 @@ EZR 2:61, NEH 7:63.
 
 
 In the Old Testament (BSB), words representing “Barzillai (Ezra 2:61)” are translated as 
-*of Barzillai* (4x). 
+*of Barzillai* (2x). 
 
 
 
@@ -36,7 +36,7 @@ Return to [Index](00-Index.md)
 
 ### OT Instances (BSB)
 
-* of Barzillai (EZR 2:61; EZR 2:61; NEH 7:63; NEH 7:63)
+* of Barzillai (EZR 2:61; NEH 7:63)
 
 
 
