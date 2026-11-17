@@ -89,6 +89,50 @@ class GroupTests(unittest.TestCase):
                              ["subject_referents"]["wlc"],
                              [["o160090040132"], ["o160090040132"]])
 
+    def test_pronominal_referent_links_are_not_mistaken_for_dedup_permission(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "people" / "json"
+            folder.mkdir(parents=True)
+            records = (
+                ("HebrewMatched", "wlc", "o010010010011", "o010010010021"),
+                ("HebrewUnmatched", "wlc", "o010010010031", "o010010010021"),
+                ("GreekMatched", "SBLGNT", "n40001001001", "n40001001002"),
+            )
+            for name, corpus, explicit, pronoun in records:
+                (folder / (name + ".json")).write_text(json.dumps({
+                    "id": "person:" + name,
+                    "primary_id": "person:" + name,
+                    "explicit_instances": {corpus: [[explicit]]},
+                    "pronominal_referents": {corpus: [[pronoun], [pronoun]]},
+                }), encoding="utf-8")
+            hebrew = root / "wlc.tsv"
+            hebrew.write_text(
+                "xml:id\tref\tsubjref\tframe\tparticipantref\n"
+                "o010010010021\tGEN 1:1!2\t\t\t010010010011\n",
+                encoding="utf-8",
+            )
+            greek = root / "sblgnt.tsv"
+            greek.write_text(
+                "xml:id\tref\tsubjref\tframe\treferent\n"
+                "n40001001002\tMAT 1:1!2\t\t\tn40001001001\n",
+                encoding="utf-8",
+            )
+            result = m.inspect(root, hebrew=hebrew, greek=greek)
+            self.assertEqual(result["summary"]["pronominal_repeated_groups_examined"], 3)
+            self.assertEqual(result["summary"]["pronominal_source_referent_linked"], 2)
+            self.assertEqual(result["summary"]["pronominal_source_referent_unconfirmed"], 1)
+            match = {finding["id"]: finding["source_provenance"]
+                     for finding in result["findings"]}
+            self.assertEqual(match["person:HebrewMatched"]["source_referent_linked_groups"], 1)
+            self.assertEqual(match["person:HebrewUnmatched"]["source_referent_linked_groups"], 0)
+            self.assertEqual(match["person:GreekMatched"]["source_referent_linked_groups"], 1)
+            for name, corpus, _, pronoun in records:
+                # Read-only: repeated groups still exist in the same order.
+                record = json.loads((folder / (name + ".json")).read_text())
+                self.assertEqual(record["pronominal_referents"][corpus],
+                                 [[pronoun], [pronoun]])
+
     def test_macula_referent_parser_never_matches_partial_ids(self):
         self.assertEqual(
             m._source_ids("A0:160090040062; A1:160090040111;", "wlc"),

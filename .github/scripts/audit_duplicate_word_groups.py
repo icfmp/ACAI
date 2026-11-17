@@ -31,7 +31,7 @@ def _source_ids(value, corpus):
 
 
 def _source_annotations(path, wanted):
-    """Load just the source rows relevant to repeated ACAI subject groups."""
+    """Load pinned Macula source rows for repeated indirect ACAI groups."""
     if path is None or not wanted:
         return {}
     rows = {}
@@ -43,16 +43,21 @@ def _source_annotations(path, wanted):
         for row in reader:
             token = row.get("xml:id")
             if token in wanted:
-                rows[token] = {"subjref": row.get("subjref", ""),
-                               "frame": row.get("frame", "")}
+                rows[token] = {
+                    "subjref": row.get("subjref", ""),
+                    "frame": row.get("frame", ""),
+                    "participantref": row.get("participantref", ""),
+                    "referent": row.get("referent", ""),
+                }
     return rows
 
 
-def _trace_parallel_subject_annotations(results, pending, hebrew, greek, summary):
-    """Recognize only concrete parallel Macula subjref/frame evidence.
+def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary):
+    """Trace repeated indirect groups to recorded source attributes, read-only.
 
-    A matching annotation pair does NOT prove that an ACAI repeat is bad:
-    this diagnostic cannot reconstruct the original import edge provenance.
+    Parallel subjref/frame mentions suggest why subject links can repeat.
+    Matching pronoun referents confirm an anchored link, NOT why it repeats.
+    Neither observation authorizes deduplication of an ACAI record.
     """
     wanted = {"wlc": set(), "sblgnt": set()}
     for finding, corpus, repeats, _ in pending:
@@ -61,31 +66,52 @@ def _trace_parallel_subject_annotations(results, pending, hebrew, greek, summary
                "sblgnt": _source_annotations(greek, wanted["sblgnt"])}
     for finding, corpus, repeats, explicit_ids in pending:
         source = sources[corpus.lower()]
-        parallel = []
-        unresolved = []
+        matched_groups = []
+        unmatched_groups = []
+        subject = finding["occurrence_field"] == "subject_referents"
         for group in repeats:
-            matched = []
+            linked = []
             for token in group:
                 row = source.get(token)
                 if row is None:
                     continue
-                subjects = _source_ids(row["subjref"], corpus)
-                frames = _source_ids(row["frame"], corpus)
-                if subjects & frames & explicit_ids:
-                    matched.append(token)
-            if matched:
-                parallel.append({"group": list(group), "source_tokens": matched})
+                if subject:
+                    subjects = _source_ids(row["subjref"], corpus)
+                    frames = _source_ids(row["frame"], corpus)
+                    supported = bool(subjects & frames & explicit_ids)
+                else:
+                    # Macula Greek uses "referent"; Hebrew Lowfat/TSV may
+                    # use "participantref". Read both without guessing aliases.
+                    referenced = (_source_ids(row["referent"], corpus)
+                                  | _source_ids(row["participantref"], corpus))
+                    supported = bool(referenced & explicit_ids)
+                if supported:
+                    linked.append(token)
+            if linked:
+                matched_groups.append({"group": list(group), "source_tokens": linked})
             else:
-                unresolved.append(list(group))
-        finding["source_provenance"] = {
-            "repeated_groups_examined": len(repeats),
-            "parallel_subjref_frame_candidates": len(parallel),
-            "unresolved_or_other_source_patterns": len(unresolved),
-            "examples": parallel[:5],
-        }
-        summary["subject_repeated_groups_examined"] += len(repeats)
-        summary["parallel_source_annotation_candidates"] += len(parallel)
-        summary["subject_groups_not_explained_by_parallel_fields"] += len(unresolved)
+                unmatched_groups.append(list(group))
+        if subject:
+            finding["source_provenance"] = {
+                "repeated_groups_examined": len(repeats),
+                "parallel_subjref_frame_candidates": len(matched_groups),
+                "unresolved_or_other_source_patterns": len(unmatched_groups),
+                "examples": matched_groups[:5],
+            }
+            summary["subject_repeated_groups_examined"] += len(repeats)
+            summary["parallel_source_annotation_candidates"] += len(matched_groups)
+            summary["subject_groups_not_explained_by_parallel_fields"] += len(unmatched_groups)
+        else:
+            finding["source_provenance"] = {
+                "repeated_groups_examined": len(repeats),
+                "source_referent_linked_groups": len(matched_groups),
+                "source_referent_unconfirmed_groups": len(unmatched_groups),
+                "note": "Matching a referent confirms an anchor, not why a group repeats.",
+                "examples": matched_groups[:5],
+            }
+            summary["pronominal_repeated_groups_examined"] += len(repeats)
+            summary["pronominal_source_referent_linked"] += len(matched_groups)
+            summary["pronominal_source_referent_unconfirmed"] += len(unmatched_groups)
 
 def inspect(root, hebrew=None, greek=None):
     summary=collections.Counter()
@@ -126,7 +152,7 @@ def inspect(root, hebrew=None, greek=None):
                         "cross_group_word_ids":overlap_words,
                         "repeat_examples":examples}
                     results.append(result)
-                    if (field == "subject_referents" and repeats
+                    if (field in ("subject_referents", "pronominal_referents") and repeats
                             and corpus.lower() in ("wlc", "sblgnt")):
                         repeated=[group for group, n in
                                   collections.Counter(group_tuples).items() if n > 1]
@@ -136,7 +162,7 @@ def inspect(root, hebrew=None, greek=None):
                         pending.append((result, corpus, repeated, explicit))
     summary["records_with_any_repeat"]=len(flagged_records)
     if hebrew is not None and greek is not None:
-        _trace_parallel_subject_annotations(results, pending, hebrew, greek, summary)
+        _trace_indirect_source_annotations(results, pending, hebrew, greek, summary)
     results.sort(key=lambda x:(-x["duplicate_groups"],-x["cross_group_word_ids"],
                                x["id"],x["occurrence_field"],x["corpus"]))
     return {"summary":dict(summary),"findings":results}
