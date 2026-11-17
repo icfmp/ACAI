@@ -106,6 +106,41 @@ class GlobalAuditTests(unittest.TestCase):
             self.assertNotIn("markdown_reference_count_mismatch",
                              {v["rule"] for v in findings})
 
+    def test_stale_family_infobox_is_reviewed_without_rewriting_prose(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            p = root / "people" / "json"
+            md = root / "people" / "md"
+            p.mkdir(parents=True)
+            md.mkdir(parents=True)
+            for name in ("Parent", "Child"):
+                record = {"id": "person:" + name, "primary_id": "person:" + name}
+                if name == "Child":
+                    record.update(gender="female", father="person:Parent")
+                (p / (name + ".json")).write_text(json.dumps(record))
+            page = md / "Child.md"
+            page.write_text(
+                "# Child\nA biographical paragraph that must not be rewritten.\n\n"
+                "**Familial Relationships of Child**\n\n"
+                "* Gender: male\n* Father: [Wrong](Wrong.md)\n\n"
+                "**Key References for Child**:\n"
+            )
+            issues = [x for x in module.scan(root)["findings"]
+                      if x["rule"] == "markdown_family_metadata_mismatch"]
+            self.assertEqual({x["location"].split("#/")[1] for x in issues},
+                             {"gender", "father"})
+            self.assertTrue(all(x["severity"] == "review" for x in issues))
+            page.write_text(
+                "# Child\nA biographical paragraph that must not be rewritten.\n\n"
+                "**Familial Relationships of Child**\n\n"
+                "* Gender: female\n* Father: [Parent](Parent.md)\n\n"
+                "**Key References for Child**:\n"
+            )
+            self.assertNotIn(
+                "markdown_family_metadata_mismatch",
+                {x["rule"] for x in module.scan(root)["findings"]},
+            )
+
     def test_conflicting_flags_and_missing_relation(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
