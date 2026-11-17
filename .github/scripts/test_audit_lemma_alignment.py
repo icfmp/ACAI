@@ -68,13 +68,13 @@ class LemmaAuditTests(unittest.TestCase):
             (root / "keyterms" / "json" / "Phrase.json").write_text(
                 json.dumps(data, ensure_ascii=False), encoding="utf-8")
             hebrew = root / "wlc.tsv"
-            rows = ["xml:id\\tref\\tlemma\\ttext"]
+            rows = ["xml:id\tref\tlemma\ttext"]
             for index, token in enumerate(ids, start=1):
                 lemma = "דָּבָר" if index <= 7 else "דֶּלֶת"
-                rows.append(f"{token}\\tGEN 15:1!{index}\\t{lemma}\\tword{index}")
-            hebrew.write_text("\\n".join(rows) + "\\n", encoding="utf-8")
+                rows.append(f"{token}\tGEN 15:1!{index}\t{lemma}\tword{index}")
+            hebrew.write_text("\n".join(rows) + "\n", encoding="utf-8")
             greek = root / "greek.tsv"
-            greek.write_text("xml:id\\tref\\tlemma\\n", encoding="utf-8")
+            greek.write_text("xml:id\tref\tlemma\n", encoding="utf-8")
             result = module.audit(root, hebrew, greek)
             self.assertEqual(result["summary"]["zero_exact_lemma_overlap"], 1)
             item = result["findings"][0]
