@@ -14,7 +14,7 @@ In the Old Testament (BSB), words representing “Trumpet” are translated as
 
 
 In the New Testament (BSB), words representing “Trumpet” are translated as 
-*the trumpet* (2x), *a trumpet* (2x), *trumpets* (2x), *trumpet* (3x), *trumpet call* (1x), *to a trumpet* (1x), *do not sound a trumpet* (2x), *sound them* (1x), *sounded his trumpet* (7x), *to be sounded* (1x), *to sound his trumpet* (1x), *the trumpet will sound* (1x), *trumpeters* (1x). 
+*the trumpet* (2x), *a trumpet* (2x), *trumpets* (2x), *trumpet* (3x), *trumpet call* (1x), *to a trumpet* (1x), *do not sound a trumpet* (1x), *sound them* (1x), *sounded his trumpet* (7x), *to be sounded* (1x), *to sound his trumpet* (1x), *the trumpet will sound* (1x), *trumpeters* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -75,7 +75,7 @@ Return to [Index](00-Index.md)
 
 * to a trumpet (HEB 12:19)
 
-* do not sound a trumpet (MAT 6:2; MAT 6:2)
+* do not sound a trumpet (MAT 6:2)
 
 * sound them (REV 8:6)
 
@@ -88,7 +88,6 @@ Return to [Index](00-Index.md)
 * the trumpet will sound (1CO 15:52)
 
 * trumpeters (REV 18:22)
-
 
 
 ### OT Pronominal Referents (BSB)

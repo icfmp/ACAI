@@ -10,7 +10,7 @@ JOS 2:15, 2SA 17:13, JHN 2:15.
 
 
 In the Old Testament (BSB), words representing “Rope” are translated as 
-*a cord* (1x), *by a rope* (1x), *with a cord* (1x), *lengths* (1x), *length* (1x), *ropes* (4x), *and ropes* (4x), *with cords* (6x), *a rope* (2x), *The lines* (1x), *and apportioned* (1x), *cord* (2x), *of its cords* (1x), *Your ropes* (1x), *with ropes* (5x), *to pad the ropes* (1x), *with the ropes* (1x), *by a measuring line* (1x), *land by* (1x), *line* (1x), *along with their ropes* (2x), *its ropes* (2x), *and the cords* (1x), *when Your bow* (1x), *your ropes* (1x), *these* (1x), *braided chains* (1x), *chains* (5x), *and* (1x), *The ropes* (1x), *with a harness* (1x), *cords* (1x), *from the cords* (1x). 
+*a cord* (1x), *by a rope* (1x), *with a cord* (1x), *lengths* (1x), *length* (1x), *ropes* (4x), *and ropes* (4x), *with cords* (4x), *a rope* (2x), *The lines* (1x), *and apportioned* (1x), *cord* (2x), *of its cords* (1x), *Your ropes* (1x), *with ropes* (5x), *to pad the ropes* (1x), *with the ropes* (1x), *by a measuring line* (1x), *land by* (1x), *line* (1x), *along with their ropes* (2x), *its ropes* (2x), *and the cords* (1x), *when Your bow* (1x), *your ropes* (1x), *these* (1x), *braided chains* (1x), *chains* (5x), *and* (1x), *The ropes* (1x), *with a harness* (1x), *cords* (1x), *from the cords* (1x). 
 
 
 In the New Testament (BSB), words representing “Rope” are translated as 
@@ -37,7 +37,7 @@ Return to [Index](00-Index.md)
 
 * and ropes (1KI 20:31; 1KI 20:32; NUM 3:37; NUM 4:32)
 
-* with cords (EST 1:6; ISA 5:18; ISA 5:18; ISA 5:18; EZK 27:24; HOS 11:4)
+* with cords (EST 1:6; ISA 5:18; EZK 27:24; HOS 11:4)
 
 * a rope (JOB 40:25; ISA 3:24)
 
@@ -88,7 +88,6 @@ Return to [Index](00-Index.md)
 * cords (PSA 2:3)
 
 * from the cords (PSA 129:4)
-
 
 
 ### NT Instances (BSB)

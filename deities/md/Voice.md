@@ -8,7 +8,7 @@ In the Old Testament (BSB), words representing “A Disembodied Voice” are tra
 
 
 In the New Testament (BSB), words representing “A Disembodied Voice” are translated as 
-*from among* (1x), *a voice* (2x), *voice* (5x), *God* (1x), *the roar* (2x). 
+*from among* (1x), *a voice* (2x), *voice* (5x), *the roar* (2x). 
 
 
 Return to [Index](00-Index.md)
@@ -87,10 +87,7 @@ Return to [Index](00-Index.md)
 
 * voice (REV 11:12; REV 12:10; REV 16:1; REV 18:4; REV 21:3)
 
-* God (REV 18:20)
-
 * the roar (REV 19:1; REV 19:6)
-
 
 
 ### OT Subject Referents (BSB)

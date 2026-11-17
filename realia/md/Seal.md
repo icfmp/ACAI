@@ -12,7 +12,7 @@ GEN 38:18, EST 8:8, MAT 27:66, REV 5:1.
 
 
 In the New Testament (BSB), words representing “Seal” are translated as 
-*a ring* (1x), *by sealing* (1x), *Seal up* (1x), *sealed it* (1x), *Do not seal up* (1x), *the seal* (1x), *seals* (5x), *seal* (9x), *wearing a gold ring* (1x). 
+*a ring* (1x), *by sealing* (1x), *Seal up* (1x), *sealed it* (1x), *Do not seal up* (1x), *the seal* (1x), *seals* (5x), *seal* (8x), *wearing a gold ring* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -35,10 +35,9 @@ Return to [Index](00-Index.md)
 
 * seals (REV 5:1; REV 5:2; REV 5:5; REV 5:9; REV 6:1)
 
-* seal (REV 6:3; REV 6:5; REV 6:7; REV 6:9; REV 6:12; REV 8:1; 2TI 2:19; REV 9:4; 2TI 2:19)
+* seal (REV 6:3; REV 6:5; REV 6:7; REV 6:9; REV 6:12; REV 8:1; REV 9:4; 2TI 2:19)
 
 * wearing a gold ring (JAS 2:2)
-
 
 
 ### References (Whole Bible)

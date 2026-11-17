@@ -11,7 +11,7 @@ LEV 11:13, MAT 24:28, REV 8:13.
 
 
 In the Old Testament (BSB), words representing “Vulture” are translated as 
-*like the feathers of an eagle* (1x), *of an eagle* (4x), *eagles* (1x), *the eagle* (2x), *an eagle a nation* (1x), *As an eagle* (1x), *than eagles* (2x), *like an eagle* (1x), *Does the eagle* (1x), *like the eagle’s* (1x), *an eagle to* (1x), *vultures* (1x), *like eagles* (1x), *swoops down* (1x), *like the eagle* (2x), *An eagle* (2x), *than the eagles* (1x), *eagle* (2x), *as an eagle* (1x), *like a vulture* (1x), *the black vulture* (2x), *And the birds of prey* (1x), *bird of prey* (3x), *birds of prey* (1x), *The birds* (1x), *a bird of prey* (1x), *with other birds of prey* (1x), *bird and* (1x), *the bearded vulture* (2x), *the osprey* (2x). 
+*like the feathers of an eagle* (1x), *of an eagle* (4x), *eagles* (1x), *the eagle* (2x), *an eagle a nation* (1x), *As an eagle* (1x), *than eagles* (2x), *like an eagle* (1x), *Does the eagle* (1x), *like the eagle’s* (1x), *an eagle to* (1x), *vultures* (1x), *like eagles* (1x), *swoops down* (1x), *like the eagle* (2x), *An eagle* (2x), *than the eagles* (1x), *eagle* (2x), *as an eagle* (1x), *like a vulture* (1x), *the black vulture* (2x), *And the birds of prey* (1x), *bird of prey* (2x), *birds of prey* (1x), *The birds* (1x), *a bird of prey* (1x), *with other birds of prey* (1x), *bird and* (1x), *the bearded vulture* (2x), *the osprey* (2x). 
 
 
 In the New Testament (BSB), words representing “Vulture” are translated as 
@@ -74,7 +74,7 @@ Return to [Index](00-Index.md)
 
 * And the birds of prey (GEN 15:11)
 
-* bird of prey (JOB 28:7; JER 12:9; JER 12:9)
+* bird of prey (JOB 28:7; JER 12:9)
 
 * birds of prey (ISA 18:6)
 
@@ -89,7 +89,6 @@ Return to [Index](00-Index.md)
 * the bearded vulture (LEV 11:13; DEU 14:12)
 
 * the osprey (LEV 11:18; DEU 14:17)
-
 
 
 ### NT Instances (BSB)

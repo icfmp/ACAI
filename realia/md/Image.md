@@ -10,7 +10,7 @@ In the Old Testament (BSB), words representing “Image” are translated as
 
 
 In the New Testament (BSB), words representing “Image” are translated as 
-*idol* (1x), *idols* (6x), *an idol* (2x), *to idols* (1x), *and idols* (1x), *idols of* (1x), *sexual immorality* (1x), *image* (10x), *images* (1x), *an image* (1x), *it* (1x), *full of idols* (1x), *an image formed* (1x). 
+*idol* (1x), *idols* (5x), *an idol* (2x), *to idols* (1x), *and idols* (1x), *idols of* (1x), *sexual immorality* (1x), *image* (10x), *images* (1x), *an image* (1x), *it* (1x), *full of idols* (1x), *an image formed* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -185,7 +185,7 @@ Return to [Index](00-Index.md)
 
 * idol (ACT 7:41)
 
-* idols (ROM 2:22; 1CO 12:2; 1TH 1:9; 1TH 1:9; 1JN 5:21; ACT 7:43)
+* idols (ROM 2:22; 1CO 12:2; 1TH 1:9; 1JN 5:21; ACT 7:43)
 
 * an idol (1CO 8:4; 1CO 10:19)
 
@@ -208,7 +208,6 @@ Return to [Index](00-Index.md)
 * full of idols (ACT 17:16)
 
 * an image formed (ACT 17:29)
-
 
 
 ### OT Pronominal Referents (BSB)

@@ -15,7 +15,7 @@ In the Old Testament (BSB), words representing “Date Palm” are translated as
 
 
 In the New Testament (BSB), words representing “Date Palm” are translated as 
-*branches* (1x), *palm* (1x), *palm branches* (2x). 
+*branches* (1x), *palm* (1x), *palm branches* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -78,8 +78,7 @@ Return to [Index](00-Index.md)
 
 * palm (JHN 12:13)
 
-* palm branches (REV 7:9; REV 7:9)
-
+* palm branches (REV 7:9)
 
 
 ### OT Pronominal Referents (BSB)

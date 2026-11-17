@@ -6,7 +6,7 @@ Other forms include:
 
 
 In the Old Testament (BSB), words representing “To Saddle” are translated as 
-*saddled* (6x), *of saddled* (1x), *he saddled* (1x), *Saddle* (2x), *Then they saddled* (1x), *So they saddled it* (1x), *Then she saddled* (1x), *in the saddlebag* (1x), *saddle blankets* (2x). 
+*saddled* (6x), *of saddled* (1x), *he saddled* (1x), *Saddle* (2x), *Then they saddled* (1x), *So they saddled it* (1x), *Then she saddled* (1x), *in the saddlebag* (1x), *saddle blankets* (1x). 
 
 
 
@@ -33,8 +33,7 @@ Return to [Index](00-Index.md)
 
 * in the saddlebag (GEN 31:34)
 
-* saddle blankets (JDG 5:10; JDG 5:10)
-
+* saddle blankets (JDG 5:10)
 
 
 ### References (Whole Bible)
