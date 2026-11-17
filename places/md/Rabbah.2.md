@@ -26,6 +26,14 @@ Return to [Index](00-Index.md)
 
 ## More Information
 
+### OT Instances (BSB)
+
+* and Rabbah (JOS 15:60)
+
+### References (Whole Bible)
+
+* JOS 15:60
+
 ### Place Types
 
 * ACAI: town

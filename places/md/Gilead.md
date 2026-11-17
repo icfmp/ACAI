@@ -20,7 +20,7 @@ Other information about Gilead:
 **OT Distribution of References**
 
 ▂▁▁▃▃▅█▁▁▂▂▂▃▁▁▁▁▁▂▁▁▂▁▂▁▁▁▂▁▂▁▁▁▁▁▁▁▁▁
-* References: Genesis: 4; Numbers: 7; Deuteronomy: 8; Joshua: 15; Judges: 27; 1 Samuel: 1; 2 Samuel: 5; 1 Kings: 5; 2 Kings: 4; 1 Chronicles: 7; Ezra: 1; Nehemiah: 1; Psalms: 2; Song of Songs: 2; Jeremiah: 4; Ezekiel: 1; Hosea: 2; Amos: 2; Obadiah: 1; Micah: 1; Zechariah: 1
+* References: Genesis: 4; Numbers: 7; Deuteronomy: 8; Joshua: 15; Judges: 27; 1 Samuel: 1; 2 Samuel: 5; 1 Kings: 4; 2 Kings: 4; 1 Chronicles: 7; Ezra: 1; Nehemiah: 1; Psalms: 2; Song of Songs: 2; Jeremiah: 4; Ezekiel: 1; Hosea: 2; Amos: 2; Obadiah: 1; Micah: 1; Zechariah: 1
 
 
 
@@ -29,7 +29,7 @@ GEN 31:21, GEN 37:25, JER 8:22.
 
 
 In the Old Testament (BSB), words representing “Gilead” are translated as 
-*Gilead* (17x), *of Gilead* (32x), *from Gilead* (1x), *and the Gileadite* (1x), *and Gilead* (4x), *to Gilead* (4x), *far as Gilead* (1x), *in Gilead* (13x), *as far* (1x), *also Gilead* (1x), *Gilead and* (2x), *of the Gileadites* (1x), *and* (1x), *the Gileadite* (8x), *Gilead which* (1x), *They* (1x), *them* (1x), *And from there* (1x), *Gileadites* (1x), *The Gileadites* (1x), *the Gileadites* (1x), *and when he* (1x), *Gilead belonged* (1x), ** (1x), *through Gilead* (1x), *Gilead to Me* (1x), *with* (1x), *of Gilead in* (1x). 
+*Gilead* (17x), *of Gilead* (32x), *from Gilead* (1x), *and the Gileadite* (1x), *and Gilead* (4x), *to Gilead* (4x), *far as Gilead* (1x), *in Gilead* (13x), *as far* (1x), *also Gilead* (1x), *Gilead and* (2x), *of the Gileadites* (1x), *and* (1x), *the Gileadite* (8x), *Gilead which* (1x), *They* (1x), *them* (1x), *And from there* (1x), *Gileadites* (1x), *The Gileadites* (1x), *the Gileadites* (1x), *and when he* (1x), *Gilead belonged* (1x), *through Gilead* (1x), *Gilead to Me* (1x), *with* (1x), *of Gilead in* (1x). 
 
 
 
@@ -86,8 +86,6 @@ Return to [Index](00-Index.md)
 
 * Gilead belonged (1KI 4:13)
 
-*  (1KI 4:13)
-
 * through Gilead (2KI 10:33)
 
 * Gilead to Me (JER 22:6)
@@ -95,7 +93,6 @@ Return to [Index](00-Index.md)
 * with (AMO 1:3)
 
 * of Gilead in (AMO 1:13)
-
 
 
 ### OT Pronominal Referents (BSB)

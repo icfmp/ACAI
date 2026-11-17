@@ -7,8 +7,8 @@ Other forms include:
 
 **OT Distribution of References**
 
-▂▁▁▃▅█▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Genesis: 1; Numbers: 2; Deuteronomy: 5; Joshua: 8; 2 Kings: 1
+▂▁▁▃▄█▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Genesis: 1; Numbers: 2; Deuteronomy: 3; Joshua: 7; 2 Kings: 1
 
 
 
@@ -17,7 +17,7 @@ GEN 14:3, DEU 3:17, 2KI 14:25.
 
 
 In the Old Testament (BSB), words representing “Dead Sea” are translated as 
-*the Salt* (1x), *the Salt Sea* (4x), *at the Salt* (1x), *in the Arabah* (1x), *of the Arabah* (5x), *the Arabah* (1x), *as well as the Arabah* (1x), *of the Salt Sea* (2x), *was the Salt Sea* (1x). 
+*the Salt* (1x), *the Salt Sea* (4x), *at the Salt* (1x), *of the Arabah* (5x), *of the Salt Sea* (2x), *was the Salt Sea* (1x). 
 
 
 
@@ -34,18 +34,11 @@ Return to [Index](00-Index.md)
 
 * at the Salt (NUM 34:12)
 
-* in the Arabah (DEU 3:17)
-
 * of the Arabah (DEU 3:17; DEU 4:49; JOS 3:16; JOS 12:3; 2KI 14:25)
-
-* the Arabah (DEU 4:49)
-
-* as well as the Arabah (JOS 12:3)
 
 * of the Salt Sea (JOS 15:2; JOS 18:19)
 
 * was the Salt Sea (JOS 15:5)
-
 
 
 ### References (Whole Bible)

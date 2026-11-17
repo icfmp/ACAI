@@ -19,8 +19,8 @@ Other information about Ramoth-gilead:
 
 **OT Distribution of References**
 
-▁▁▁▁▂▃▁▁▁▁█▅▂█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Deuteronomy: 1; Joshua: 2; 1 Kings: 9; 2 Kings: 5; 1 Chronicles: 1; 2 Chronicles: 9
+▁▁▁▁▂▃▁▁▁▁▇▅▂█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Deuteronomy: 1; Joshua: 2; 1 Kings: 8; 2 Kings: 5; 1 Chronicles: 1; 2 Chronicles: 9
 
 
 
@@ -29,7 +29,7 @@ DEU 4:43, JOS 21:38, 2KI 8:28, 2KI 8:29, 2CH 22:6.
 
 
 In the Old Testament (BSB), words representing “Ramoth-gilead” are translated as 
-*Ramoth* (4x), *Gilead belonged* (1x), ** (7x), *Ramoth-gilead* (5x), *to Ramoth-gilead* (3x), *at Ramoth-gilead* (3x), *at Ramah* (2x), *Ramoth-gilead And* (1x), *or* (1x). 
+*Ramoth* (4x), ** (7x), *Ramoth-gilead* (5x), *to Ramoth-gilead* (3x), *at Ramoth-gilead* (3x), *at Ramah* (2x), *Ramoth-gilead And* (1x), *or* (1x). 
 
 
 
@@ -41,8 +41,6 @@ Return to [Index](00-Index.md)
 ### OT Instances (BSB)
 
 * Ramoth (DEU 4:43; JOS 20:8; JOS 21:38; 1CH 6:65)
-
-* Gilead belonged (1KI 4:13)
 
 *  (1KI 4:13; 1KI 22:3; 1KI 22:4; 1KI 22:15; 1KI 22:20; 2KI 9:1; 2KI 9:4)
 
@@ -57,7 +55,6 @@ Return to [Index](00-Index.md)
 * Ramoth-gilead And (2CH 18:3)
 
 * or (2CH 18:5)
-
 
 
 ### References (Whole Bible)
