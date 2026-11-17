@@ -18,7 +18,6 @@ Sargon (Sennacherib) is a subentry. The primary entry is
 
 * Gender: male
 * Tribe/Nationality: [Mesopotamians](../../../groups/md/acai/Mesopotamia.md)
-* Offspring: [Adrammelech (2 Kings 19:37)](Adrammelech.2.md), [Sharezer](Sharezer.md), [Esarhaddon](Esarhaddon.md)
 
 
 **OT Distribution of References**
