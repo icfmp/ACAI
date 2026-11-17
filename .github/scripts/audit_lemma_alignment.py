@@ -96,6 +96,32 @@ def audit(root: Path, hebrew: Path, greek: Path) -> dict:
             continue
         rule = "zero_exact_lemma_overlap" if not matched else "partial_exact_lemma_overlap"
         summary[rule] += 1
+        # A declared form may occur exactly in the *surface text* even when
+        # Macula assigns different dictionary lemmas to inflected words or
+        # segmented compounds. This is additional evidence, never a semantic
+        # endorsement or a reason to change the strict lemma-mismatch count.
+        surface_matches = {}
+        for group in groups:
+            if not group or not all(t in indexes[corpus] for t in group):
+                continue
+            surface_text = " ".join(indexes[corpus][t]["text"] for t in group)
+            surface_normalized = normalize(surface_text)
+            if not surface_normalized:
+                continue
+            for declared_lemma, declared_normalized in normalized_declared.items():
+                if declared_lemma in matched or declared_lemma in surface_matches:
+                    continue
+                if declared_normalized == surface_normalized:
+                    surface_matches[declared_lemma] = {
+                        "declared_lemma": declared_lemma,
+                        "source_text": surface_text,
+                        "source_word_ids": list(group),
+                        "source_ref": indexes[corpus][group[0]]["ref"],
+                    }
+        if surface_matches:
+            summary["candidates_with_exact_surface_overlap"] += 1
+            summary[rule + "_with_exact_surface_overlap"] += 1
+            summary["unmatched_lemmas_attested_as_surface_forms"] += len(surface_matches)
         # Preserve one exact source-word ID for each distinct lemma. The first six
         # word examples below may hide a rare anomalous lemma in large records.
         # Populate this only for candidates to keep the audit lightweight.
@@ -112,6 +138,10 @@ def audit(root: Path, hebrew: Path, greek: Path) -> dict:
             "rule": rule, "category": category, "id": entity, "language": language,
             "declared_lemmas": declared, "matched_declared_lemmas": matched,
             "unmatched_declared_lemmas": [d for d in declared if d not in matched],
+            "surface_attested_unmatched_lemmas": sorted(surface_matches),
+            "source_surface_examples": [
+                surface_matches[k] for k in sorted(surface_matches)
+            ],
             "source_lemmas": sorted({s["lemma"] for s in source if s["lemma"]})[:30],
             "source_word_ids": len(source), "missing_source_ids": len(ids) - len(source),
             "source_lemma_examples": [lemma_examples[k] for k in sorted(lemma_examples)[:30]],
@@ -120,7 +150,7 @@ def audit(root: Path, hebrew: Path, greek: Path) -> dict:
         })
     findings.sort(key=lambda x: (x["rule"], x["category"], x["id"], x["language"]))
     return {"summary": dict(sorted(summary.items())), "findings": findings,
-            "caveat": "Exact lexical match triage only: multiword names, inflections, variants and aliases may be valid."}
+            "caveat": "Strict lemma mismatches remain diagnostic; full source surface matches are supporting textual evidence only, not editorial or identity validation."}
 
 
 def main() -> int:
