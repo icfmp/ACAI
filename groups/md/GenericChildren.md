@@ -4,7 +4,7 @@ A group of children participating in a passage (clear).
 
 
 **Key References for Children**: 
-LAM 2:11, LAM 2:12, MAT 21:15, MAT 21:15. 
+LAM 2:11, LAM 2:12, MAT 21:15. 
 
 
 
@@ -43,7 +43,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* LAM 2:11; LAM 2:12; MAT 21:15; MAT 21:15
+* LAM 2:11; LAM 2:12; MAT 21:15
 
 
 

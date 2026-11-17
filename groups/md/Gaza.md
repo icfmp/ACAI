@@ -4,7 +4,7 @@ People who live in the city of Philistine city of Gaza (clear).
 
 
 **Key References for People of Gaza**: 
-JDG 16:2, JDG 16:2. 
+JDG 16:2. 
 
 
 
@@ -31,7 +31,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* JDG 16:2; JDG 16:2
+* JDG 16:2
 
 
 

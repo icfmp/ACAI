@@ -4,7 +4,7 @@ People who live on the island of Malta (clear).
 
 
 **Key References for Malta Islanders**: 
-ACT 28:4, ACT 28:4. 
+ACT 28:4. 
 
 
 
@@ -31,7 +31,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* ACT 28:4; ACT 28:4
+* ACT 28:4
 
 
 

@@ -4,7 +4,7 @@ The sons of Sceva (clear).
 
 
 **Key References for Sons of Sceva**: 
-ACT 19:13, ACT 19:13. 
+ACT 19:13. 
 
 
 
@@ -31,7 +31,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* ACT 19:13; ACT 19:13
+* ACT 19:13
 
 
 

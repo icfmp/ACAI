@@ -4,7 +4,7 @@ A group of singers participating in a passage (clear).
 
 
 **Key References for Singers**: 
-2CH 5:13, 2CH 5:13, ISA 20:2, ISA 24:16. 
+2CH 5:13, ISA 20:2, ISA 24:16. 
 
 
 
@@ -37,7 +37,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 2CH 5:13; 2CH 5:13; ISA 20:2; ISA 24:16
+* 2CH 5:13; ISA 20:2; ISA 24:16
 
 
 

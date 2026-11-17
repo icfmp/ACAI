@@ -4,7 +4,7 @@ A group of believers participating in a passage (clear).
 
 
 **Key References for Believers**: 
-ACT 1:15, ACT 1:24, ACT 11:2, ACT 11:2, ACT 11:3. 
+ACT 1:15, ACT 1:24, ACT 11:2, ACT 11:3. 
 
 
 
@@ -45,7 +45,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* ACT 1:15; ACT 1:24; ACT 11:2; ACT 11:2; ACT 11:3
+* ACT 1:15; ACT 1:24; ACT 11:2; ACT 11:3
 
 
 

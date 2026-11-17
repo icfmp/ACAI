@@ -4,7 +4,7 @@ A group of Egyptian slave drivers (clear).
 
 
 **Key References for Egyptian Slave Drivers**: 
-EXO 5:10, EXO 5:10, EXO 5:13, EXO 5:13, EXO 5:14. 
+EXO 5:10, EXO 5:13, EXO 5:14. 
 
 
 
@@ -43,7 +43,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* EXO 5:10; EXO 5:10; EXO 5:13; EXO 5:13; EXO 5:14
+* EXO 5:10; EXO 5:13; EXO 5:14
 
 
 
