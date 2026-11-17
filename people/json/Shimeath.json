@@ -205,10 +205,7 @@
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
   "lemmas": {
-    "he": [
-      "שִׁמְעָתִי",
-      "שִׁמְעָתִים"
-    ]
+    "he": ["שִׁמְעָת"]
   },
   "key_references": [
     "12012022",
