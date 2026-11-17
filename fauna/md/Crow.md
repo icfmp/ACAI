@@ -100,7 +100,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* GEN 8:7; LEV 11:15; DEU 14:14; 1KI 17:4; 1KI 17:6; JOB 38:41; PSA 147:9; PRO 30:17; SNG 5:11; ISA 34:11; ZEP 2:14; MRK 16:18; LUK 12:24
+* GEN 8:7; LEV 11:15; DEU 14:14; 1KI 17:4; 1KI 17:6; JOB 38:41; PSA 147:9; PRO 30:17; SNG 5:11; ISA 34:11; ZEP 2:14; LUK 12:24
 
 
 
