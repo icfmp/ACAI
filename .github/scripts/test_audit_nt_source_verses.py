@@ -38,10 +38,10 @@ class VerseCompatibilityTests(unittest.TestCase):
             }), encoding="utf-8")
             source = root / "source.tsv"
             source.write_text(
-                "xml:id\\tref\\n"
-                "n45016023001\\tROM 16:23!1\\n"
-                "n47013013001\\t2CO 13:13!1\\n"
-                "n46016024001\\t1CO 16:24!1\\n",
+                "xml:id\tref\n"
+                "n45016023001\tROM 16:23!1\n"
+                "n47013013001\t2CO 13:13!1\n"
+                "n46016024001\t1CO 16:24!1\n",
                 encoding="utf-8")
             report = epistle_module.audit(root, source)
             self.assertEqual(report["records_referencing_any_final_verse"], 2)
@@ -75,8 +75,8 @@ class VerseCompatibilityTests(unittest.TestCase):
             }), encoding="utf-8")
             source = root / "source.tsv"
             source.write_text(
-                "xml:id\\tref\\n"
-                "n45016101001\\tROM 16:101!1\\n",
+                "xml:id\tref\n"
+                "n45016101001\tROM 16:101!1\n",
                 encoding="utf-8")
             report = epistle_module.audit(root, source)
             cases = report["absent_source_final_chapter_references"]
