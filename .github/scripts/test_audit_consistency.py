@@ -17,6 +17,57 @@ homonym_spec.loader.exec_module(homonym_module)
 
 
 class GlobalAuditTests(unittest.TestCase):
+    def test_homonym_family_links_are_declared_evidence_only(self):
+        # Shared patronymic name tokens can name both a son and his father.
+        # A recorded family edge is not validation of either identity.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "people" / "json"
+            folder.mkdir(parents=True)
+            (folder / "Son.json").write_text(json.dumps({
+                "id": "person:Son", "father": "person:Father",
+            }))
+            (folder / "Father.json").write_text(json.dumps({
+                "id": "person:Father", "offspring": ["person:Son"],
+            }))
+            self.assertEqual(
+                homonym_module.declared_parent_child_edges(
+                    root, "person:Son", "person:Father"),
+                ["person:Son.father=person:Father",
+                 "person:Father.offspring+=person:Son"],
+            )
+            self.assertEqual(
+                homonym_module.declared_parent_child_edges(
+                    root, "person:Father", "person:Son"),
+                ["person:Father.offspring+=person:Son",
+                 "person:Son.father=person:Father"],
+            )
+            self.assertEqual(
+                homonym_module.declared_parent_child_edges(
+                    root, "place:Son", "person:Father"), [],
+            )
+            # Do not fabricate links for other identities, missing files,
+            # or a file whose own canonical ID disagrees with the filename.
+            (folder / "Other.json").write_text(json.dumps({
+                "id": "person:Other",
+            }))
+            self.assertEqual(
+                homonym_module.declared_parent_child_edges(
+                    root, "person:Father", "person:Other"), [],
+            )
+            self.assertEqual(
+                homonym_module.declared_parent_child_edges(
+                    root, "person:Father", "person:Missing"), [],
+            )
+            (folder / "Other.json").write_text(json.dumps({
+                "id": "person:Different",
+            }))
+            self.assertEqual(
+                homonym_module.declared_parent_child_edges(
+                    root, "person:Father", "person:Other"), [],
+            )
+
+
     def test_homonym_source_sense_evidence_is_review_only(self):
         # In real data the son of Seir and son of Anah called Dishon have
         # distinct SDBH senses; the scanner must expose both, never choose one.
