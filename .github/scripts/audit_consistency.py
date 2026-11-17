@@ -135,7 +135,7 @@ def scan(root: Path) -> dict:
             if not isinstance(ref, str) or not BCV8.fullmatch(ref):
                 report("invalid_reference_format", rid, f"{rel}#/references/{i}", str(ref), "error")
             if isinstance(ref, str) and ref in seen:
-                report("duplicate_reference", rid, f"{rel}#/references/{i}", ref)
+                report("duplicate_reference", rid, f"{rel}#/references/{i}", ref, "error")
             seen.add(ref)
 
         for field in RELATION_FIELDS:

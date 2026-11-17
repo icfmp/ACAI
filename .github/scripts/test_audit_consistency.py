@@ -31,6 +31,33 @@ class GlobalAuditTests(unittest.TestCase):
             self.assertIn("explicit_verse_not_listed", rules)
             self.assertEqual(result["summary"]["canonical_entities"], 2)
 
+    def test_duplicate_verse_is_invalid_even_with_multiple_word_occurrences(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            p = root / "people" / "json"
+            p.mkdir(parents=True)
+            record = {
+                "id": "person:A", "primary_id": "person:A",
+                "references": ["01001001", "01001001"],
+                "explicit_instances": {
+                    "wlc": [["o010010010011"], ["o010010010021"]]
+                },
+            }
+            path = p / "A.json"
+            path.write_text(json.dumps(record))
+            findings = [f for f in module.scan(root)["findings"]
+                        if f["rule"] == "duplicate_reference"]
+            self.assertEqual(len(findings), 1)
+            self.assertEqual(findings[0]["severity"], "error")
+            self.assertTrue(findings[0]["location"].endswith("#/references/1"))
+
+            # Two legitimate source-word occurrences can share one verse ID.
+            record["references"] = ["01001001"]
+            path.write_text(json.dumps(record))
+            findings = module.scan(root)["findings"]
+            self.assertFalse(any(f["rule"] == "duplicate_reference"
+                                 for f in findings))
+
     def test_secondary_name_does_not_create_collision(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
