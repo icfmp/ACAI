@@ -11,7 +11,7 @@ Edom (Group), [Syria](Syria.md).
 **OT Distribution of References**
 
 ▇▂▁▇▅▄▄▁▄▃▇█▄▆▁▁▁▁▆▁▁▁▄▇▂▅▂▁▂▄▄▁▁▁▁▁▁▁▃
-* References: Genesis: 10; Exodus: 1; NUM: 9; Deuteronomy: 7; Joshua: 4; Judges: 4; 1 Samuel: 5; 2 Samuel: 3; 1KI: 9; 2 Kings: 11; 1 Chronicles: 5; 2 Chronicles: 8; Psalms: 8; Isaiah: 4; Jeremiah: 10; Lamentations: 2; Ezekiel: 7; DAN: 1; JOL: 1; Amos: 5; OBA: 5; MAL: 3
+* References: Genesis: 10; Exodus: 1; Numbers: 9; Deuteronomy: 7; Joshua: 4; Judges: 4; 1 Samuel: 5; 2 Samuel: 3; 1 Kings: 9; 2 Kings: 11; 1 Chronicles: 5; 2 Chronicles: 8; Psalms: 8; Isaiah: 4; Jeremiah: 10; Lamentations: 2; Ezekiel: 7; Daniel: 1; Joel: 1; Amos: 5; Obadiah: 5; Malachi: 3
 
 
 
