@@ -57,6 +57,66 @@ def _markdown_display_counts(content: str):
 
 
 
+# Canonical 66-book order for ACAI's existing BSB Markdown abbreviations.
+# This is a standard reference parser, not an entity-specific exception.
+MD_BOOKS = (
+    "GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH "
+    "EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZK DAN HOS JOL "
+    "AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL MAT MRK LUK JHN ACT "
+    "ROM 1CO 2CO GAL EPH PHP COL 1TH 2TH 1TI 2TI TIT PHM HEB JAS "
+    "1PE 2PE 1JN 2JN 3JN JUD REV"
+).split()
+MD_BOOK_INDEX = {book: pos for pos, book in enumerate(MD_BOOKS, 1)}
+MD_VERSE_REF = re.compile(r"^([1-3]?[A-Z]{3}) ([0-9]+):([0-9]+)$")
+
+
+def _markdown_verse_counts(content: str):
+    """Parse the *existing* displayed verse lists, preserving multiplicity.
+
+    Malformed labels are reported for review rather than guessed or coerced.
+    This detects wrong verses even when the total number of entries matches.
+    """
+    verses = {period: Counter() for period in ("OT", "NT", "REF")}
+    invalid = Counter()
+    section = None
+    for line in content.splitlines():
+        if line.startswith("#"):
+            section = {
+                "### OT Instances (BSB)": "OT",
+                "### NT Instances (BSB)": "NT",
+                "### References (Whole Bible)": "REF",
+            }.get(line)
+            continue
+        if not line.startswith("* ") or section is None:
+            continue
+        if section == "REF":
+            entries = line[2:].split("; ")
+        else:
+            match = MD_INSTANCE_TAIL.search(line)
+            if not match:
+                continue  # The existing malformed-bullet rule reports this.
+            entries = match.group(1).split("; ")
+        for label in entries:
+            parsed = MD_VERSE_REF.fullmatch(label.strip())
+            if not parsed or parsed.group(1) not in MD_BOOK_INDEX:
+                invalid[section] += 1
+                continue
+            book = MD_BOOK_INDEX[parsed.group(1)]
+            chapter, verse = int(parsed.group(2)), int(parsed.group(3))
+            if not (1 <= chapter <= 999 and 1 <= verse <= 999):
+                invalid[section] += 1
+                continue
+            verses[section][f"{book:02d}{chapter:03d}{verse:03d}"] += 1
+    return verses, invalid
+
+
+def _verse_delta(rendered: Counter, source: Counter) -> str:
+    """Compact, repeatable examples of wrong/missing displayed verse IDs."""
+    extra = sorted((rendered - source).elements())
+    missing = sorted((source - rendered).elements())
+    return f"extra={extra[:5]!r} ({len(extra)}), missing={missing[:5]!r} ({len(missing)})"
+
+
 FAMILY_MD_FIELDS = {
     "Father": "father", "Mother": "mother", "Partner(s)": "partners",
     "Offspring": "offspring", "Sibling(s)": "siblings",
@@ -232,6 +292,56 @@ def scan(root: Path) -> dict:
                     report("markdown_reference_count_mismatch", rid, md_rel,
                            f"{displayed['REF']} rendered references vs "
                            f"{len(references)} JSON references")
+
+                # Count-only comparisons cannot catch a wrong-versus-right
+                # verse swap when both lists have the same length. Verify the
+                # full verse multisets without changing any source data.
+                displayed_verses, invalid_labels = _markdown_verse_counts(md)
+                source_verses = {"OT": Counter(), "NT": Counter()}
+                invalid_groups = Counter()
+                for corpus, groups in explicit_map.items():
+                    period = ("OT" if corpus.lower() == "wlc" else
+                              "NT" if corpus.upper() == "SBLGNT" else None)
+                    if period is None or not isinstance(groups, list):
+                        continue
+                    for group in groups:
+                        if (not isinstance(group, list) or not group or
+                                any(not isinstance(token, str) or not TOKEN.fullmatch(token)
+                                    for token in group)):
+                            invalid_groups[period] += 1
+                            continue
+                        # Several word parts can describe one occurrence,
+                        # but a multi-verse group cannot safely be assigned
+                        # to one verse by taking its first word.
+                        verse_ids = {token[1:9] for token in group}
+                        if len(verse_ids) != 1:
+                            invalid_groups[period] += 1
+                            continue
+                        source_verses[period][next(iter(verse_ids))] += 1
+                for period in ("OT", "NT"):
+                    if invalid_labels[period]:
+                        report("markdown_unparseable_verse", rid, md_rel,
+                               f"{period}: {invalid_labels[period]} unparseable displayed IDs")
+                    if invalid_groups[period]:
+                        report("source_uncomparable_word_group", rid, rel,
+                               f"{period}: {invalid_groups[period]} ambiguous source groups")
+                    if (period in sections and displayed[period] == sources[period]
+                            and not invalid_labels[period] and not invalid_groups[period]
+                            and displayed_verses[period] != source_verses[period]):
+                        report("markdown_instance_verse_mismatch", rid, md_rel,
+                               f"{period}: " + _verse_delta(
+                                   displayed_verses[period], source_verses[period]))
+                if "REF" in sections:
+                    if invalid_labels["REF"]:
+                        report("markdown_unparseable_verse", rid, md_rel,
+                               f"REF: {invalid_labels['REF']} unparseable displayed IDs")
+                    elif (displayed["REF"] == len(references)
+                          and all(isinstance(ref, str) and BCV8.fullmatch(ref)
+                                  for ref in references)):
+                        expected_refs = Counter(references)
+                        if displayed_verses["REF"] != expected_refs:
+                            report("markdown_reference_verse_mismatch", rid, md_rel,
+                                   _verse_delta(displayed_verses["REF"], expected_refs))
 
                 # An old generated family infobox must not reverse a vetted
                 # JSON kinship correction (e.g. Ahlai or Judas).
