@@ -34,9 +34,36 @@ def distinct_source_senses(rows):
     })
 
 
+def declared_parent_child_edges(root: Path, a: str, b: str) -> list[str]:
+    """Expose existing relation fields; never infer or validate a genealogy."""
+    if not (a.startswith("person:") and b.startswith("person:")):
+        return []
+    records = {}
+    for entity in (a, b):
+        name = entity.partition(":")[2]
+        if not name or "/" in name or "\\" in name:
+            return []
+        path = root / "people" / "json" / (name + ".json")
+        try:
+            record = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return []
+        if record.get("id") != entity:
+            return []
+        records[entity] = record
+    edges = []
+    for child, parent in ((a, b), (b, a)):
+        if records[child].get("father") == parent:
+            edges.append(f"{child}.father={parent}")
+        if child in (records[parent].get("offspring") or []):
+            edges.append(f"{parent}.offspring+={child}")
+    return edges
+
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--findings", type=Path, default=Path("audit-results.json"))
+    p.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2])
     p.add_argument("--hebrew",type=Path,required=True)
     p.add_argument("--greek",type=Path,required=True)
     p.add_argument("--top",type=int,default=18)
@@ -72,10 +99,13 @@ def main():
             d = wordrows.get(k)
             rows.append({"token": k[1], "corpus": k[0], **(d or {})})
         senses = distinct_source_senses(rows)
+        family_edges = declared_parent_child_edges(args.root, a, b)
         review_pairs.append({
             "a": a, "b": b, "shared_exact_ids": len(lst),
             "source_sense_ids": senses,
             "multiple_source_senses": len(senses) > 1,
+            "declared_parent_child_edges": family_edges,
+            "has_declared_parent_child_link": bool(family_edges),
             "tokens": rows,
         })
     print("HOMONYM_CONTEXT_COUNTS "+json.dumps({
@@ -86,6 +116,8 @@ def main():
         "source_rows_requested":len(target),
         "selected_pairs_with_multiple_source_senses":sum(
             bool(pair["multiple_source_senses"]) for pair in review_pairs),
+        "selected_pairs_with_declared_parent_child_links":sum(
+            bool(pair["has_declared_parent_child_link"]) for pair in review_pairs),
     }))
     for pair in review_pairs:
         print("HOMONYM_CONTEXT_PAIR "+json.dumps(
