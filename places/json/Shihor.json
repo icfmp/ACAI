@@ -216,10 +216,7 @@
   "is_person": false,
   "added_entry": false,
   "lemmas": {
-    "he": [
-      "שִׁיחֹור לִבְנָת",
-      "שִׁיחוֹר לִבְנָת"
-    ]
+    "he": ["שִׁיחוֹר"]
   },
   "place_types": {
     "obi": [

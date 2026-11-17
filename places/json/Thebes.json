@@ -219,10 +219,7 @@
   "is_person": false,
   "added_entry": false,
   "lemmas": {
-    "he": [
-      "אָמֹון",
-      "אָמוֹן"
-    ]
+    "he": ["נֹא","נֹא אָמֹון"]
   },
   "place_types": {
     "obi": [

@@ -213,10 +213,7 @@
   "is_person": false,
   "added_entry": false,
   "lemmas": {
-    "he": [
-      "סֻכֹּות בְּנֹות",
-      "סֻכּוֹת בְּנוֹת"
-    ]
+    "he": ["סֻכּוֹת"]
   },
   "place_types": {
     "obi": [
