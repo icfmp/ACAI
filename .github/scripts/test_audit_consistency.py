@@ -39,8 +39,8 @@ class GlobalAuditTests(unittest.TestCase):
             self.assertEqual(
                 homonym_module.declared_parent_child_edges(
                     root, "person:Father", "person:Son"),
-                ["person:Father.offspring+=person:Son",
-                 "person:Son.father=person:Father"],
+                ["person:Son.father=person:Father",
+                 "person:Father.offspring+=person:Son"],
             )
             self.assertEqual(
                 homonym_module.declared_parent_child_edges(
