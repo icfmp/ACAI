@@ -14,7 +14,7 @@ In the Old Testament (BSB), words representing “Treasury” are translated as
 
 
 In the New Testament (BSB), words representing “Treasury” are translated as 
-*treasury* (6x), *it* (1x). 
+*treasury* (5x), *it* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -35,10 +35,9 @@ Return to [Index](00-Index.md)
 
 ### NT Instances (BSB)
 
-* treasury (JHN 8:20; MRK 12:41; MRK 12:43; LUK 21:1; JHN 8:20; MAT 27:6)
+* treasury (MRK 12:41; MRK 12:43; LUK 21:1; JHN 8:20; MAT 27:6)
 
 * it (MRK 12:41)
-
 
 
 ### OT Pronominal Referents (BSB)

@@ -11,7 +11,7 @@ LEV 11:16, DEU 14:15.
 
 
 In the Old Testament (BSB), words representing “Nightjar” are translated as 
-*the screech owl* (4x). 
+*the screech owl* (2x). 
 
 
 
@@ -22,8 +22,7 @@ Return to [Index](00-Index.md)
 
 ### OT Instances (BSB)
 
-* the screech owl (LEV 11:16; DEU 14:15; LEV 11:16; DEU 14:15)
-
+* the screech owl (LEV 11:16; DEU 14:15)
 
 
 ### References (Whole Bible)
