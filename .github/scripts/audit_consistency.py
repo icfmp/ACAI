@@ -122,6 +122,18 @@ FAMILY_MD_FIELDS = {
     "Offspring": "offspring", "Sibling(s)": "siblings",
 }
 MD_FAMILY_LINK = re.compile(r"\]\(([^)]+)\)")
+# Derivative Markdown renders group IDs as plain text, not person links.
+# Preserve source group identifiers, including historical noncanonical @ IDs.
+MD_FAMILY_GROUP = re.compile(
+    r"(?:^|, )((?:group:[A-Za-z0-9_.-]+|[A-Za-z0-9_.-]+@[A-Za-z0-9_.-]+))"
+    r" \(Group\)(?=,|$)"
+)
+
+
+def _markdown_family_ids(value: str):
+    people = ["person:" + Path(target).stem
+              for target in MD_FAMILY_LINK.findall(value)]
+    return people + MD_FAMILY_GROUP.findall(value)
 
 
 def _markdown_family_metadata(content: str):
@@ -142,10 +154,7 @@ def _markdown_family_metadata(content: str):
         if label == "Gender":
             rendered["gender"] = value.strip()
         elif label in FAMILY_MD_FIELDS:
-            rendered[FAMILY_MD_FIELDS[label]] = [
-                "person:" + Path(target).stem
-                for target in MD_FAMILY_LINK.findall(value)
-            ]
+            rendered[FAMILY_MD_FIELDS[label]] = _markdown_family_ids(value)
     return found, rendered
 
 
