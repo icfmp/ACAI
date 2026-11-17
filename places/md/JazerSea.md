@@ -8,7 +8,7 @@ Other forms include:
 **OT Distribution of References**
 
 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Jeremiah: 2
+* References: Jeremiah: 1
 
 
 
@@ -17,7 +17,7 @@ JER 48:32.
 
 
 In the Old Testament (BSB), words representing “Sea of Jazer” are translated as 
-*for Jazer* (1x), *Jazer* (1x). 
+*for Jazer* (1x). 
 
 
 
@@ -29,9 +29,6 @@ Return to [Index](00-Index.md)
 ### OT Instances (BSB)
 
 * for Jazer (JER 48:32)
-
-* Jazer (JER 48:32)
-
 
 
 ### References (Whole Bible)

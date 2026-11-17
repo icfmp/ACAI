@@ -20,8 +20,8 @@ Other information about Brook of Egypt:
 
 **OT Distribution of References**
 
-▁▁▁▆▁█▁▁▁▁▃█▁▃▁▁▁▁▁▁▁▁▆▁▁▆▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Numbers: 2; Joshua: 3; 1 Kings: 1; 2 Kings: 3; 2 Chronicles: 1; Isaiah: 2; Ezekiel: 2
+▁▁▁▆▁█▁▁▁▁▃▃▁▃▁▁▁▁▁▁▁▁▆▁▁▆▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Numbers: 2; Joshua: 3; 1 Kings: 1; 2 Kings: 1; 2 Chronicles: 1; Isaiah: 2; Ezekiel: 2
 
 
 
@@ -30,7 +30,7 @@ NUM 34:5, JOS 15:4, JOS 15:47, 1KI 8:65, 2KI 24:7, 2CH 7:8, ISA 27:12, EZK 47:19
 
 
 In the Old Testament (BSB), words representing “Brook of Egypt” are translated as 
-*join the Brook* (1x), *of Egypt* (2x), *the Shihor* (1x), *joined the Brook of Egypt* (1x), *the Brook of Egypt* (3x), *from the Brook of Egypt* (1x), *his territory* (1x), *of Shihor* (1x), *the Wadi of Egypt* (1x), *and along the Brook of Egypt* (1x), *Brook of Egypt and out to* (1x). 
+*join the Brook* (1x), *of Egypt* (1x), *the Shihor* (1x), *joined the Brook of Egypt* (1x), *the Brook of Egypt* (3x), *from the Brook of Egypt* (1x), *of Shihor* (1x), *the Wadi of Egypt* (1x), *and along the Brook of Egypt* (1x), *Brook of Egypt and out to* (1x). 
 
 
 
@@ -43,7 +43,7 @@ Return to [Index](00-Index.md)
 
 * join the Brook (NUM 34:5)
 
-* of Egypt (NUM 34:5; 2KI 24:7)
+* of Egypt (NUM 34:5)
 
 * the Shihor (JOS 13:3)
 
@@ -53,8 +53,6 @@ Return to [Index](00-Index.md)
 
 * from the Brook of Egypt (2KI 24:7)
 
-* his territory (2KI 24:7)
-
 * of Shihor (ISA 23:3)
 
 * the Wadi of Egypt (ISA 27:12)
@@ -62,7 +60,6 @@ Return to [Index](00-Index.md)
 * and along the Brook of Egypt (EZK 47:19)
 
 * Brook of Egypt and out to (EZK 48:28)
-
 
 
 ### References (Whole Bible)

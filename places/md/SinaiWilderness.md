@@ -17,7 +17,7 @@ Other information about Wilderness of Sinai:
 **OT Distribution of References**
 
 ▁▃▂█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Exodus: 3; Leviticus: 2; Numbers: 11
+* References: Exodus: 3; Leviticus: 1; Numbers: 11
 
 
 
@@ -26,7 +26,7 @@ EXO 19:2, NUM 1:1, ACT 7:30.
 
 
 In the Old Testament (BSB), words representing “Wilderness of Sinai” are translated as 
-*to the Wilderness of Sinai* (1x), *the Wilderness of Sinai* (1x), ** (1x), *Sinai* (1x), *in the Wilderness of Sinai* (9x), *from the Wilderness of Sinai* (2x), *in the Wilderness* (1x). 
+*to the Wilderness of Sinai* (1x), *the Wilderness of Sinai* (1x), ** (1x), *in the Wilderness of Sinai* (9x), *from the Wilderness of Sinai* (2x), *in the Wilderness* (1x). 
 
 
 
@@ -43,14 +43,11 @@ Return to [Index](00-Index.md)
 
 *  (EXO 19:2)
 
-* Sinai (LEV 7:38)
-
 * in the Wilderness of Sinai (LEV 7:38; NUM 1:1; NUM 1:19; NUM 3:4; NUM 3:14; NUM 9:1; NUM 9:5; NUM 26:64; NUM 33:15)
 
 * from the Wilderness of Sinai (NUM 10:12; NUM 33:16)
 
 * in the Wilderness (NUM 10:12)
-
 
 
 ### References (Whole Bible)

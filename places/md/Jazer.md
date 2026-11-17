@@ -17,8 +17,8 @@ Other information about Jazer:
 
 **OT Distribution of References**
 
-▁▁▁█▁▄▁▁▁▃▁▁▄▁▁▁▁▁▁▁▁▁▄▄▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Numbers: 4; Joshua: 2; 2 Samuel: 1; 1 Chronicles: 2; Isaiah: 2; Jeremiah: 2
+▁▁▁█▁▅▁▁▁▃▁▁▅▁▁▁▁▁▁▁▁▁▅▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Numbers: 4; Joshua: 2; 2 Samuel: 1; 1 Chronicles: 2; Isaiah: 2; Jeremiah: 1
 
 
 
@@ -27,7 +27,7 @@ NUM 21:32, JOS 13:25, JER 48:32.
 
 
 In the Old Testament (BSB), words representing “Jazer” are translated as 
-*to Jazer* (1x), *of Jazer* (1x), *Jazer* (3x), *Jazer all* (1x), *and Jazer* (3x), *at Jazer* (1x), *far as Jazer* (1x), *with Jazer* (1x), *for Jazer* (1x). 
+*to Jazer* (1x), *of Jazer* (1x), *Jazer* (3x), *Jazer all* (1x), *and Jazer* (3x), *at Jazer* (1x), *far as Jazer* (1x), *with Jazer* (1x). 
 
 
 
@@ -53,9 +53,6 @@ Return to [Index](00-Index.md)
 * far as Jazer (ISA 16:8)
 
 * with Jazer (ISA 16:9)
-
-* for Jazer (JER 48:32)
-
 
 
 ### References (Whole Bible)
