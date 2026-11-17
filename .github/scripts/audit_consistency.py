@@ -57,6 +57,38 @@ def _markdown_display_counts(content: str):
 
 
 
+FAMILY_MD_FIELDS = {
+    "Father": "father", "Mother": "mother", "Partner(s)": "partners",
+    "Offspring": "offspring", "Sibling(s)": "siblings",
+}
+MD_FAMILY_LINK = re.compile(r"\]\(([^)]+)\)")
+
+
+def _markdown_family_metadata(content: str):
+    """Extract existing structured family infobox links, not biography prose."""
+    found = False
+    rendered = {}
+    for line in content.splitlines():
+        if line.startswith("**Familial Relationships of ") and line.endswith("**"):
+            found = True
+            continue
+        if not found:
+            continue
+        if line.startswith(("**", "##")):
+            break
+        if not line.startswith("* ") or ": " not in line:
+            continue
+        label, value = line[2:].split(": ", 1)
+        if label == "Gender":
+            rendered["gender"] = value.strip()
+        elif label in FAMILY_MD_FIELDS:
+            rendered[FAMILY_MD_FIELDS[label]] = [
+                "person:" + Path(target).stem
+                for target in MD_FAMILY_LINK.findall(value)
+            ]
+    return found, rendered
+
+
 def scan(root: Path) -> dict:
     records = {}
     findings = []
@@ -200,6 +232,32 @@ def scan(root: Path) -> dict:
                     report("markdown_reference_count_mismatch", rid, md_rel,
                            f"{displayed['REF']} rendered references vs "
                            f"{len(references)} JSON references")
+
+                # An old generated family infobox must not reverse a vetted
+                # JSON kinship correction (e.g. Ahlai or Judas).
+                if rid.startswith("person:"):
+                    has_family, family = _markdown_family_metadata(md)
+                    if has_family:
+                        expected_gender = record.get("gender")
+                        if expected_gender != family.get("gender"):
+                            report("markdown_family_metadata_mismatch", rid,
+                                   f"{md_rel}#/gender",
+                                   f"gender: JSON={expected_gender!r}, "
+                                   f"Markdown={family.get('gender')!r}")
+                        for key in FAMILY_MD_FIELDS.values():
+                            value = record.get(key, [])
+                            if isinstance(value, str):
+                                expected = [value]
+                            elif isinstance(value, list):
+                                expected = value
+                            else:
+                                expected = []
+                            rendered = family.get(key, [])
+                            if sorted(expected) != sorted(rendered):
+                                report("markdown_family_metadata_mismatch", rid,
+                                       f"{md_rel}#/{key}",
+                                       f"{key}: JSON={expected!r}, "
+                                       f"Markdown={rendered!r}")
 
         if record.get("mentioned_in_bible") is True and record.get("non_biblical") is True:
             report("contradictory_biblical_flags", rid, rel,
