@@ -205,10 +205,7 @@
   "is_person": false,
   "added_entry": false,
   "lemmas": {
-    "he": [
-      "עִיר שֶׁמֶשׁ",
-      "עִיר שָׁ֑מֶשׁ"
-    ]
+    "he": ["עִיר הַתְּמָרִים"]
   },
   "place_types": {
     "obi": [
