@@ -104,15 +104,15 @@ class LemmaAuditTests(unittest.TestCase):
                     json.dumps(data, ensure_ascii=False), encoding="utf-8")
             hebrew = root / "wlc.tsv"
             hebrew.write_text(
-                "xml:id\\tref\\tlemma\\ttext\\n"
-                "o1\\t1SA 16:1!1\\tבַּיִת\\tבֵּית\\n"
-                "o2\\t1SA 16:1!2\\tהַ\\tהַלַּחְמִי\\n"
-                "o3\\t1SA 16:2!1\\tבַּיִת\\tבֵּית\\n"
-                "o4\\t1SA 16:2!2\\tאַחֵר\\tאַחֵר\\n"
-                "o5\\tEXO 34:22!2\\tשָׁבוּעַ\\tשָׁבֻעוֹת\\n",
+                "xml:id\tref\tlemma\ttext\n"
+                "o1\t1SA 16:1!1\tבַּיִת\tבֵּית\n"
+                "o2\t1SA 16:1!2\tהַ\tהַלַּחְמִי\n"
+                "o3\t1SA 16:2!1\tבַּיִת\tבֵּית\n"
+                "o4\t1SA 16:2!2\tאַחֵר\tאַחֵר\n"
+                "o5\tEXO 34:22!2\tשָׁבוּעַ\tשָׁבֻעוֹת\n",
                 encoding="utf-8")
             greek = root / "greek.tsv"
-            greek.write_text("xml:id\\tref\\tlemma\\ttext\\n", encoding="utf-8")
+            greek.write_text("xml:id\tref\tlemma\ttext\n", encoding="utf-8")
             result = module.audit(root, hebrew, greek)
             self.assertEqual(result["summary"]["zero_exact_lemma_overlap"], 3)
             self.assertEqual(result["summary"]["candidates_with_exact_surface_overlap"], 2)
