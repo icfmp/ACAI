@@ -11,7 +11,7 @@ An unnamed female participating in a passage (clear).
 **NT Distribution of References**
 
 ▁▁▂█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Luke: 1; John: 5
+* References: Luke: 1; John: 4
 
 
 
@@ -20,7 +20,7 @@ In the Old Testament (BSB), words representing “A Woman” are translated as
 
 
 In the New Testament (BSB), words representing “A Woman” are translated as 
-*woman* (5x), *Messiah* (1x). 
+*woman* (5x). 
 
 
 Return to [Index](00-Index.md)
@@ -117,7 +117,6 @@ Return to [Index](00-Index.md)
 
 * woman (LUK 11:27; JHN 4:9; JHN 4:15; JHN 4:19; JHN 4:25)
 
-* Messiah (JHN 4:25)
 
 
 
@@ -179,7 +178,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 1SA 28:9; 1SA 28:11; 2SA 14:9; 2SA 14:13; 2SA 14:18; 2SA 17:20; 2SA 20:16; LUK 11:27; JHN 4:9; JHN 4:15; JHN 4:19; JHN 4:25; JHN 4:25
+* 1SA 28:9; 1SA 28:11; 2SA 14:9; 2SA 14:13; 2SA 14:18; 2SA 17:20; 2SA 20:16; LUK 11:27; JHN 4:9; JHN 4:15; JHN 4:19; JHN 4:25
 
 
 

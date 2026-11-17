@@ -20,7 +20,7 @@ In the Old Testament (BSB), words representing “A Servant” are translated as
 
 
 In the New Testament (BSB), words representing “A Servant” are translated as 
-*those* (1x), *servant girl* (2x), *Peter* (1x). 
+*those* (1x), *servant girl* (2x). 
 
 
 Return to [Index](00-Index.md)
@@ -113,7 +113,6 @@ Return to [Index](00-Index.md)
 
 * servant girl (LUK 22:56; JHN 18:17)
 
-* Peter (JHN 18:26)
 
 
 

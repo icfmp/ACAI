@@ -16,11 +16,11 @@ A person participating in a passage (clear).
 
 
 In the Old Testament (BSB), words representing “A Person” are translated as 
-*On the mountain* (1x), *Micah* (1x), *And the priest* (1x), *priest said* (1x), *And if any man* (1x), *Is Saul* (1x), *Who* (1x), *Your mind* (1x), *let the eunuch not* (1x), *the days* (2x). 
+*On the mountain* (1x), *And the priest* (1x), *priest said* (1x), *And if any man* (1x), *Who* (1x), *Your mind* (1x), *let the eunuch not* (1x), *the days* (2x). 
 
 
 In the New Testament (BSB), words representing “A Person” are translated as 
-*crowd* (1x), *someone* (5x), *no one* (2x), *the Spirit* (1x), *who is uninstructed* (1x), *one* (1x), *A dog* (1x), *anyone* (1x), *Spirit* (1x). 
+*crowd* (1x), *someone* (5x), *no one* (2x), *who is uninstructed* (1x), *one* (1x), *A dog* (1x), *anyone* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -227,7 +227,6 @@ Return to [Index](00-Index.md)
 
 * On the mountain (GEN 22:14)
 
-* Micah (JDG 17:9)
 
 * And the priest (JDG 18:6)
 
@@ -235,7 +234,6 @@ Return to [Index](00-Index.md)
 
 * And if any man (1SA 2:16)
 
-* Is Saul (1SA 10:12)
 
 * Who (PRO 20:9)
 
@@ -255,7 +253,6 @@ Return to [Index](00-Index.md)
 
 * no one (JHN 4:27; JAS 1:13)
 
-* the Spirit (1CO 12:3)
 
 * who is uninstructed (1CO 14:16)
 
@@ -265,7 +262,6 @@ Return to [Index](00-Index.md)
 
 * anyone (1JN 4:20)
 
-* Spirit (REV 22:17)
 
 
 

@@ -15,7 +15,7 @@ A lookout or watchman (clear).
 
 
 In the Old Testament (BSB), words representing “A Lookout” are translated as 
-*the king* (1x), *Joram* (1x), *Then the lookout* (1x), *The watchman* (1x). 
+*the king* (1x), *The watchman* (1x). 
 
 
 
@@ -44,9 +44,7 @@ Return to [Index](00-Index.md)
 
 * the king (2SA 18:27)
 
-* Joram (2KI 9:17)
 
-* Then the lookout (ISA 21:8)
 
 * The watchman (ISA 21:12)
 
