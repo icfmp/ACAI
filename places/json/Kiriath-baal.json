@@ -93,10 +93,7 @@
   "is_person": false,
   "added_entry": false,
   "lemmas": {
-    "he": [
-      "קִרְיַת חֻצֹות",
-      "קִרְיַת חֻצוֹת"
-    ]
+    "he": ["קִרְיַת בַּעַל"]
   },
   "geocoordinates": {
     "obi": {
