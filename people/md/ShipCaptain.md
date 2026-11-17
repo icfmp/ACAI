@@ -6,7 +6,7 @@ A ship's captain participating in a passage (clear).
 
 
 **Key References for Ship Captain**: 
-JON 1:6, JON 1:6. 
+JON 1:6. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* JON 1:6; JON 1:6
+* JON 1:6
 
 
 

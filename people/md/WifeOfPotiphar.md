@@ -6,7 +6,7 @@ The wife of Potiphar (clear).
 
 
 **Key References for Wife of Potiphar**: 
-GEN 39:7, GEN 39:7, GEN 39:8, GEN 39:8, GEN 39:12. 
+GEN 39:7, GEN 39:8, GEN 39:12. 
 
 
 
@@ -49,7 +49,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* GEN 39:7; GEN 39:7; GEN 39:8; GEN 39:8; GEN 39:12
+* GEN 39:7; GEN 39:8; GEN 39:12
 
 
 

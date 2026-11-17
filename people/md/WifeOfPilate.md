@@ -6,7 +6,7 @@ The wife of Pilate (clear).
 
 
 **Key References for Wife of Pilate**: 
-MAT 27:19, MAT 27:19. 
+MAT 27:19. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* MAT 27:19; MAT 27:19
+* MAT 27:19
 
 
 

@@ -6,7 +6,7 @@ Samson's Philistine wife (clear).
 
 
 **Key References for Wife of Samson**: 
-JDG 14:16, JDG 14:16. 
+JDG 14:16. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* JDG 14:16; JDG 14:16
+* JDG 14:16
 
 
 

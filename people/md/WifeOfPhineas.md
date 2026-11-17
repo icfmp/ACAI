@@ -6,7 +6,7 @@ The wife of Phineas the priest, also the daughter-in-law of Eli the priest (clea
 
 
 **Key References for Wife of Phineas**: 
-1SA 4:19, 1SA 4:19, 1SA 4:21, 1SA 4:22. 
+1SA 4:19, 1SA 4:21, 1SA 4:22. 
 
 
 
@@ -37,7 +37,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 1SA 4:19; 1SA 4:19; 1SA 4:21; 1SA 4:22
+* 1SA 4:19; 1SA 4:21; 1SA 4:22
 
 
 

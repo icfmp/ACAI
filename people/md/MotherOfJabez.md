@@ -6,7 +6,7 @@ The mother of Jabez (clear).
 
 
 **Key References for Mother of Jabez**: 
-1CH 4:9, 1CH 4:9. 
+1CH 4:9. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 1CH 4:9; 1CH 4:9
+* 1CH 4:9
 
 
 

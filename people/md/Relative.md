@@ -6,7 +6,7 @@ A relative of a person mentioned in the context of the passage (clear).
 
 
 **Key References for Relatives**: 
-AMO 6:10, AMO 6:10. 
+AMO 6:10. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* AMO 6:10; AMO 6:10
+* AMO 6:10
 
 
 
