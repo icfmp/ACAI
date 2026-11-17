@@ -86,6 +86,47 @@ class LemmaAuditTests(unittest.TestCase):
             self.assertEqual(rare["ref"], "GEN 15:1!8")
             self.assertEqual(rare["text"], "word8")
 
+    def test_source_surface_matches_are_evidence_not_lemma_fixes(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "groups" / "json").mkdir(parents=True)
+            (root / "keyterms" / "json").mkdir(parents=True)
+            records = (
+                ("groups", "Bethlehemite", "בֵּית הַלַּחְמִי", [["o1", "o2"]]),
+                ("groups", "Unrelated", "בֵּית הַלַּחְמִי", [["o3", "o4"]]),
+                ("keyterms", "Weeks", "שָׁבֻעוֹת", [["o5"]]),
+            )
+            for category, name, lemma, groups in records:
+                data = {"id": category + ":" + name,
+                        "lemmas": {"he": [lemma]},
+                        "explicit_instances": {"wlc": groups}}
+                (root / category / "json" / (name + ".json")).write_text(
+                    json.dumps(data, ensure_ascii=False), encoding="utf-8")
+            hebrew = root / "wlc.tsv"
+            hebrew.write_text(
+                "xml:id\\tref\\tlemma\\ttext\\n"
+                "o1\\t1SA 16:1!1\\tבַּיִת\\tבֵּית\\n"
+                "o2\\t1SA 16:1!2\\tהַ\\tהַלַּחְמִי\\n"
+                "o3\\t1SA 16:2!1\\tבַּיִת\\tבֵּית\\n"
+                "o4\\t1SA 16:2!2\\tאַחֵר\\tאַחֵר\\n"
+                "o5\\tEXO 34:22!2\\tשָׁבוּעַ\\tשָׁבֻעוֹת\\n",
+                encoding="utf-8")
+            greek = root / "greek.tsv"
+            greek.write_text("xml:id\\tref\\tlemma\\ttext\\n", encoding="utf-8")
+            result = module.audit(root, hebrew, greek)
+            self.assertEqual(result["summary"]["zero_exact_lemma_overlap"], 3)
+            self.assertEqual(result["summary"]["candidates_with_exact_surface_overlap"], 2)
+            self.assertEqual(result["summary"]["unmatched_lemmas_attested_as_surface_forms"], 2)
+            findings = {x["id"]: x for x in result["findings"]}
+            bethlehem = findings["groups:Bethlehemite"]
+            self.assertEqual(bethlehem["surface_attested_unmatched_lemmas"],
+                             ["בֵּית הַלַּחְמִי"])
+            self.assertEqual(bethlehem["source_surface_examples"][0]["source_word_ids"],
+                             ["o1", "o2"])
+            self.assertEqual(findings["groups:Unrelated"]["source_surface_examples"], [])
+            self.assertEqual(findings["keyterms:Weeks"]["source_surface_examples"][0]["source_word_ids"],
+                             ["o5"])
+
     def test_missing_source_token_does_not_create_false_mismatch(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
