@@ -52,6 +52,56 @@ def _source_annotations(path, wanted):
     return rows
 
 
+def _classify_subject_group(group, source, explicit_ids, primary_ids, corpus):
+    """Classify source evidence for a repeated group, never its editorial validity.
+
+    Semantic frame roles are NOT automatically grammatical subjects. This
+    classification records exact pointer locations, not their interpretation.
+    A group is attributed to the strongest matching evidence among its words.
+    """
+    scores = {
+        "own_parallel": 0, "own_split_fields": 0,
+        "own_subjref_only": 0, "own_frame_only": 0,
+        "primary_parallel": 0, "primary_split_fields": 0,
+        "primary_subjref_only": 0, "primary_frame_only": 0,
+        "source_without_entity_link": 0, "source_word_missing": 0,
+    }
+    for token in group:
+        row = source.get(token)
+        if row is None:
+            scores["source_word_missing"] += 1
+            continue
+        subj = _source_ids(row["subjref"], corpus)
+        frame = _source_ids(row["frame"], corpus)
+        own_sub = subj & explicit_ids
+        own_frame = frame & explicit_ids
+        par_sub = subj & primary_ids
+        par_frame = frame & primary_ids
+        if own_sub & own_frame:
+            key = "own_parallel"
+        elif own_sub and own_frame:
+            key = "own_split_fields"
+        elif own_sub:
+            key = "own_subjref_only"
+        elif own_frame:
+            key = "own_frame_only"
+        elif par_sub & par_frame:
+            key = "primary_parallel"
+        elif par_sub and par_frame:
+            key = "primary_split_fields"
+        elif par_sub:
+            key = "primary_subjref_only"
+        elif par_frame:
+            key = "primary_frame_only"
+        else:
+            key = "source_without_entity_link"
+        scores[key] += 1
+    for key, count in scores.items():
+        if count:
+            return key
+    return "source_word_missing"
+
+
 def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary,
                                        explicit_by_id, primary_by_id):
     """Trace repeated indirect groups to recorded source attributes, read-only.
@@ -70,6 +120,8 @@ def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary,
         matched_groups = []
         primary_only_groups = []
         unmatched_groups = []
+        subject_classes = collections.Counter()
+        subject_examples = collections.defaultdict(list)
         subject = finding["occurrence_field"] == "subject_referents"
         primary = primary_by_id.get(finding["id"])
         # An aggregate's exact tokens are evidence of indexing inheritance,
@@ -77,6 +129,13 @@ def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary,
         primary_ids = (explicit_by_id.get(primary, set()) - explicit_ids
                        if primary != finding["id"] else set())
         for group in repeats:
+            if subject:
+                classification = _classify_subject_group(
+                    group, source, explicit_ids, primary_ids, corpus)
+                subject_classes[classification] += 1
+                if len(subject_examples[classification]) < 5:
+                    subject_examples[classification].append(list(group))
+                continue
             linked = []
             parent_linked = []
             for token in group:
@@ -106,15 +165,22 @@ def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary,
             else:
                 unmatched_groups.append(list(group))
         if subject:
+            parallel = subject_classes["own_parallel"]
             finding["source_provenance"] = {
                 "repeated_groups_examined": len(repeats),
-                "parallel_subjref_frame_candidates": len(matched_groups),
-                "unresolved_or_other_source_patterns": len(unmatched_groups),
-                "examples": matched_groups[:5],
+                "parallel_subjref_frame_candidates": parallel,
+                "unresolved_or_other_source_patterns": len(repeats) - parallel,
+                "subject_evidence_classes": dict(sorted(subject_classes.items())),
+                "subject_evidence_examples": dict(sorted(subject_examples.items())),
+                "note": ("Exact source-pointer evidence only. Frame mentions "
+                         "are not automatically grammatical subjects; no "
+                         "classification authorizes deduplication."),
             }
             summary["subject_repeated_groups_examined"] += len(repeats)
-            summary["parallel_source_annotation_candidates"] += len(matched_groups)
-            summary["subject_groups_not_explained_by_parallel_fields"] += len(unmatched_groups)
+            summary["parallel_source_annotation_candidates"] += parallel
+            summary["subject_groups_not_explained_by_parallel_fields"] += len(repeats) - parallel
+            for category, count in subject_classes.items():
+                summary["subject_class_" + category] += count
         else:
             finding["source_provenance"] = {
                 "repeated_groups_examined": len(repeats),
