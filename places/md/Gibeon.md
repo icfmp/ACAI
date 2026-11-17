@@ -22,7 +22,7 @@ Other information about Gibeon:
 **OT Distribution of References**
 
 ▁▁▁▁▁█▁▁▁█▃▁▅▂▂▃▁▁▁▁▁▁▂▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Joshua: 13; 2 Samuel: 13; 1KI: 3; 1 Chronicles: 8; 2 Chronicles: 2; EZR: 1; NEH: 3; Isaiah: 1; Jeremiah: 3
+* References: Joshua: 13; 2 Samuel: 13; 1 Kings: 3; 1 Chronicles: 8; 2 Chronicles: 2; Ezra: 1; Nehemiah: 3; Isaiah: 1; Jeremiah: 3
 
 
 
