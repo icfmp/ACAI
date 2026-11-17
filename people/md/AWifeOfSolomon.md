@@ -13,7 +13,7 @@ Other forms include:
 * Gender: female
 * Tribe/Nationality: [Tribe of Judah](../../../groups/md/acai/Judah.md)
 * Partner(s): [Solomon](Solomon.md)
-* Offspring: [Taphath](Taphath.md), [Basemath (1 Kings 4:15)](Basemath.2.md)
+* Offspring: [Taphath](Taphath.md)
 
 
 

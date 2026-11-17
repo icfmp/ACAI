@@ -9,10 +9,8 @@ A woman in the New Testament, mother of John Mark and relative of Barnabas, ment
 
 
 * Gender: female
-* Father: [Father of Barnabas](FatherOfBarnabas.md)
 * Partner(s): [Husband of Mary](HusbandOfMary.md)
 * Offspring: [Mark](Mark.md)
-* Sibling(s): [Barnabas](Barnabas.md)
 
 
 **NT Distribution of References**

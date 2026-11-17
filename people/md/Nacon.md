@@ -13,8 +13,6 @@ Nacon is also referred to as:
 
 
 * Gender: male
-* Father: [Serug](Serug.md)
-* Offspring: [Terah](Terah.md)
 
 
 **OT Distribution of References**
