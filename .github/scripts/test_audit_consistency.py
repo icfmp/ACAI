@@ -202,10 +202,10 @@ class GlobalAuditTests(unittest.TestCase):
             }))
             page = pages / "Parent.md"
             page.write_text(
-                "**Familial Relationships of Parent**\\n\\n"
+                "**Familial Relationships of Parent**\n\n"
                 "* Offspring: [Child](Child.md), group:Kittim (Group), "
-                "Ludim@Gen.10.13-1Ch (Group)\\n\\n"
-                "**OT Distribution of References**\\n"
+                "Ludim@Gen.10.13-1Ch (Group)\n\n"
+                "**OT Distribution of References**\n"
             )
             def mismatch():
                 return [x for x in module.scan(root)["findings"]
