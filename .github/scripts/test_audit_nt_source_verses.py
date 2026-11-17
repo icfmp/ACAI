@@ -10,8 +10,79 @@ spec=importlib.util.spec_from_file_location("nt_verse_audit",src)
 module=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
+epistle_path=Path(__file__).with_name("audit_epistle_endings.py")
+epistle_spec=importlib.util.spec_from_file_location("epistle_endings", epistle_path)
+epistle_module=importlib.util.module_from_spec(epistle_spec)
+epistle_spec.loader.exec_module(epistle_module)
+
 
 class VerseCompatibilityTests(unittest.TestCase):
+    def test_epistle_endings_distinguish_present_last_verse_from_source_absence(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            folder = root / "people" / "json"
+            folder.mkdir(parents=True)
+            (folder / "Person.json").write_text(json.dumps({
+                "id": "person:Person", "primary_id": "person:Person",
+                "references": [
+                    "45016023", "45016025", "45016027",
+                    "47013014", "45015020", "45016027", "bad",
+                ],
+                "explicit_instances": {
+                    "SBLGNT": [["n45016023001"], ["n47013014001"]]
+                },
+            }), encoding="utf-8")
+            (folder / "Second.json").write_text(json.dumps({
+                "id": "person:Second", "primary_id": "person:Second",
+                "references": ["46016024"],
+            }), encoding="utf-8")
+            source = root / "source.tsv"
+            source.write_text(
+                "xml:id\tref\n"
+                "n45016023001\tROM 16:23!1\n"
+                "n47013013001\t2CO 13:13!1\n"
+                "n46016024001\t1CO 16:24!1\n",
+                encoding="utf-8")
+            report = epistle_module.audit(root, source)
+            self.assertEqual(report["records_referencing_any_final_verse"], 2)
+            self.assertEqual(report["unanchored_record_count"], 1)
+            self.assertEqual(report["findings"][0]["id"], "person:Second")
+            cases = report["absent_source_final_chapter_references"]
+            self.assertEqual({x["verse_id"] for x in cases},
+                             {"45016025", "45016027", "47013014"})
+            self.assertEqual(len(cases), 3)  # repeated ACAI ref counts once
+            self.assertEqual(report["absent_source_final_chapter_record_count"], 1)
+            self.assertTrue(next(
+                x for x in cases if x["verse_id"] == "47013014"
+            )["acai_record_has_word_or_referent_anchor"])
+            self.assertFalse(next(
+                x for x in cases if x["verse_id"] == "45016027"
+            )["acai_record_has_word_or_referent_anchor"])
+            self.assertEqual({
+                x["pinned_last_verse"] for x in cases
+            }, {"45016023", "47013013"})
+
+    def test_epistle_endings_compare_chapter_not_first_verse_digit(self):
+        # A verse can have three digits. Prefix length six erroneously
+        # incorporates the hundreds digit of its verse into "chapter".
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            folder = root / "places" / "json"
+            folder.mkdir(parents=True)
+            (folder / "Site.json").write_text(json.dumps({
+                "id": "place:Site", "primary_id": "place:Site",
+                "references": ["45016099", "45015099"],
+            }), encoding="utf-8")
+            source = root / "source.tsv"
+            source.write_text(
+                "xml:id\tref\n"
+                "n45016101001\tROM 16:101!1\n",
+                encoding="utf-8")
+            report = epistle_module.audit(root, source)
+            cases = report["absent_source_final_chapter_references"]
+            self.assertEqual([x["verse_id"] for x in cases], ["45016099"])
+            self.assertEqual(cases[0]["pinned_last_verse"], "45016101")
+
     def test_source_absence_is_counted_not_corrected(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)
