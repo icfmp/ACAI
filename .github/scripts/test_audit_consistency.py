@@ -66,6 +66,46 @@ class GlobalAuditTests(unittest.TestCase):
             self.assertEqual(issues[0]["entity"], "person:Conflicted")
             self.assertEqual(issues[0]["severity"], "review")
 
+    def test_markdown_and_source_counts_are_reviewed_without_overcounting_word_parts(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            p = root / "people" / "json"
+            md = root / "people" / "md"
+            p.mkdir(parents=True)
+            md.mkdir(parents=True)
+            (p / "A.json").write_text(json.dumps({
+                "id": "person:A", "primary_id": "person:A",
+                "references": ["42001001"],
+                "explicit_instances": {
+                    "SBLGNT": [["n42001001001", "n42001001002"]]
+                },
+            }))
+            display = md / "A.md"
+            display.write_text(
+                "### NT Instances (BSB)\n\n"
+                "* a person (LUK 1:1; LUK 1:1)\n\n"
+                "### References (Whole Bible)\n\n"
+                "* LUK 1:1; LUK 1:1\n"
+            )
+            findings = module.scan(root)["findings"]
+            kinds = {v["rule"] for v in findings}
+            self.assertIn("markdown_instance_group_count_mismatch", kinds)
+            self.assertIn("markdown_reference_count_mismatch", kinds)
+            self.assertTrue(all(v["severity"] == "review" for v in findings))
+
+            # Two original word parts in *one* group mean one occurrence.
+            display.write_text(
+                "### NT Instances (BSB)\n\n"
+                "* a person (LUK 1:1)\n\n"
+                "### References (Whole Bible)\n\n"
+                "* LUK 1:1\n"
+            )
+            findings = module.scan(root)["findings"]
+            self.assertNotIn("markdown_instance_group_count_mismatch",
+                             {v["rule"] for v in findings})
+            self.assertNotIn("markdown_reference_count_mismatch",
+                             {v["rule"] for v in findings})
+
     def test_conflicting_flags_and_missing_relation(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

@@ -17,6 +17,45 @@ OCCURRENCE_FIELDS = ("explicit_instances", "pronominal_referents", "subject_refe
 BCV8 = re.compile(r"^[0-9]{8}$")
 TOKEN = re.compile(r"^[on][0-9]{11,}$")
 
+MD_INSTANCE_TAIL = re.compile(r"\(([^()\n]+)\)\s*$")
+
+
+def _markdown_display_counts(content: str):
+    """Count rendered BSB verse occurrences per section, not Hebrew/Greek word parts.
+
+    Reports are review candidates: BSB-aligned display grouping and source
+    original-language segmentation can differ legitimately.
+    """
+    counts = Counter()
+    present = set()
+    unparseable = 0
+    section = None
+    for line in content.splitlines():
+        if line.startswith("#"):
+            if line == "### OT Instances (BSB)":
+                section = "OT"
+            elif line == "### NT Instances (BSB)":
+                section = "NT"
+            elif line == "### References (Whole Bible)":
+                section = "REF"
+            else:
+                section = None
+            if section is not None:
+                present.add(section)
+            continue
+        if section is None or not line.startswith("* "):
+            continue
+        if section == "REF":
+            counts[section] += len([v for v in line[2:].split("; ") if v])
+        else:
+            match = MD_INSTANCE_TAIL.search(line)
+            if match:
+                counts[section] += len([v for v in match.group(1).split("; ") if v])
+            else:
+                unparseable += 1
+    return counts, present, unparseable
+
+
 
 def scan(root: Path) -> dict:
     records = {}
@@ -125,6 +164,42 @@ def scan(root: Path) -> dict:
             for speech in speeches:
                 if isinstance(speech, dict) and isinstance(speech.get("words"), list):
                     counts["speech_tokens"] += len(speech["words"])
+
+        # Compare the derivative Markdown against the recorded word *groups*.
+        # This deliberately does not invent names, source tokens or new refs.
+        md_rel = f"{Path(rel).parts[0]}/md/{Path(rel).stem}.md"
+        md_file = root / md_rel
+        if md_file.is_file():
+            try:
+                md = md_file.read_text(encoding="utf-8")
+            except UnicodeError as exc:
+                report("invalid_markdown_encoding", rid, md_rel, str(exc))
+            else:
+                displayed, sections, malformed = _markdown_display_counts(md)
+                if malformed:
+                    report("malformed_markdown_instance", rid, md_rel,
+                           f"{malformed} instance bullets lack a terminal reference list")
+                sources = Counter()
+                explicit_map = record.get("explicit_instances", {})
+                if not isinstance(explicit_map, dict):
+                    explicit_map = {}
+                for corpus, groups in explicit_map.items():
+                    if not isinstance(groups, list):
+                        continue
+                    if corpus.lower() == "wlc":
+                        sources["OT"] += len(groups)
+                    elif corpus.upper() == "SBLGNT":
+                        sources["NT"] += len(groups)
+                for period in ("OT", "NT"):
+                    if period in sections or sources[period]:
+                        if displayed[period] != sources[period]:
+                            report("markdown_instance_group_count_mismatch", rid, md_rel,
+                                   f"{period}: {displayed[period]} rendered BSB instances "
+                                   f"vs {sources[period]} original-language groups")
+                if "REF" in sections and displayed["REF"] != len(references):
+                    report("markdown_reference_count_mismatch", rid, md_rel,
+                           f"{displayed['REF']} rendered references vs "
+                           f"{len(references)} JSON references")
 
         if record.get("mentioned_in_bible") is True and record.get("non_biblical") is True:
             report("contradictory_biblical_flags", rid, rel,
