@@ -18,7 +18,6 @@
   "type": "person",
   "gender": "male",
   "father": "person:Jarha",
-  "mother": "person:Ahlai",
   "offspring": [
     "person:Nathan.4"
   ],
