@@ -216,10 +216,7 @@
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
   "lemmas": {
-    "he": [
-      "שְׁבָאִים",
-      "שְׁבָאִי"
-    ]
+    "he": ["שְׁבָא"]
   },
   "key_references": [
     "01010028",
