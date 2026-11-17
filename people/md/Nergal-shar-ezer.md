@@ -16,7 +16,7 @@ Other forms include:
 **OT Distribution of References**
 
 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Jeremiah: 2
+* References: Jeremiah: 1
 
 
 
@@ -25,7 +25,7 @@ JER 39:3.
 
 
 In the Old Testament (BSB), words representing “Nergal-shar-ezer” are translated as 
-*Nergal-sharezer* (2x). 
+*Nergal-sharezer* (1x). 
 
 
 
@@ -36,8 +36,7 @@ Return to [Index](00-Index.md)
 
 ### OT Instances (BSB)
 
-* Nergal-sharezer (JER 39:3; JER 39:3)
-
+* Nergal-sharezer (JER 39:3)
 
 
 ### References (Whole Bible)
