@@ -56,6 +56,36 @@ class LemmaAuditTests(unittest.TestCase):
             finding = next(x for x in result["findings"] if x["id"] == "groups:Mixed")
             self.assertEqual(finding["unmatched_declared_lemmas"], ["פֶּלֶת"])
 
+    def test_distinct_lemma_evidence_includes_rare_eighth_word(self):
+        # The old six first-word examples cannot identify a later source typo.
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "keyterms" / "json").mkdir(parents=True)
+            ids = [f"o{i}" for i in range(1, 9)]
+            data = {"id": "keyterm:Phrase",
+                    "lemmas": {"he": ["דְּבַר־יהוה"]},
+                    "explicit_instances": {"wlc": [[id_] for id_ in ids]}}
+            (root / "keyterms" / "json" / "Phrase.json").write_text(
+                json.dumps(data, ensure_ascii=False), encoding="utf-8")
+            hebrew = root / "wlc.tsv"
+            rows = ["xml:id\tref\tlemma\ttext"]
+            for index, token in enumerate(ids, start=1):
+                lemma = "דָּבָר" if index <= 7 else "דֶּלֶת"
+                rows.append(f"{token}\tGEN 15:1!{index}\t{lemma}\tword{index}")
+            hebrew.write_text("\n".join(rows) + "\n", encoding="utf-8")
+            greek = root / "greek.tsv"
+            greek.write_text("xml:id\tref\tlemma\n", encoding="utf-8")
+            result = module.audit(root, hebrew, greek)
+            self.assertEqual(result["summary"]["zero_exact_lemma_overlap"], 1)
+            item = result["findings"][0]
+            self.assertEqual(len(item["source_examples"]), 6)
+            self.assertEqual(len(item["source_lemma_examples"]), 2)
+            rare = next(x for x in item["source_lemma_examples"]
+                        if x["lemma"] == "דֶּלֶת")
+            self.assertEqual(rare["word_id"], "o8")
+            self.assertEqual(rare["ref"], "GEN 15:1!8")
+            self.assertEqual(rare["text"], "word8")
+
     def test_missing_source_token_does_not_create_false_mismatch(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
