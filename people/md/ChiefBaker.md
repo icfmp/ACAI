@@ -6,7 +6,7 @@ Pharoah's chief baker (clear).
 
 
 **Key References for Pharoah's Chief Baker**: 
-GEN 40:7, GEN 40:8, GEN 40:16, GEN 40:16. 
+GEN 40:7, GEN 40:8, GEN 40:16. 
 
 
 
@@ -39,7 +39,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* GEN 40:7; GEN 40:8; GEN 40:16; GEN 40:16
+* GEN 40:7; GEN 40:8; GEN 40:16
 
 
 

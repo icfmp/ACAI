@@ -6,7 +6,7 @@ The criminal crucified next to Jesus who insulted him. Tradition gives him the n
 
 
 **Key References for Criminal on the Cross (Gestas)**: 
-LUK 23:39, LUK 23:39. 
+LUK 23:39. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* LUK 23:39; LUK 23:39
+* LUK 23:39
 
 
 

@@ -6,7 +6,7 @@ An unnamed daughter participating in a passage (clear).
 
 
 **Key References for A Daughter**: 
-JER 4:31, JER 4:31. 
+JER 4:31. 
 
 
 
@@ -35,7 +35,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* JER 4:31; JER 4:31
+* JER 4:31
 
 
 
