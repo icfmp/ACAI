@@ -208,10 +208,7 @@
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
   "lemmas": {
-    "he": [
-      "רֶגֶם מֶלֶךְ",
-      "רֶ֫גֶם מֶ֫לֶךְ"
-    ]
+    "he": ["רֶגֶם"]
   },
   "key_references": [
     "13002047"
