@@ -12,6 +12,43 @@ spec.loader.exec_module(module)
 
 
 class GlobalAuditTests(unittest.TestCase):
+    def test_exact_lemma_duplicates_are_reviewed_without_conflating_variants(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "flora" / "json"
+            folder.mkdir(parents=True)
+            entry = {
+                "id": "flora:Agarwood", "primary_id": "flora:Agarwood",
+                "lemmas": {
+                    "he": ["אָהָל", "אֲהָלֹות", "אֲהָלֹות"],
+                    "el": ["ἀγάπη", "ἀγάπη", "αγάπη"],
+                },
+            }
+            filename = folder / "Agarwood.json"
+            filename.write_text(json.dumps(entry, ensure_ascii=False),
+                                encoding="utf-8")
+            scanned = module.scan(root)
+            findings = [item for item in scanned["findings"]
+                        if item["rule"] == "duplicate_exact_lemma"]
+            self.assertEqual(len(findings), 2)
+            self.assertTrue(all(item["severity"] == "review" for item in findings))
+            self.assertEqual({item["location"].split("#/")[1] for item in findings},
+                             {"lemmas/he/2", "lemmas/el/1"})
+            self.assertEqual(scanned["summary"]["duplicate_exact_lemma_entries"], 2)
+            self.assertEqual(scanned["summary"]["records_with_duplicate_exact_lemmas"], 1)
+
+            # Original and alternate source spellings remain distinct; an
+            # exact comparison must not silently normalize/merge them.
+            entry["lemmas"]["he"] = ["אָהָל", "אֲהָלֹות"]
+            entry["lemmas"]["el"] = ["ἀγάπη", "αγάπη"]
+            filename.write_text(json.dumps(entry, ensure_ascii=False),
+                                encoding="utf-8")
+            scanned = module.scan(root)
+            self.assertFalse(any(item["rule"] == "duplicate_exact_lemma"
+                                 for item in scanned["findings"]))
+            self.assertEqual(json.loads(filename.read_text(encoding="utf-8")),
+                             entry)
+
     def test_cross_person_duplicate_and_missing_reference(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
