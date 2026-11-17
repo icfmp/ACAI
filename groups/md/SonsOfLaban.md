@@ -4,7 +4,7 @@ The sons of Laban (clear).
 
 
 **Key References for Sons of Laban**: 
-GEN 31:1, GEN 31:1. 
+GEN 31:1. 
 
 
 
@@ -31,7 +31,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* GEN 31:1; GEN 31:1
+* GEN 31:1
 
 
 

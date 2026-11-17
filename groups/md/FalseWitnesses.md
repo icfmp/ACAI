@@ -4,7 +4,7 @@ A group of people who give false testimony (clear).
 
 
 **Key References for False Witnesses**: 
-MAT 26:60, MAT 26:61, MRK 14:57, MRK 14:57. 
+MAT 26:60, MAT 26:61, MRK 14:57. 
 
 
 
@@ -37,7 +37,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* MAT 26:60; MAT 26:61; MRK 14:57; MRK 14:57
+* MAT 26:60; MAT 26:61; MRK 14:57
 
 
 

@@ -4,7 +4,7 @@ People who live in Ekron (clear).
 
 
 **Key References for People of Ekron**: 
-1SA 5:10, 1SA 5:10, 1SA 5:10, 1SA 5:11. 
+1SA 5:10, 1SA 5:11. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 1SA 5:10; 1SA 5:10; 1SA 5:10; 1SA 5:11
+* 1SA 5:10; 1SA 5:11
 
 
 

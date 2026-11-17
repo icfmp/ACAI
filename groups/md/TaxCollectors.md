@@ -4,7 +4,7 @@ A group of tax collectors participating in a passage (clear).
 
 
 **Key References for Tax Collectors**: 
-MAT 17:24, MAT 17:24, LUK 3:12, LUK 3:12. 
+MAT 17:24, LUK 3:12. 
 
 
 
@@ -37,7 +37,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* MAT 17:24; MAT 17:24; LUK 3:12; LUK 3:12
+* MAT 17:24; LUK 3:12
 
 
 

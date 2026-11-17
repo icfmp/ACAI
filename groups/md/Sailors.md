@@ -4,7 +4,7 @@ A group of unnamed sailors participating in a passage (clear).
 
 
 **Key References for Sailors**: 
-JON 1:6, JON 1:6, JON 1:7, JON 1:8, JON 1:10. 
+JON 1:6, JON 1:7, JON 1:8, JON 1:10. 
 
 
 
@@ -69,7 +69,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* JON 1:6; JON 1:6; JON 1:7; JON 1:8; JON 1:10
+* JON 1:6; JON 1:7; JON 1:8; JON 1:10
 
 
 

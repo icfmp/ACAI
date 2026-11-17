@@ -4,7 +4,7 @@ The half-brothers of Jephthah (clear).
 
 
 **Key References for Half-Brothers of Jephthah**: 
-JDG 11:2, JDG 11:2. 
+JDG 11:2. 
 
 
 
@@ -31,7 +31,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* JDG 11:2; JDG 11:2
+* JDG 11:2
 
 
 

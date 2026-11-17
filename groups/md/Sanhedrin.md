@@ -4,7 +4,7 @@ Supreme judicial council of Judaism, located in Jerusalem (clear).
 
 
 **Key References for Sanhedrin**: 
-MAT 26:67, MAT 26:68, MRK 14:65, MRK 14:65, ACT 4:5. 
+MAT 26:67, MAT 26:68, MRK 14:65, ACT 4:5. 
 
 
 
@@ -47,7 +47,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* MAT 26:67; MAT 26:68; MRK 14:65; MRK 14:65; ACT 4:5
+* MAT 26:67; MAT 26:68; MRK 14:65; ACT 4:5
 
 
 
