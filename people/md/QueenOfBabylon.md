@@ -6,7 +6,7 @@ The queen of Babylon as represented in the book of Daniel (clear).
 
 
 **Key References for Queen of Babylon (Daniel)**: 
-DAN 5:10, DAN 5:10. 
+DAN 5:10. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* DAN 5:10; DAN 5:10
+* DAN 5:10
 
 
 
