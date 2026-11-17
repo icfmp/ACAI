@@ -9,8 +9,8 @@ Mount Sinai is also referred to as:
 
 **OT Distribution of References**
 
-▁█▄▂▆▁▂▁▁▁▂▁▁▂▁▂▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂
-* References: Exodus: 14; Leviticus: 5; Numbers: 2; Deuteronomy: 10; Judges: 1; 1 Kings: 2; 2 Chronicles: 1; Nehemiah: 1; Psalms: 3; Malachi: 1
+▁█▃▂▆▁▂▁▁▁▂▁▁▂▁▂▁▁▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂
+* References: Exodus: 14; Leviticus: 4; Numbers: 2; Deuteronomy: 10; Judges: 1; 1 Kings: 2; 2 Chronicles: 1; Nehemiah: 1; Psalms: 3; Malachi: 1
 
 **NT Distribution of References**
 
@@ -24,7 +24,7 @@ EXO 3:1, EXO 19:16, EXO 24:12, EXO 31:18, DEU 1:2, DEU 5:2, DEU 28:69, GAL 4:24.
 
 
 In the Old Testament (BSB), words representing “Mount Sinai” are translated as 
-*Horeb* (2x), *and Sinai* (1x), *at Horeb* (9x), *Sinai* (17x), *Horeb onward* (1x), *of Sinai* (2x), *journey from Horeb* (1x), *from Horeb* (1x), *Horeb the* (1x), *At Horeb* (2x), *Sinai and* (1x), *on Sinai* (1x), *was at Sinai* (1x). 
+*Horeb* (2x), *and Sinai* (1x), *at Horeb* (9x), *Sinai* (17x), *Horeb onward* (1x), *of Sinai* (1x), *journey from Horeb* (1x), *from Horeb* (1x), *Horeb the* (1x), *At Horeb* (2x), *Sinai and* (1x), *on Sinai* (1x), *was at Sinai* (1x). 
 
 
 In the New Testament (BSB), words representing “Mount Sinai” are translated as 
@@ -47,7 +47,7 @@ Return to [Index](00-Index.md)
 
 * Horeb onward (EXO 33:6)
 
-* of Sinai (LEV 7:38; JDG 5:5)
+* of Sinai (JDG 5:5)
 
 * journey from Horeb (DEU 1:2)
 
@@ -62,7 +62,6 @@ Return to [Index](00-Index.md)
 * on Sinai (PSA 68:9)
 
 * was at Sinai (PSA 68:18)
-
 
 
 ### NT Instances (BSB)

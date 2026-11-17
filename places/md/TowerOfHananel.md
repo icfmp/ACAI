@@ -16,8 +16,8 @@ Other information about Tower of Hananel:
 
 **OT Distribution of References**
 
-▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▃▁▁▁▁▁▁▁▁▁▁▁▁▁▃▁
-* References: Nehemiah: 4; Jeremiah: 1; Zechariah: 1
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▅▁▁▁▁▁▁▁▁▁▁▁▁▁▅▁
+* References: Nehemiah: 2; Jeremiah: 1; Zechariah: 1
 
 
 
@@ -26,7 +26,7 @@ NEH 3:1, JER 31:38, ZEC 14:10.
 
 
 In the Old Testament (BSB), words representing “Tower of Hananel” are translated as 
-*the Tower* (1x), *and the Tower of Hananel* (1x), *the Tower of Hananel* (1x), *and the Tower* (1x), *from the tower of Hananel* (1x), *and from the Tower of Hananel* (1x). 
+*and the Tower of Hananel* (1x), *the Tower of Hananel* (1x), *from the tower of Hananel* (1x), *and from the Tower of Hananel* (1x). 
 
 
 
@@ -37,18 +37,13 @@ Return to [Index](00-Index.md)
 
 ### OT Instances (BSB)
 
-* the Tower (NEH 3:1)
-
 * and the Tower of Hananel (NEH 3:1)
 
 * the Tower of Hananel (NEH 12:39)
 
-* and the Tower (NEH 12:39)
-
 * from the tower of Hananel (JER 31:38)
 
 * and from the Tower of Hananel (ZEC 14:10)
-
 
 
 ### References (Whole Bible)

@@ -19,7 +19,7 @@ Other information about Egypt:
 **OT Distribution of References**
 
 ▅█▁▂▃▂▁▁▂▁▂▂▁▂▁▁▁▁▂▁▁▁▃▃▁▃▁▂▁▁▁▁▁▁▁▁▁▁▁
-* References: Genesis: 97; Exodus: 180; Leviticus: 12; Numbers: 32; Deuteronomy: 52; Joshua: 17; Judges: 9; 1 Samuel: 15; 2 Samuel: 5; 1 Kings: 24; 2 Kings: 16; 1 Chronicles: 6; 2 Chronicles: 18; Ezra: 1; Nehemiah: 3; Psalms: 16; Proverbs: 1; Isaiah: 52; Jeremiah: 62; Lamentations: 1; Ezekiel: 54; Daniel: 4; Hosea: 13; Joel: 1; Amos: 7; Micah: 4; Nahum: 1; Haggai: 1; Zechariah: 4
+* References: Genesis: 97; Exodus: 180; Leviticus: 12; Numbers: 32; Deuteronomy: 52; Joshua: 17; Judges: 9; 1 Samuel: 15; 2 Samuel: 5; 1 Kings: 24; 2 Kings: 15; 1 Chronicles: 6; 2 Chronicles: 18; Ezra: 1; Nehemiah: 3; Psalms: 16; Proverbs: 1; Isaiah: 52; Jeremiah: 62; Lamentations: 1; Ezekiel: 54; Daniel: 4; Hosea: 13; Joel: 1; Amos: 7; Micah: 4; Nahum: 1; Haggai: 1; Zechariah: 4
 
 **NT Distribution of References**
 
@@ -33,7 +33,7 @@ GEN 12:10, GEN 25:18, EXO 1:1, EXO 12:40, MAT 2:13.
 
 
 In the Old Testament (BSB), words representing “Egypt” are translated as 
-*to Egypt* (53x), *Egypt* (56x), *the Egyptians* (34x), *out of Egypt* (29x), *of Egypt* (292x), *to the* (1x), *she had an Egyptian* (1x), *her Egyptian* (1x), *the Egyptian* (4x), *where an Egyptian* (1x), *of his Egyptian* (1x), *Egyptian’s household* (1x), ** (20x), *king’s cupbearer* (1x), *the Egyptians for* (1x), *in Egypt* (41x), *from Egypt* (18x), *Egyptians They ate* (1x), *would not* (1x), *that the Egyptians* (2x), *into Egypt* (2x), *Egypt But* (1x), *you to Egypt* (1x), *to Egypt were* (1x), *Egyptians* (2x), *here* (1x), *Egyptians mourned for* (1x), *by the Egyptians* (1x), *already in Egypt* (1x), *They worked* (1x), *like the Egyptian* (1x), *an Egyptian* (7x), *An Egyptian* (1x), *of the Egyptians* (17x), *Egypt by* (2x), *on Egypt* (4x), *And the Egyptians* (2x), *Egypt and* (5x), *and the Egyptians* (4x), *to the Egyptians* (2x), *the land* (1x), *with the Egyptians* (1x), *Egyptian* (1x), *it* (1x), *of Egypt a palpable* (1x), *all the* (1x), *Egyptians and there* (1x), *The Egyptians* (5x), *and He threw their camp into confusion* (1x), *against Egypt* (3x), *As the Egyptians* (1x), *over the Egyptians* (1x), *on the Egyptians* (1x), *out of Egypt to make* (1x), *Egypt out* (3x), *Egypt I* (2x), *an Egyptian father* (1x), *Egypt Therefore* (1x), *they left Egypt* (1x), *who* (1x), *Egypt to* (4x), *eyes* (1x), *Egypt but* (1x), *Egypt with* (3x), *of Egypt have* (1x), *to the Egyptian* (1x), *Egypt few* (1x), *But the Egyptians* (2x), *you and the Egyptians* (1x), *and in Egypt* (1x), *out* (1x), *Amorites Ammonites Philistines* (1x), *of Egypt they* (1x), *up out of Egypt* (1x), *Although the Egyptian* (2x), *from his* (2x), *Egypt in* (1x), *where* (1x), *to* (1x), *splintered reed* (1x), *who trust* (1x), *his territory* (1x), *of Egypt Libyans* (1x), *Egypt So* (1x), *Rahab* (2x), *things in Egypt* (1x), *O Egypt* (1x), *of the Nile* (1x), *as the Egyptians* (1x), *as He did in Egypt* (1x), *against* (1x), *Egyptian brother* (1x), *have led Egypt* (1x), *Egypt with a plague* (1x), *alliance with Egypt* (1x), *to Egypt’s* (1x), *and Egypt* (2x), *in Egypt’s* (1x), *of Egypt’s* (1x), *Egypt’s* (1x), *that* (1x), *Egypt who* (1x), *by Egypt* (1x), *They will all* (1x), *Egypt For* (1x), *she began in Egypt* (1x), *when the Egyptians* (1x), *Egypt as* (1x), *of Egypt’s doom* (1x), *in that land* (1x), *then turning* (1x), *and out of Egypt* (1x), *the Philistines* (1x). 
+*to Egypt* (53x), *Egypt* (56x), *the Egyptians* (34x), *out of Egypt* (29x), *of Egypt* (292x), *to the* (1x), *she had an Egyptian* (1x), *her Egyptian* (1x), *the Egyptian* (4x), *where an Egyptian* (1x), *of his Egyptian* (1x), *Egyptian’s household* (1x), ** (20x), *king’s cupbearer* (1x), *the Egyptians for* (1x), *in Egypt* (41x), *from Egypt* (18x), *Egyptians They ate* (1x), *would not* (1x), *that the Egyptians* (2x), *into Egypt* (2x), *Egypt But* (1x), *you to Egypt* (1x), *to Egypt were* (1x), *Egyptians* (2x), *here* (1x), *Egyptians mourned for* (1x), *by the Egyptians* (1x), *already in Egypt* (1x), *They worked* (1x), *like the Egyptian* (1x), *an Egyptian* (7x), *An Egyptian* (1x), *of the Egyptians* (17x), *Egypt by* (2x), *on Egypt* (4x), *And the Egyptians* (2x), *Egypt and* (5x), *and the Egyptians* (4x), *to the Egyptians* (2x), *the land* (1x), *with the Egyptians* (1x), *Egyptian* (1x), *it* (1x), *of Egypt a palpable* (1x), *all the* (1x), *Egyptians and there* (1x), *The Egyptians* (5x), *and He threw their camp into confusion* (1x), *against Egypt* (3x), *As the Egyptians* (1x), *over the Egyptians* (1x), *on the Egyptians* (1x), *out of Egypt to make* (1x), *Egypt out* (3x), *Egypt I* (2x), *an Egyptian father* (1x), *Egypt Therefore* (1x), *they left Egypt* (1x), *who* (1x), *Egypt to* (4x), *eyes* (1x), *Egypt but* (1x), *Egypt with* (3x), *of Egypt have* (1x), *to the Egyptian* (1x), *Egypt few* (1x), *But the Egyptians* (2x), *you and the Egyptians* (1x), *and in Egypt* (1x), *out* (1x), *Amorites Ammonites Philistines* (1x), *of Egypt they* (1x), *up out of Egypt* (1x), *Although the Egyptian* (2x), *from his* (2x), *Egypt in* (1x), *where* (1x), *to* (1x), *splintered reed* (1x), *who trust* (1x), *of Egypt Libyans* (1x), *Egypt So* (1x), *Rahab* (2x), *things in Egypt* (1x), *O Egypt* (1x), *of the Nile* (1x), *as the Egyptians* (1x), *as He did in Egypt* (1x), *against* (1x), *Egyptian brother* (1x), *have led Egypt* (1x), *Egypt with a plague* (1x), *alliance with Egypt* (1x), *to Egypt’s* (1x), *and Egypt* (2x), *in Egypt’s* (1x), *of Egypt’s* (1x), *Egypt’s* (1x), *that* (1x), *Egypt who* (1x), *by Egypt* (1x), *They will all* (1x), *Egypt For* (1x), *she began in Egypt* (1x), *when the Egyptians* (1x), *Egypt as* (1x), *of Egypt’s doom* (1x), *in that land* (1x), *then turning* (1x), *and out of Egypt* (1x), *the Philistines* (1x). 
 
 
 In the New Testament (BSB), words representing “Egypt” are translated as 
@@ -208,8 +208,6 @@ Return to [Index](00-Index.md)
 
 * who trust (2KI 18:21)
 
-* his territory (2KI 24:7)
-
 * of Egypt Libyans (2CH 12:3)
 
 * Egypt So (2CH 20:10)
@@ -271,7 +269,6 @@ Return to [Index](00-Index.md)
 * and out of Egypt (HOS 11:1)
 
 * the Philistines (AMO 9:7)
-
 
 
 ### NT Instances (BSB)

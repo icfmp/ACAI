@@ -17,7 +17,7 @@ Other information about Tower of the Hundred:
 **OT Distribution of References**
 
 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Nehemiah: 6
+* References: Nehemiah: 2
 
 
 
@@ -26,7 +26,7 @@ NEH 3:1, NEH 12:39.
 
 
 In the Old Testament (BSB), words representing “Tower of the Hundred” are translated as 
-*the Tower* (2x), *of the Hundred* (2x), *and the Tower* (2x). 
+*of the Hundred* (2x). 
 
 
 
@@ -37,12 +37,7 @@ Return to [Index](00-Index.md)
 
 ### OT Instances (BSB)
 
-* the Tower (NEH 3:1; NEH 12:39)
-
 * of the Hundred (NEH 3:1; NEH 12:39)
-
-* and the Tower (NEH 3:1; NEH 12:39)
-
 
 
 ### References (Whole Bible)
