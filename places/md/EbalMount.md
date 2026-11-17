@@ -20,8 +20,8 @@ Other information about Mount Ebal:
 
 **OT Distribution of References**
 
-▁▁▁▁█▆▃▁▁▁▁▁▁▁▁▁▁▁▃▁▁▁▁▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Deuteronomy: 3; Joshua: 2; Judges: 1; Psalms: 1; Jeremiah: 1
+▁▁▁▁█▆▃▁▁▁▁▁▁▁▁▁▁▁▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Deuteronomy: 3; Joshua: 2; Judges: 1; Psalms: 1
 
 
 
@@ -30,7 +30,7 @@ DEU 11:29, DEU 27:13, JOS 8:30.
 
 
 In the Old Testament (BSB), words representing “Mount Ebal” are translated as 
-*Ebal* (5x), *Zalmon* (1x), *on Zalmon* (1x), *of Ephraim* (1x). 
+*Ebal* (5x), *Zalmon* (1x), *on Zalmon* (1x). 
 
 
 
@@ -47,13 +47,10 @@ Return to [Index](00-Index.md)
 
 * on Zalmon (PSA 68:15)
 
-* of Ephraim (JER 4:15)
-
-
 
 ### References (Whole Bible)
 
-* DEU 11:29; DEU 27:4; DEU 27:13; JOS 8:30; JOS 8:33; JDG 9:48; PSA 68:15; JER 4:15
+* DEU 11:29; DEU 27:4; DEU 27:13; JOS 8:30; JOS 8:33; JDG 9:48; PSA 68:15
 
 
 ### Place Types

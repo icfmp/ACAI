@@ -51,7 +51,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* JOS 17:7; JOS 17:9
+* JOS 17:7
 
 
 ### Place Types
