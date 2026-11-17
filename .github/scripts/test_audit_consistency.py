@@ -173,6 +173,18 @@ class GlobalAuditTests(unittest.TestCase):
             self.assertNotIn("markdown_instance_verse_mismatch", rules)
             self.assertNotIn("markdown_reference_verse_mismatch", rules)
 
+    def test_numbered_bible_books_are_parsed_without_guessing(self):
+        counts, invalid = module._markdown_verse_counts(
+            "### OT Instances (BSB)\n\n"
+            "* place (1KI 4:13; 2CH 23:1)\n\n"
+            "### NT Instances (BSB)\n\n"
+            "* person (1CO 12:3)\n"
+        )
+        self.assertEqual(counts["OT"]["11004013"], 1)
+        self.assertEqual(counts["OT"]["14023001"], 1)
+        self.assertEqual(counts["NT"]["46012003"], 1)
+        self.assertFalse(invalid)
+
     def test_stale_family_infobox_is_reviewed_without_rewriting_prose(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
