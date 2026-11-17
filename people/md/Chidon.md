@@ -15,8 +15,6 @@ Chidon (Nacon) is a subentry. The primary entry is
 
 
 * Gender: male
-* Father: [Serug](Serug.md)
-* Offspring: [Terah](Terah.md)
 
 
 **OT Distribution of References**
