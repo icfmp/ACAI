@@ -20,7 +20,7 @@ In the Old Testament (BSB), words representing “Military Member” are transla
 
 
 In the New Testament (BSB), words representing “Military Member” are translated as 
-*Paul* (1x), *commander* (3x). 
+*commander* (3x). 
 
 
 Return to [Index](00-Index.md)
@@ -83,7 +83,6 @@ Return to [Index](00-Index.md)
 
 ### NT Instances (BSB)
 
-* Paul (ACT 21:37)
 
 * commander (ACT 22:27; ACT 22:28; ACT 23:19)
 

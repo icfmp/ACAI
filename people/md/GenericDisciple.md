@@ -17,7 +17,7 @@ MAT 8:21, JHN 1:38, 1CO 1:12, 1CO 3:4.
 
 
 In the New Testament (BSB), words representing “A Disciple” are translated as 
-*disciples* (1x), *Jesus* (1x), *Individuals* (1x), *one of you* (1x). 
+*disciples* (1x), *Individuals* (1x), *one of you* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -52,7 +52,6 @@ Return to [Index](00-Index.md)
 
 * disciples (MAT 8:21)
 
-* Jesus (JHN 1:38)
 
 * Individuals (1CO 1:12)
 

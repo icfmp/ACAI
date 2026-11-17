@@ -20,7 +20,7 @@ In the Old Testament (BSB), words representing “A Man” are translated as
 
 
 In the New Testament (BSB), words representing “A Man” are translated as 
-*Jesus* (1x), *another* (1x). 
+*another* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -159,7 +159,6 @@ Return to [Index](00-Index.md)
 
 ### NT Instances (BSB)
 
-* Jesus (LUK 8:30)
 
 * another (LUK 9:61)
 

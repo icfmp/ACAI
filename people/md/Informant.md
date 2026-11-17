@@ -14,8 +14,6 @@ A person disclosing unknown (and usually negative) information (clear).
 JDG 15:6, 2SA 11:10, 2SA 15:31. 
 
 
-In the Old Testament (BSB), words representing “An Informant” are translated as 
-*the Philistines* (1x), *asked* (1x), *David pleaded* (1x). 
 
 
 
@@ -35,16 +33,6 @@ Return to [Index](00-Index.md)
 * 2SA 15:31: “LORD please turn the counsel of Ahithophel into foolishness”
 
 * 1KI 1:51: “Adonijah fears King Solomon and he has taken hold of the horns of the altar saying Let King Solomon first swear to me not to put his servant to the”
-
-### OT Instances (BSB)
-
-* the Philistines (JDG 15:6)
-
-* asked (2SA 11:10)
-
-* David pleaded (2SA 15:31)
-
-
 
 ### OT Subject Referents (BSB)
 
