@@ -14,7 +14,7 @@ MAT 12:36, JHN 5:22, ROM 2:2, JAS 2:13.
 
 
 In the New Testament (BSB), words representing “Judgment” are translated as 
-*judgment* (36x), *condemnation* (3x), *the sentence* (1x), *judgments* (3x), *lawsuits* (1x), *the same condemnation as the* (1x), *strictly* (1x), *verdict* (2x), *turn* (1x), *punishment* (1x), *His judgment* (1x), *authority to judge* (1x), *of judgment* (7x), *sentence* (1x), ** (3x), *justly* (1x), *so* (1x), *to face judgment* (1x), *charges* (1x), *charge against him* (1x), *justice* (4x). 
+*judgment* (35x), *condemnation* (3x), *the sentence* (1x), *judgments* (3x), *lawsuits* (1x), *the same condemnation as the* (1x), *strictly* (1x), *verdict* (2x), *turn* (1x), *punishment* (1x), *His judgment* (1x), *authority to judge* (1x), *of judgment* (7x), *sentence* (1x), ** (3x), *justly* (1x), *so* (1x), *to face judgment* (1x), *charges* (1x), *charge against him* (1x), *justice* (4x). 
 
 
 Return to [Index](00-Index.md)
@@ -23,7 +23,7 @@ Return to [Index](00-Index.md)
 
 ### NT Instances (BSB)
 
-* judgment (MAT 7:2; LUK 23:40; JHN 9:39; ACT 24:25; ROM 2:2; ROM 2:3; ROM 5:16; ROM 13:2; 1CO 11:29; 1CO 11:34; GAL 5:10; 1TI 5:12; HEB 6:2; 1PE 4:17; MAT 5:21; MAT 5:22; MAT 12:41; MAT 12:42; LUK 10:14; LUK 11:31; LUK 11:32; JHN 5:22; JHN 5:24; JHN 5:27; JHN 8:16; JHN 12:31; JHN 16:8; JHN 16:11; 1TI 5:24; JAS 2:13; 2PE 2:4; JUD 1:6; JUD 1:15; REV 14:7; REV 18:10; JHN 16:11)
+* judgment (MAT 7:2; LUK 23:40; JHN 9:39; ACT 24:25; ROM 2:2; ROM 2:3; ROM 5:16; ROM 13:2; 1CO 11:29; 1CO 11:34; GAL 5:10; 1TI 5:12; HEB 6:2; 1PE 4:17; MAT 5:21; MAT 5:22; MAT 12:41; MAT 12:42; LUK 10:14; LUK 11:31; LUK 11:32; JHN 5:22; JHN 5:24; JHN 5:27; JHN 8:16; JHN 12:31; JHN 16:8; JHN 16:11; 1TI 5:24; JAS 2:13; 2PE 2:4; JUD 1:6; JUD 1:15; REV 14:7; REV 18:10)
 
 * condemnation (MRK 12:40; LUK 20:47; ROM 3:8)
 
