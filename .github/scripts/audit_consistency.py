@@ -67,7 +67,7 @@ MD_BOOKS = (
     "1PE 2PE 1JN 2JN 3JN JUD REV"
 ).split()
 MD_BOOK_INDEX = {book: pos for pos, book in enumerate(MD_BOOKS, 1)}
-MD_VERSE_REF = re.compile(r"^([1-3]?[A-Z]{3}) ([0-9]+):([0-9]+)$")
+MD_VERSE_REF = re.compile(r"^([1-3]?[A-Z]{2,3}) ([0-9]+):([0-9]+)$")
 
 
 def _markdown_verse_counts(content: str):
