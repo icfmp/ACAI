@@ -17,8 +17,8 @@ _Disciple_.
 
 **NT Distribution of References**
 
-▇█▄▇▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Matthew: 6; Mark: 7; Luke: 3; John: 6
+▅▇▄█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Matthew: 3; Mark: 4; Luke: 2; John: 5
 
 
 
@@ -29,7 +29,7 @@ MAT 27:56, LUK 8:2, JHN 20:1.
 
 
 In the New Testament (BSB), words representing “Mary Magdalene” are translated as 
-*Mary* (20x), *to Mary* (1x), *as well as Mary* (1x). 
+*Mary* (13x), *to Mary* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -54,11 +54,9 @@ Return to [Index](00-Index.md)
 
 ### NT Instances (BSB)
 
-* Mary (MAT 27:56; MAT 27:56; MAT 27:61; MAT 27:61; MAT 28:1; MAT 28:1; MRK 15:40; MRK 15:40; MRK 15:47; MRK 15:47; MRK 16:1; MRK 16:1; LUK 8:2; LUK 24:10; LUK 24:10; JHN 19:25; JHN 20:1; JHN 20:11; JHN 20:16; JHN 20:18)
+* Mary (MAT 27:56; MAT 27:61; MAT 28:1; MRK 15:40; MRK 15:47; MRK 16:1; LUK 8:2; LUK 24:10; JHN 19:25; JHN 20:1; JHN 20:11; JHN 20:16; JHN 20:18)
 
 * to Mary (MRK 16:9)
-
-* as well as Mary (JHN 19:25)
 
 
 

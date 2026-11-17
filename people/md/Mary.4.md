@@ -15,7 +15,7 @@ Wife of Clopas who was among the women who witnessed Jesus's death on the cross 
 **NT Distribution of References**
 
 ▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: John: 2
+* References: John: 1
 
 
 
@@ -26,7 +26,7 @@ JHN 19:25.
 
 
 In the New Testament (BSB), words representing “Mary (Wife of Clopas)” are translated as 
-*as well as Mary* (1x), *Mary* (1x). 
+*as well as Mary* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -36,8 +36,6 @@ Return to [Index](00-Index.md)
 ### NT Instances (BSB)
 
 * as well as Mary (JHN 19:25)
-
-* Mary (JHN 19:25)
 
 
 
