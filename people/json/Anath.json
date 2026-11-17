@@ -201,10 +201,7 @@
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
   "lemmas": {
-    "he": [
-      "עֲנָתֹות",
-      "עֲנָתוֹת"
-    ]
+    "he": ["עֲנָת"]
   },
   "key_references": [
     "07003031",
