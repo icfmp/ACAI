@@ -14,7 +14,7 @@ Elnathan, another chief living during the time of exile and return, is first men
 **OT Distribution of References**
 
 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Ezra: 3
+* References: Ezra: 1
 
 
 
@@ -23,7 +23,7 @@ EZR 8:16.
 
 
 In the Old Testament (BSB), words representing “Elnathan (Ezra 8:16b)” are translated as 
-*Elnathan* (2x), *and Elnathan* (1x). 
+*Elnathan* (1x). 
 
 
 
@@ -34,10 +34,7 @@ Return to [Index](00-Index.md)
 
 ### OT Instances (BSB)
 
-* Elnathan (EZR 8:16; EZR 8:16)
-
-* and Elnathan (EZR 8:16)
-
+* Elnathan (EZR 8:16)
 
 
 ### OT Subject Referents (BSB)

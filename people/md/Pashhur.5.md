@@ -17,7 +17,7 @@ Other forms include:
 **OT Distribution of References**
 
 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Jeremiah: 2
+* References: Jeremiah: 1
 
 
 
@@ -26,7 +26,7 @@ JER 38:1.
 
 
 In the Old Testament (BSB), words representing “Pashhur (Jeremiah 38:1)” are translated as 
-*of Pashhur* (1x), *and Pashhur* (1x). 
+*of Pashhur* (1x). 
 
 
 
@@ -38,9 +38,6 @@ Return to [Index](00-Index.md)
 ### OT Instances (BSB)
 
 * of Pashhur (JER 38:1)
-
-* and Pashhur (JER 38:1)
-
 
 
 ### References (Whole Bible)

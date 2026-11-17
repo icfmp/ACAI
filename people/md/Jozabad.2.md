@@ -14,7 +14,7 @@ A warrior from the tribe of Manasseh who lived during King David's time, mention
 **OT Distribution of References**
 
 ▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: 1 Chronicles: 2
+* References: 1 Chronicles: 1
 
 
 
@@ -23,7 +23,7 @@ A warrior from the tribe of Manasseh who lived during King David's time, mention
 
 
 In the Old Testament (BSB), words representing “Jozabad (1 Chronicles 12:20a)” are translated as 
-*Jozabad* (2x). 
+*Jozabad* (1x). 
 
 
 
@@ -34,8 +34,7 @@ Return to [Index](00-Index.md)
 
 ### OT Instances (BSB)
 
-* Jozabad (1CH 12:21; 1CH 12:21)
-
+* Jozabad (1CH 12:21)
 
 
 ### OT Pronominal Referents (BSB)

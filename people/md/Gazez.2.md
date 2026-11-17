@@ -16,7 +16,7 @@ Gazez, a man from the tribe of Judah and son of Haran, is first mentioned in 1 C
 **OT Distribution of References**
 
 ▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: 1 Chronicles: 2
+* References: 1 Chronicles: 1
 
 
 
@@ -25,7 +25,7 @@ Gazez, a man from the tribe of Judah and son of Haran, is first mentioned in 1 C
 
 
 In the Old Testament (BSB), words representing “Gazez (1 Chronicles 2:46b)” are translated as 
-*and Gazez* (1x), *Gazez* (1x). 
+*Gazez* (1x). 
 
 
 
@@ -36,10 +36,7 @@ Return to [Index](00-Index.md)
 
 ### OT Instances (BSB)
 
-* and Gazez (1CH 2:46)
-
 * Gazez (1CH 2:46)
-
 
 
 ### References (Whole Bible)
