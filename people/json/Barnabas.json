@@ -19,9 +19,6 @@
   "type": "person",
   "gender": "male",
   "father": "person:FatherOfBarnabas",
-  "siblings": [
-    "person:Mary.5"
-  ],
   "roles": [
     "Apostle",
     "Church Leader"
