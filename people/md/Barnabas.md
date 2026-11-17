@@ -16,7 +16,6 @@ Barnabas is also referred to as:
 
 * Gender: male
 * Father: [Father of Barnabas](FatherOfBarnabas.md)
-* Sibling(s): [Mary (Acts 12:12)](Mary.5.md)
 
 
 **NT Distribution of References**

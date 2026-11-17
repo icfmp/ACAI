@@ -13,7 +13,6 @@ Other forms include:
 * Gender: female
 * Tribe/Nationality: [Tribe of Judah](../../../groups/md/acai/Judah.md)
 * Father: [Solomon](Solomon.md)
-* Mother: [A Wife of Solomon](AWifeOfSolomon.md)
 * Partner(s): [Ahimaaz (1 Kings 4:15)](Ahimaaz.3.md)
 * Sibling(s): [Taphath](Taphath.md), [Rehoboam](Rehoboam.md)
 

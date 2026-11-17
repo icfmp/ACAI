@@ -9,7 +9,7 @@ The Father of Barnabas is an unnamed man living during the New Testament times, 
 
 
 * Gender: male
-* Offspring: [Barnabas](Barnabas.md), [Mary (Acts 12:12)](Mary.5.md)
+* Offspring: [Barnabas](Barnabas.md)
 
 
 
