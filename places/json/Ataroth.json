@@ -208,10 +208,7 @@
   "is_person": false,
   "added_entry": false,
   "lemmas": {
-    "he": [
-      "עַטְרֹות אַדָּר",
-      "עַטְרוֹת אַדָּר"
-    ]
+    "he": ["עֲטָרוֹת"]
   },
   "place_types": {
     "obi": [
