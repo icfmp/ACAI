@@ -26,7 +26,12 @@ def source_word_evidence(row):
 
 def distinct_source_senses(rows):
     """A mixed source sense is an editorial review signal, never a remapping."""
-    return sorted({row.get("sdbh", "") for row in rows if row.get("sdbh", "")})
+    # A Macula TSV cell can contain more than one space-separated SDBH ID.
+    # Preserve the original cell in each token's evidence, but count senses,
+    # not whole attribute strings, in the pair-level diagnostic.
+    return sorted({
+        sense for row in rows for sense in row.get("sdbh", "").split()
+    })
 
 
 def main():
