@@ -228,6 +228,27 @@ class GroupTests(unittest.TestCase):
             self.assertEqual(classes["primary_frame_only"], 1)
             self.assertEqual(classes["source_without_entity_link"], 1)
             self.assertEqual(classes["source_word_missing"], 1)
+            source_examples = finding["source_provenance"]["subject_source_examples"]
+            self.assertEqual(
+                source_examples["own_parallel"][0]["source_words"][0]["word_id"],
+                "o010010010041",
+            )
+            self.assertEqual(
+                source_examples["own_parallel"][0]["source_words"][0]["source_ref"],
+                "GEN 1:1!4",
+            )
+            self.assertTrue(
+                source_examples["source_without_entity_link"][0]["source_words"][0]
+                ["exists_in_pinned_source"],
+            )
+            self.assertFalse(
+                source_examples["source_word_missing"][0]["source_words"][0]
+                ["exists_in_pinned_source"],
+            )
+            self.assertEqual(
+                source_examples["source_word_missing"][0]["source_words"][0]
+                ["text"], "",
+            )
             self.assertEqual(result["summary"]["subject_repeated_groups_examined"], 10)
             self.assertEqual(result["summary"]["parallel_source_annotation_candidates"], 1)
             record = json.loads((folder / "Secondary.json").read_text())

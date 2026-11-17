@@ -48,8 +48,32 @@ def _source_annotations(path, wanted):
                     "frame": row.get("frame", ""),
                     "participantref": row.get("participantref", ""),
                     "referent": row.get("referent", ""),
+                    "ref": row.get("ref", ""),
+                    "text": row.get("text", ""),
+                    "english": row.get("english", "") or row.get("gloss", ""),
+                    "morph": row.get("morph", ""),
+                    "pos": row.get("pos", ""),
                 }
     return rows
+
+
+def _source_word_context(group, source):
+    """Preserve readable pinned lexical witnesses, including absent word rows."""
+    return {
+        "group": list(group),
+        "source_words": [
+            {
+                "word_id": token,
+                "exists_in_pinned_source": token in source,
+                "source_ref": source.get(token, {}).get("ref", ""),
+                "text": source.get(token, {}).get("text", ""),
+                "gloss": source.get(token, {}).get("english", ""),
+                "morph": source.get(token, {}).get("morph", ""),
+                "pos": source.get(token, {}).get("pos", ""),
+            }
+            for token in group
+        ],
+    }
 
 
 def _classify_subject_group(group, source, explicit_ids, primary_ids, corpus):
@@ -122,6 +146,7 @@ def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary,
         unmatched_groups = []
         subject_classes = collections.Counter()
         subject_examples = collections.defaultdict(list)
+        subject_source_examples = collections.defaultdict(list)
         subject = finding["occurrence_field"] == "subject_referents"
         primary = primary_by_id.get(finding["id"])
         # An aggregate's exact tokens are evidence of indexing inheritance,
@@ -135,6 +160,8 @@ def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary,
                 subject_classes[classification] += 1
                 if len(subject_examples[classification]) < 5:
                     subject_examples[classification].append(list(group))
+                    subject_source_examples[classification].append(
+                        _source_word_context(group, source))
                 continue
             linked = []
             parent_linked = []
@@ -172,6 +199,7 @@ def _trace_indirect_source_annotations(results, pending, hebrew, greek, summary,
                 "unresolved_or_other_source_patterns": len(repeats) - parallel,
                 "subject_evidence_classes": dict(sorted(subject_classes.items())),
                 "subject_evidence_examples": dict(sorted(subject_examples.items())),
+                "subject_source_examples": dict(sorted(subject_source_examples.items())),
                 "note": ("Exact source-pointer evidence only. Frame mentions "
                          "are not automatically grammatical subjects; no "
                          "classification authorizes deduplication."),
