@@ -46,6 +46,62 @@ class GroupTests(unittest.TestCase):
                              {"pronominal_referents","subject_referents"})
             self.assertTrue(all(x["corpus"]=="wlc" for x in result["findings"]))
 
+    def test_parallel_source_subject_and_frame_links_are_candidates_only(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            p = root / "people" / "json"
+            p.mkdir(parents=True)
+            for name, token in (("A", "o160090040062"), ("B", "o160090040111")):
+                (p / (name + ".json")).write_text(json.dumps({
+                    "id": "person:" + name, "primary_id": "person:" + name,
+                    "explicit_instances": {"wlc": [[token]]},
+                    "subject_referents": {"wlc": [
+                        ["o160090040132"], ["o160090040132"]]},
+                }), encoding="utf-8")
+            (p / "C.json").write_text(json.dumps({
+                "id": "person:C", "primary_id": "person:C",
+                "explicit_instances": {"wlc": [["o160090040072"]]},
+                "subject_referents": {"wlc": [
+                    ["o160090040133"], ["o160090040133"]]},
+            }), encoding="utf-8")
+            hebrew = root / "wlc.tsv"
+            hebrew.write_text(
+                "xml:id\tref\tsubjref\tframe\n"
+                "o160090040132\tNEH 9:4!13\t"
+                "160090040062 160090040111\t"
+                "A0:160090040062;160090040111;\n",
+                encoding="utf-8",
+            )
+            greek = root / "sblgnt.tsv"
+            greek.write_text("xml:id\tref\tsubjref\tframe\n", encoding="utf-8")
+            results = m.inspect(root, hebrew=hebrew, greek=greek)
+            self.assertEqual(results["summary"]["exact_duplicate_groups"], 3)
+            self.assertEqual(results["summary"]["subject_repeated_groups_examined"], 3)
+            self.assertEqual(results["summary"]["parallel_source_annotation_candidates"], 2)
+            self.assertEqual(results["summary"]["subject_groups_not_explained_by_parallel_fields"], 1)
+            self.assertEqual(
+                {r["id"]: r["source_provenance"]["parallel_subjref_frame_candidates"]
+                 for r in results["findings"]},
+                {"person:A": 1, "person:B": 1, "person:C": 0},
+            )
+            # No source evidence authorizes changing any original record.
+            self.assertEqual(json.loads((p / "A.json").read_text())
+                             ["subject_referents"]["wlc"],
+                             [["o160090040132"], ["o160090040132"]])
+
+    def test_macula_referent_parser_never_matches_partial_ids(self):
+        self.assertEqual(
+            m._source_ids("A0:160090040062; A1:160090040111;", "wlc"),
+            {"o160090040062", "o160090040111"},
+        )
+        self.assertEqual(
+            m._source_ids("16009004006", "wlc"), set(),
+        )
+        self.assertEqual(
+            m._source_ids("n44010032007", "SBLGNT"),
+            {"n44010032007"},
+        )
+
     def test_no_duplicates(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
