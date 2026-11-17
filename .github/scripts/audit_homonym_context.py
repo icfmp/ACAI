@@ -41,7 +41,7 @@ def declared_parent_child_edges(root: Path, a: str, b: str) -> list[str]:
     records = {}
     for entity in (a, b):
         name = entity.partition(":")[2]
-        if not name or "/" in name or "\\\\" in name:
+        if not name or "/" in name or "\\" in name:
             return []
         path = root / "people" / "json" / (name + ".json")
         try:
