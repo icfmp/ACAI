@@ -116,6 +116,7 @@ class LemmaAuditTests(unittest.TestCase):
             result = module.audit(root, hebrew, greek)
             self.assertEqual(result["summary"]["zero_exact_lemma_overlap"], 3)
             self.assertEqual(result["summary"]["candidates_with_exact_surface_overlap"], 2)
+            self.assertEqual(result["summary"]["zero_exact_lemma_overlap_with_exact_surface_overlap"], 2)
             self.assertEqual(result["summary"]["unmatched_lemmas_attested_as_surface_forms"], 2)
             findings = {x["id"]: x for x in result["findings"]}
             bethlehem = findings["groups:Bethlehemite"]
