@@ -185,6 +185,40 @@ class GlobalAuditTests(unittest.TestCase):
         self.assertEqual(counts["NT"]["46012003"], 1)
         self.assertFalse(invalid)
 
+    def test_family_infobox_keeps_person_and_group_ids_distinct(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            directory = root / "people" / "json"
+            pages = root / "people" / "md"
+            directory.mkdir(parents=True)
+            pages.mkdir(parents=True)
+            (directory / "Parent.json").write_text(json.dumps({
+                "id": "person:Parent", "primary_id": "person:Parent",
+                "offspring": ["person:Child", "group:Kittim",
+                              "Ludim@Gen.10.13-1Ch"]
+            }))
+            (directory / "Child.json").write_text(json.dumps({
+                "id": "person:Child", "primary_id": "person:Child"
+            }))
+            page = pages / "Parent.md"
+            page.write_text(
+                "**Familial Relationships of Parent**\\n\\n"
+                "* Offspring: [Child](Child.md), group:Kittim (Group), "
+                "Ludim@Gen.10.13-1Ch (Group)\\n\\n"
+                "**OT Distribution of References**\\n"
+            )
+            def mismatch():
+                return [x for x in module.scan(root)["findings"]
+                        if x["rule"] == "markdown_family_metadata_mismatch"
+                        and x["entity"] == "person:Parent"]
+            self.assertFalse(mismatch())
+            page.write_text(page.read_text().replace(
+                "group:Kittim (Group)", "group:Dodanim (Group)"
+            ))
+            findings = mismatch()
+            self.assertEqual(len(findings), 1)
+            self.assertTrue(findings[0]["location"].endswith("#/offspring"))
+
     def test_stale_family_infobox_is_reviewed_without_rewriting_prose(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
