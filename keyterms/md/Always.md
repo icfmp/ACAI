@@ -14,7 +14,7 @@ JHN 3:16, JHN 10:28, HEB 13:8, REV 22:5.
 
 
 In the New Testament (BSB), words representing “Always” are translated as 
-*May you never bear* (1x), *will never* (1x), *ever* (19x), *forever* (42x), *will never thirst* (1x), ** (7x), *he will never see* (1x), *will never taste* (1x), *they will never perish* (1x), *will never die* (1x), *of* (2x), *again* (1x), *endures forever* (1x), *and ever* (2x), *of eternity* (1x), *time* (2x), *eternal* (46x), *of eternal* (8x), *He will give eternal* (1x), *is eternal* (3x), *an eternal* (2x), *began* (2x), *for good* (1x), *the eternal* (3x), *of the eternal* (1x), *ages past* (2x), *before* (1x), *long ago* (1x), *ages* (5x), *age* (16x), *life* (2x), *of this life* (1x), *come* (1x), *age to come* (1x), *world* (2x), *are* (1x), *time began* (1x), *ways* (1x), *universe* (2x), *of the age* (1x), *in eternal* (1x). 
+*May you never bear* (1x), *will never* (1x), *ever* (19x), *forever* (42x), *will never thirst* (1x), ** (7x), *he will never see* (1x), *will never taste* (1x), *they will never perish* (1x), *will never die* (1x), *of* (2x), *again* (1x), *endures forever* (1x), *and ever* (2x), *of eternity* (1x), *time* (1x), *eternal* (46x), *of eternal* (8x), *He will give eternal* (1x), *is eternal* (3x), *an eternal* (2x), *began* (2x), *for good* (1x), *the eternal* (3x), *of the eternal* (1x), *ages past* (2x), *before* (1x), *long ago* (1x), *ages* (5x), *age* (16x), *life* (2x), *of this life* (1x), *come* (1x), *age to come* (1x), *world* (2x), *are* (1x), *time began* (1x), *ways* (1x), *universe* (2x), *of the age* (1x), *in eternal* (1x). 
 
 
 Return to [Index](00-Index.md)
@@ -53,7 +53,7 @@ Return to [Index](00-Index.md)
 
 * of eternity (2PE 3:18)
 
-* time (JUD 1:25; JUD 1:25)
+* time (JUD 1:25)
 
 * eternal (MAT 18:8; MAT 19:16; MAT 19:29; MAT 25:41; MAT 25:46; MAT 25:46; MRK 10:17; LUK 10:25; LUK 16:9; LUK 18:18; JHN 3:15; JHN 3:16; JHN 3:36; JHN 4:14; JHN 4:36; JHN 5:24; JHN 5:39; JHN 6:27; JHN 6:40; JHN 6:47; JHN 6:54; JHN 10:28; JHN 12:25; JHN 12:50; JHN 17:2; JHN 17:3; ACT 13:48; ROM 5:21; GAL 6:8; 2TH 2:16; 1TI 6:12; 1TI 6:16; 2TI 2:10; HEB 6:2; HEB 9:12; HEB 9:15; 1PE 5:10; 2PE 1:11; 1JN 1:2; 1JN 2:25; 1JN 3:15; 1JN 5:11; 1JN 5:13; JUD 1:21; 1TI 1:17; ROM 1:20)
 
