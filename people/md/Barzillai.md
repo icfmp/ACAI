@@ -15,8 +15,8 @@ _Leader_.
 
 **OT Distribution of References**
 
-▁▁▁▁▁▁▁▁▁█▂▁▁▁▃▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: 2 Samuel: 6; 1 Kings: 1; Ezra: 2; Nehemiah: 2
+▁▁▁▁▁▁▁▁▁█▂▁▁▁▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: 2 Samuel: 6; 1 Kings: 1; Ezra: 1; Nehemiah: 1
 
 
 
@@ -25,7 +25,7 @@ _Leader_.
 
 
 In the Old Testament (BSB), words representing “Barzillai” are translated as 
-*and Barzillai* (1x), *Now Barzillai* (1x), *Barzillai* (3x), *But Barzillai* (1x), *of Barzillai* (5x). 
+*and Barzillai* (1x), *Now Barzillai* (1x), *Barzillai* (3x), *But Barzillai* (1x), *of Barzillai* (3x). 
 
 
 
@@ -52,7 +52,7 @@ Return to [Index](00-Index.md)
 
 * But Barzillai (2SA 19:35)
 
-* of Barzillai (1KI 2:7; EZR 2:61; EZR 2:61; NEH 7:63; NEH 7:63)
+* of Barzillai (1KI 2:7; EZR 2:61; NEH 7:63)
 
 
 
