@@ -133,6 +133,58 @@ class GlobalAuditTests(unittest.TestCase):
             self.assertNotIn("markdown_reference_count_mismatch",
                              {v["rule"] for v in findings})
 
+    def test_same_counts_do_not_hide_wrong_displayed_verses(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            p = root / "people" / "json"
+            md = root / "people" / "md"
+            p.mkdir(parents=True)
+            md.mkdir(parents=True)
+            record = {
+                "id": "person:A", "primary_id": "person:A",
+                "references": ["42001001", "42001002"],
+                "explicit_instances": {"SBLGNT": [
+                    ["n42001001005"], ["n42001002005"]
+                ]},
+            }
+            (p / "A.json").write_text(json.dumps(record))
+            page = md / "A.md"
+            page.write_text(
+                "### NT Instances (BSB)\n\n"
+                "* named person (LUK 1:1; LUK 1:3)\n\n"
+                "### References (Whole Bible)\n\n"
+                "* LUK 1:1; LUK 1:3\n"
+            )
+            findings = module.scan(root)["findings"]
+            rules = {f["rule"] for f in findings}
+            self.assertIn("markdown_instance_verse_mismatch", rules)
+            self.assertIn("markdown_reference_verse_mismatch", rules)
+            self.assertNotIn("markdown_instance_group_count_mismatch", rules)
+            self.assertNotIn("markdown_reference_count_mismatch", rules)
+            self.assertTrue(all(f["severity"] == "review" for f in findings))
+
+            page.write_text(
+                "### NT Instances (BSB)\n\n"
+                "* named person (LUK 1:1; LUK 1:2)\n\n"
+                "### References (Whole Bible)\n\n"
+                "* LUK 1:1; LUK 1:2\n"
+            )
+            rules = {f["rule"] for f in module.scan(root)["findings"]}
+            self.assertNotIn("markdown_instance_verse_mismatch", rules)
+            self.assertNotIn("markdown_reference_verse_mismatch", rules)
+
+    def test_numbered_bible_books_are_parsed_without_guessing(self):
+        counts, invalid = module._markdown_verse_counts(
+            "### OT Instances (BSB)\n\n"
+            "* place (1KI 4:13; 2CH 23:1)\n\n"
+            "### NT Instances (BSB)\n\n"
+            "* person (1CO 12:3)\n"
+        )
+        self.assertEqual(counts["OT"]["11004013"], 1)
+        self.assertEqual(counts["OT"]["14023001"], 1)
+        self.assertEqual(counts["NT"]["46012003"], 1)
+        self.assertFalse(invalid)
+
     def test_stale_family_infobox_is_reviewed_without_rewriting_prose(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
