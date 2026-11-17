@@ -96,12 +96,25 @@ def audit(root: Path, hebrew: Path, greek: Path) -> dict:
             continue
         rule = "zero_exact_lemma_overlap" if not matched else "partial_exact_lemma_overlap"
         summary[rule] += 1
+        # Preserve one exact source-word ID for each distinct lemma. The first six
+        # word examples below may hide a rare anomalous lemma in large records.
+        # Populate this only for candidates to keep the audit lightweight.
+        lemma_examples = {}
+        for token in sorted(ids):
+            entry = indexes[corpus].get(token)
+            if entry is None or not entry["lemma"]:
+                continue
+            lemma_examples.setdefault(entry["lemma"], {
+                "word_id": token, "ref": entry["ref"],
+                "lemma": entry["lemma"], "text": entry["text"],
+            })
         findings.append({
             "rule": rule, "category": category, "id": entity, "language": language,
             "declared_lemmas": declared, "matched_declared_lemmas": matched,
             "unmatched_declared_lemmas": [d for d in declared if d not in matched],
             "source_lemmas": sorted({s["lemma"] for s in source if s["lemma"]})[:30],
             "source_word_ids": len(source), "missing_source_ids": len(ids) - len(source),
+            "source_lemma_examples": [lemma_examples[k] for k in sorted(lemma_examples)[:30]],
             "source_examples": [{"ref": x["ref"], "lemma": x["lemma"], "text": x["text"]}
                                 for x in source[:6]],
         })
