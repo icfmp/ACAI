@@ -180,7 +180,7 @@
       ]
     }
   },
-  "mentioned_in_bible": true,
+  "mentioned_in_bible": false,
   "only_mentioned_in_apocrypha": false,
   "non_biblical": true,
   "is_artifact": false,
