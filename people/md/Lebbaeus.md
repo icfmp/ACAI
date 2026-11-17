@@ -17,8 +17,6 @@ Lebbaeus (Thaddaeus) is a subentry. The primary entry is
 
 
 * Gender: male
-* Father: [James](James.2.md)
-* Sibling(s): [James](James.2.md)
 
 
 

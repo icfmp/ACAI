@@ -15,8 +15,6 @@ Judas is also referred to as:
 
 
 * Gender: male
-* Father: [James](James.2.md)
-* Sibling(s): [James](James.2.md)
 
 
 **NT Distribution of References**

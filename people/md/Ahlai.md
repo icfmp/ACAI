@@ -8,11 +8,9 @@ A man from the tribe of Judah, son of Sheshan, married to Jarha, and father of A
 **Familial Relationships of Ahlai**
 
 
-* Gender: male
+* Gender: female
 * Tribe/Nationality: [Tribe of Judah](../../../groups/md/acai/Judah.md)
 * Father: [Sheshan](Sheshan.md)
-* Partner(s): [Jarha](Jarha.md)
-* Offspring: [Attai](Attai.md)
 
 
 **OT Distribution of References**

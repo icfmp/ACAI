@@ -11,7 +11,6 @@ A man of the tribe of Judah living during the divided kingdom, son of Jarha and 
 * Gender: male
 * Tribe/Nationality: [Tribe of Judah](../../../groups/md/acai/Judah.md)
 * Father: [Jarha](Jarha.md)
-* Mother: [Ahlai](Ahlai.md)
 * Offspring: [Nathan (1 Chronicles 2:36)](Nathan.4.md)
 
 

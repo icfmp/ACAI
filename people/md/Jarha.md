@@ -10,7 +10,6 @@ An Egyptian slave belonging to Sheshan from the tribe of Judah, who lived during
 
 * Gender: male
 * Tribe/Nationality: [Egyptians](../../../groups/md/acai/Egypt.md)
-* Partner(s): [Ahlai](Ahlai.md)
 * Offspring: [Attai](Attai.md)
 
 

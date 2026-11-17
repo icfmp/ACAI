@@ -12,7 +12,6 @@ _Apostle_, _Disciple_.
 
 * Gender: male
 * Father: [Alphaeus](Alphaeus.md)
-* Sibling(s): [Judas](Judas.md)
 
 
 **NT Distribution of References**
