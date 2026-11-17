@@ -38,6 +38,13 @@ class GlobalAuditTests(unittest.TestCase):
             ["001642002002000"],
         )
         self.assertEqual(homonym_module.distinct_source_senses([{}]), [])
+        self.assertEqual(
+            homonym_module.distinct_source_senses([
+                {"sdbh": "001642002001000 001642002002000"},
+                {"sdbh": "001642002002000"}
+            ]),
+            ["001642002001000", "001642002002000"],
+        )
         self.assertEqual(anah["word"], "דִּישׁוֹן")
         self.assertEqual(seir["stronglemma"], "דִּישֹׁון")
 
