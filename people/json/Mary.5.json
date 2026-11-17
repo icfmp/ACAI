@@ -20,15 +20,11 @@
   },
   "type": "person",
   "gender": "female",
-  "father": "person:FatherOfBarnabas",
   "partners": [
     "person:HusbandOfMary"
   ],
   "offspring": [
     "person:Mark"
-  ],
-  "siblings": [
-    "person:Barnabas"
   ],
   "ubsdgnt": [
     "93.253f"
