@@ -53,9 +53,20 @@ class GlobalAuditTests(unittest.TestCase):
                 {"id": "place:A", "primary_id": "place:A",
                  "mentioned_in_bible": True, "non_biblical": True,
                  "referred_to_as": ["place:Missing"]}))
-            rules = {x["rule"] for x in module.scan(root)["findings"]}
+            findings = module.scan(root)["findings"]
+            rules = {x["rule"] for x in findings}
             self.assertIn("contradictory_biblical_flags", rules)
             self.assertIn("dangling_relationship", rules)
+            self.assertEqual(
+                next(x["severity"] for x in findings
+                     if x["rule"] == "contradictory_biblical_flags"),
+                "error",
+            )
+            self.assertEqual(
+                next(x["severity"] for x in findings
+                     if x["rule"] == "dangling_relationship"),
+                "review",
+            )
 
 
 if __name__ == "__main__":
