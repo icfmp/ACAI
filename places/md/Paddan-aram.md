@@ -19,7 +19,7 @@ Other information about Paddan-aram:
 **OT Distribution of References**
 
 █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Genesis: 20; Numbers: 1; Deuteronomy: 1; Hosea: 1
+* References: Genesis: 15; Numbers: 1; Hosea: 1
 
 
 
@@ -28,7 +28,7 @@ GEN 24:10, GEN 25:20, GEN 48:7, DEU 23:4, JDG 3:8.
 
 
 In the Old Testament (BSB), words representing “Paddan-aram” are translated as 
-*from Paddan-aram* (3x), *and the* (1x), ** (1x), *to Paddan-aram* (8x), *the Aramean* (3x), *in Paddan-aram* (3x), *from Paddan* (1x), *the* (1x), *and* (1x), *of Aram* (1x). 
+*from Paddan-aram* (3x), *to Paddan-aram* (8x), *in Paddan-aram* (3x), *from Paddan* (1x), *the* (1x), *of Aram* (1x). 
 
 
 
@@ -41,13 +41,7 @@ Return to [Index](00-Index.md)
 
 * from Paddan-aram (GEN 25:20; GEN 33:18; GEN 35:9)
 
-* and the (GEN 25:20)
-
-*  (GEN 25:20)
-
 * to Paddan-aram (GEN 28:2; GEN 28:2; GEN 28:5; GEN 28:5; GEN 28:6; GEN 28:6; GEN 28:7; GEN 28:7)
-
-* the Aramean (GEN 28:5; GEN 31:20; GEN 31:24)
 
 * in Paddan-aram (GEN 31:18; GEN 35:26; GEN 46:15)
 
@@ -55,10 +49,7 @@ Return to [Index](00-Index.md)
 
 * the (NUM 23:7)
 
-* and (DEU 26:5)
-
 * of Aram (HOS 12:13)
-
 
 
 ### OT Subject Referents (BSB)
@@ -69,7 +60,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* GEN 25:20; GEN 28:2; GEN 28:5; GEN 28:6; GEN 28:7; GEN 31:18; GEN 31:20; GEN 31:24; GEN 33:18; GEN 35:9; GEN 35:26; GEN 46:15; GEN 48:7; NUM 23:7; DEU 26:5; HOS 12:13
+* GEN 25:20; GEN 28:2; GEN 28:5; GEN 28:6; GEN 28:7; GEN 31:18; GEN 33:18; GEN 35:9; GEN 35:26; GEN 46:15; GEN 48:7; NUM 23:7; HOS 12:13
 
 
 ### Place Types

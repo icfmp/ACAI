@@ -9,8 +9,8 @@ Mount Hermon is also referred to as:
 
 **OT Distribution of References**
 
-▁▁▁▁▅█▂▁▁▁▁▁▃▁▁▁▁▁▄▁▁▃▁▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Deuteronomy: 5; Joshua: 9; Judges: 1; 1 Chronicles: 3; Psalms: 4; Song of Songs: 3; Jeremiah: 1; Ezekiel: 1
+▁▁▁▁▇█▂▁▁▁▁▁▅▁▁▁▁▁▆▁▁▃▁▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁
+* References: Deuteronomy: 5; Joshua: 6; Judges: 1; 1 Chronicles: 3; Psalms: 4; Song of Songs: 2; Jeremiah: 1; Ezekiel: 1
 
 
 
@@ -19,7 +19,7 @@ DEU 3:8, DEU 3:9, 1CH 5:23, SNG 4:8.
 
 
 In the Old Testament (BSB), words representing “Mount Hermon” are translated as 
-*Hermon* (9x), *call Sirion* (1x), *Senir* (2x), *Siyon* (1x), *Baal-gad* (1x), *from Baal-gad* (2x), *Baal-hermon* (1x), *Baal-hermon that is* (1x), *and Sirion* (1x), *and the peaks of Hermon even from* (1x), *and Hermon* (2x), *of Hermon* (1x), *of Senir* (1x), *in Baal-hamon* (1x), *slopes* (1x), *Senir They* (1x). 
+*Hermon* (9x), *call Sirion* (1x), *Senir* (2x), *Siyon* (1x), *Baal-hermon* (1x), *Baal-hermon that is* (1x), *and Sirion* (1x), *and the peaks of Hermon even from* (1x), *and Hermon* (2x), *of Hermon* (1x), *of Senir* (1x), *slopes* (1x), *Senir They* (1x). 
 
 
 
@@ -38,10 +38,6 @@ Return to [Index](00-Index.md)
 
 * Siyon (DEU 4:48)
 
-* Baal-gad (JOS 11:17)
-
-* from Baal-gad (JOS 12:7; JOS 13:5)
-
 * Baal-hermon (JDG 3:3)
 
 * Baal-hermon that is (1CH 5:23)
@@ -56,17 +52,14 @@ Return to [Index](00-Index.md)
 
 * of Senir (SNG 4:8)
 
-* in Baal-hamon (SNG 8:11)
-
 * slopes (JER 18:14)
 
 * Senir They (EZK 27:5)
 
 
-
 ### References (Whole Bible)
 
-* DEU 3:8; DEU 3:9; DEU 4:48; JOS 11:3; JOS 11:17; JOS 12:1; JOS 12:5; JOS 12:7; JOS 13:5; JOS 13:11; JDG 3:3; 1CH 5:23; PSA 29:6; PSA 42:7; PSA 89:13; PSA 133:3; SNG 4:8; SNG 8:11; JER 18:14; EZK 27:5
+* DEU 3:8; DEU 3:9; DEU 4:48; JOS 11:3; JOS 11:17; JOS 12:1; JOS 12:5; JOS 12:7; JOS 13:5; JOS 13:11; JDG 3:3; 1CH 5:23; PSA 29:6; PSA 42:7; PSA 89:13; PSA 133:3; SNG 4:8; JER 18:14; EZK 27:5
 
 
 ### Place Types
