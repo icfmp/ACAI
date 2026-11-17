@@ -10,8 +10,8 @@ Edom (Group), [Syria](Syria.md).
 
 **OT Distribution of References**
 
-▇▂▁▇▅▄▄▁▄▄▇█▄▇▁▁▁▁▆▁▁▁▄▇▂▅▂▁▂▄▄▁▁▁▁▁▁▁▃
-* References: Genesis: 10; Exodus: 1; Numbers: 9; Deuteronomy: 7; Joshua: 4; Judges: 4; 1 Samuel: 5; 2 Samuel: 5; 1 Kings: 9; 2 Kings: 11; 1 Chronicles: 5; 2 Chronicles: 9; Psalms: 8; Isaiah: 4; Jeremiah: 10; Lamentations: 2; Ezekiel: 7; Daniel: 1; Joel: 1; Amos: 5; Obadiah: 5; Malachi: 3
+▇▂▁▇▅▄▄▁▄▃▇█▄▆▁▁▁▁▆▁▁▁▄▇▂▅▂▁▂▄▄▁▁▁▁▁▁▁▃
+* References: Genesis: 10; Exodus: 1; Numbers: 9; Deuteronomy: 7; Joshua: 4; Judges: 4; 1 Samuel: 5; 2 Samuel: 3; 1 Kings: 9; 2 Kings: 11; 1 Chronicles: 5; 2 Chronicles: 8; Psalms: 8; Isaiah: 4; Jeremiah: 10; Lamentations: 2; Ezekiel: 7; Daniel: 1; Joel: 1; Amos: 5; Obadiah: 5; Malachi: 3
 
 
 
@@ -20,7 +20,7 @@ GEN 32:4, GEN 36:8.
 
 
 In the Old Testament (BSB), words representing “Edom” are translated as 
-*of Edom* (32x), *of the Edomites* (2x), *in Edom* (6x), *of Esau’s* (1x), *Esau* (6x), *But Edom* (2x), *So Edom* (1x), *Edom* (28x), *of Esau* (6x), *to Esau* (1x), *an Edomite* (1x), *and Esau* (1x), *the kings* (1x), *the Edomite* (5x), *from Edom* (3x), *Edomites* (2x), *the Edomites* (4x), ** (3x), *Sidon* (1x), *some Edomites* (1x), *Edom replied* (1x), *When the Edomites* (2x), *in* (1x), *and Moab* (1x), *The Edomites* (1x), *on Edom* (2x), *Concerning Edom* (1x), *will strip Esau* (1x), *of Edom’s* (1x), *with Edom* (1x), *and Edom* (1x), *Edom and* (1x), *Edom even* (1x), *Edom’s king* (1x), *about Edom We have* (1x), *the LORD* (1x). 
+*of Edom* (32x), *of the Edomites* (2x), *in Edom* (6x), *of Esau’s* (1x), *Esau* (6x), *But Edom* (2x), *So Edom* (1x), *Edom* (28x), *of Esau* (6x), *to Esau* (1x), *an Edomite* (1x), *and Esau* (1x), *the kings* (1x), *the Edomite* (5x), *from Edom* (1x), *Edomites* (1x), *the Edomites* (4x), ** (3x), *Sidon* (1x), *some Edomites* (1x), *Edom replied* (1x), *When the Edomites* (2x), *in* (1x), *and Moab* (1x), *The Edomites* (1x), *on Edom* (2x), *Concerning Edom* (1x), *will strip Esau* (1x), *of Edom’s* (1x), *with Edom* (1x), *and Edom* (1x), *Edom and* (1x), *Edom even* (1x), *Edom’s king* (1x), *about Edom We have* (1x), *the LORD* (1x). 
 
 
 
@@ -59,9 +59,9 @@ Return to [Index](00-Index.md)
 
 * the Edomite (1SA 21:8; 1SA 22:9; 1SA 22:18; 1SA 22:22; 1KI 11:14)
 
-* from Edom (2SA 8:12; 2CH 20:2; ISA 63:1)
+* from Edom (ISA 63:1)
 
-* Edomites (2SA 8:13; 1CH 18:12)
+* Edomites (1CH 18:12)
 
 * the Edomites (2SA 8:14; 2KI 16:6; 1CH 18:13; 2CH 25:14)
 
@@ -102,7 +102,6 @@ Return to [Index](00-Index.md)
 * about Edom We have (OBA 1:1)
 
 * the LORD (OBA 1:18)
-
 
 
 ### OT Pronominal Referents (BSB)
@@ -191,7 +190,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* GEN 32:4; GEN 36:9; GEN 36:16; GEN 36:17; GEN 36:20; GEN 36:21; GEN 36:31; GEN 36:32; GEN 36:40; GEN 36:43; EXO 15:15; NUM 20:14; NUM 20:18; NUM 20:20; NUM 20:21; NUM 20:23; NUM 21:4; NUM 24:18; NUM 33:37; NUM 34:3; DEU 2:4; DEU 2:5; DEU 2:8; DEU 2:12; DEU 2:22; DEU 2:29; DEU 23:8; JOS 15:1; JOS 15:21; JOS 24:4; JDG 5:4; JDG 11:17; JDG 11:18; 1SA 14:47; 1SA 21:8; 1SA 22:9; 1SA 22:18; 1SA 22:22; 2SA 8:12; 2SA 8:13; 2SA 8:14; 1KI 9:26; 1KI 11:1; 1KI 11:14; 1KI 11:15; 1KI 11:16; 1KI 11:17; 1KI 22:48; 2KI 3:8; 2KI 3:9; 2KI 3:12; 2KI 3:20; 2KI 3:26; 2KI 8:20; 2KI 8:21; 2KI 8:22; 2KI 14:7; 2KI 14:10; 2KI 16:6; 1CH 1:43; 1CH 1:51; 1CH 1:54; 1CH 18:11; 1CH 18:12; 1CH 18:13; 2CH 8:17; 2CH 20:2; 2CH 21:8; 2CH 21:9; 2CH 21:10; 2CH 25:14; 2CH 25:19; 2CH 25:20; 2CH 28:17; PSA 52:2; PSA 60:2; PSA 60:3; PSA 60:10; PSA 60:11; PSA 83:7; PSA 108:10; PSA 108:11; PSA 137:7; ISA 11:14; ISA 34:5; ISA 34:6; ISA 34:8; ISA 34:9; ISA 34:10; ISA 34:11; ISA 63:1; JER 9:25; JER 25:21; JER 27:3; JER 40:11; JER 49:7; JER 49:8; JER 49:10; JER 49:14; JER 49:15; JER 49:17; JER 49:18; JER 49:19; JER 49:20; JER 49:21; JER 49:22; LAM 4:21; LAM 4:22; EZK 25:12; EZK 25:13; EZK 25:14; EZK 32:29; EZK 35:15; EZK 36:5; DAN 11:41; JOL 4:19; AMO 1:6; AMO 1:9; AMO 1:11; AMO 2:1; AMO 9:12; OBA 1:1; OBA 1:2; OBA 1:6; OBA 1:8; OBA 1:18; MAL 1:2; MAL 1:3; MAL 1:4
+* GEN 32:4; GEN 36:9; GEN 36:16; GEN 36:17; GEN 36:20; GEN 36:21; GEN 36:31; GEN 36:32; GEN 36:40; GEN 36:43; EXO 15:15; NUM 20:14; NUM 20:18; NUM 20:20; NUM 20:21; NUM 20:23; NUM 21:4; NUM 24:18; NUM 33:37; NUM 34:3; DEU 2:4; DEU 2:5; DEU 2:8; DEU 2:12; DEU 2:22; DEU 2:29; DEU 23:8; JOS 15:1; JOS 15:21; JOS 24:4; JDG 5:4; JDG 11:17; JDG 11:18; 1SA 14:47; 1SA 21:8; 1SA 22:9; 1SA 22:18; 1SA 22:22; 2SA 8:14; 1KI 9:26; 1KI 11:1; 1KI 11:14; 1KI 11:15; 1KI 11:16; 1KI 11:17; 1KI 22:48; 2KI 3:8; 2KI 3:9; 2KI 3:12; 2KI 3:20; 2KI 3:26; 2KI 8:20; 2KI 8:21; 2KI 8:22; 2KI 14:7; 2KI 14:10; 2KI 16:6; 1CH 1:43; 1CH 1:51; 1CH 1:54; 1CH 18:11; 1CH 18:12; 1CH 18:13; 2CH 8:17; 2CH 21:8; 2CH 21:9; 2CH 21:10; 2CH 25:14; 2CH 25:19; 2CH 25:20; 2CH 28:17; PSA 52:2; PSA 60:2; PSA 60:3; PSA 60:10; PSA 60:11; PSA 83:7; PSA 108:10; PSA 108:11; PSA 137:7; ISA 11:14; ISA 34:5; ISA 34:6; ISA 34:8; ISA 34:9; ISA 34:10; ISA 34:11; ISA 63:1; JER 9:25; JER 25:21; JER 27:3; JER 40:11; JER 49:7; JER 49:8; JER 49:10; JER 49:14; JER 49:15; JER 49:17; JER 49:18; JER 49:19; JER 49:20; JER 49:21; JER 49:22; LAM 4:21; LAM 4:22; EZK 25:12; EZK 25:13; EZK 25:14; EZK 32:29; EZK 35:15; EZK 36:5; DAN 11:41; JOL 4:19; AMO 1:6; AMO 1:9; AMO 1:11; AMO 2:1; AMO 9:12; OBA 1:1; OBA 1:2; OBA 1:6; OBA 1:8; OBA 1:18; MAL 1:2; MAL 1:3; MAL 1:4
 
 
 ### Place Types

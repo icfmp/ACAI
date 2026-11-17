@@ -20,7 +20,7 @@ Other information about Tappuah (of Ephraim):
 **OT Distribution of References**
 
 ▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-* References: Joshua: 5
+* References: Joshua: 4
 
 
 
@@ -29,7 +29,7 @@ JOS 12:17, JOS 16:8, JOS 17:8.
 
 
 In the Old Testament (BSB), words representing “Tappuah (of Ephraim)” are translated as 
-*of Tappuah* (2x), *From Tappuah* (1x), *of En-tappuah* (1x), *but Tappuah itself* (1x). 
+*of Tappuah* (2x), *From Tappuah* (1x), *but Tappuah itself* (1x). 
 
 
 
@@ -44,15 +44,12 @@ Return to [Index](00-Index.md)
 
 * From Tappuah (JOS 16:8)
 
-* of En-tappuah (JOS 17:7)
-
 * but Tappuah itself (JOS 17:8)
-
 
 
 ### References (Whole Bible)
 
-* JOS 12:17; JOS 16:8; JOS 17:7; JOS 17:8
+* JOS 12:17; JOS 16:8; JOS 17:8
 
 
 ### Place Types
