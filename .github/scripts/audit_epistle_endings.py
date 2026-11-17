@@ -47,7 +47,7 @@ def audit(root: Path, source: Path) -> dict:
             absent_end_chapter = sorted(
                 ref for ref in refs
                 if (book := int(ref[:2])) in final
-                and ref[:6] == final[book][:6]
+                and ref[:5] == final[book][:5]
                 and ref not in source_verses
             )
             if not end_refs and not absent_end_chapter:
