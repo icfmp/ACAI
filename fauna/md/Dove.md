@@ -11,7 +11,7 @@ GEN 8:8, LEV 5:11, MAT 3:16.
 
 
 In the Old Testament (BSB), words representing “Dove” are translated as 
-*a dove* (1x), *But the dove* (1x), *the dove* (2x), *the dove again* (1x), *pigeon* (2x), *pigeons one as* (1x), *pigeons* (5x), *come* (1x), *and* (1x), *like a dove* (3x), ** (1x), *of the dove* (1x), *are like doves* (3x), *O my dove* (1x), *my dove* (1x), *but my dove* (1x), *like doves* (3x), *dove calling out* (1x), *and like doves* (1x), *doves* (1x), *along with a turtledove* (1x), *a turtledove* (2x), *turtledoves* (5x), *the turtledoves* (1x), *or* (2x), *of Your dove* (1x), *of turtledoves* (1x), *The turtledove* (1x), *living* (1x). 
+*a dove* (1x), *But the dove* (1x), *the dove* (2x), *the dove again* (1x), *pigeon* (2x), *pigeons one as* (1x), *pigeons* (5x), *come* (1x), *and* (1x), *like a dove* (3x), ** (1x), *of the dove* (1x), *are like doves* (3x), *O my dove* (1x), *my dove* (1x), *but my dove* (1x), *like doves* (3x), *dove calling out* (1x), *and like doves* (1x), *doves* (1x), *along with a turtledove* (1x), *a turtledove* (2x), *turtledoves* (5x), *the turtledoves* (1x), *or* (2x), *of Your dove* (1x), *of turtledoves* (1x), *The turtledove* (1x). 
 
 
 In the New Testament (BSB), words representing “Dove” are translated as 
@@ -79,8 +79,6 @@ Return to [Index](00-Index.md)
 * of turtledoves (SNG 2:12)
 
 * The turtledove (JER 8:7)
-
-* living (GEN 6:19)
 
 
 
@@ -166,8 +164,6 @@ Return to [Index](00-Index.md)
 
 * of migration (JER 8:7)
 
-* of every (GEN 6:19)
-
 
 
 ### OT Subject Referents (BSB)
@@ -216,7 +212,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* GEN 6:19; GEN 8:8; GEN 8:9; GEN 8:10; GEN 8:11; GEN 8:12; GEN 15:9; LEV 1:14; LEV 5:7; LEV 5:11; LEV 12:6; LEV 12:8; LEV 14:22; LEV 14:30; LEV 15:14; LEV 15:29; NUM 6:10; PSA 55:7; PSA 56:1; PSA 68:14; PSA 74:19; SNG 1:15; SNG 2:12; SNG 2:14; SNG 4:1; SNG 5:2; SNG 5:12; SNG 6:9; ISA 38:14; ISA 59:11; ISA 60:8; JER 8:7; JER 48:28; EZK 7:16; HOS 7:11; HOS 11:11; NAM 2:8; MAT 3:16; MAT 10:16; MAT 21:12; MRK 1:10; MRK 11:15; LUK 2:24; LUK 3:22; JHN 1:32; JHN 2:14; JHN 2:16
+* GEN 8:8; GEN 8:9; GEN 8:10; GEN 8:11; GEN 8:12; GEN 15:9; LEV 1:14; LEV 5:7; LEV 5:11; LEV 12:6; LEV 12:8; LEV 14:22; LEV 14:30; LEV 15:14; LEV 15:29; NUM 6:10; PSA 55:7; PSA 56:1; PSA 68:14; PSA 74:19; SNG 1:15; SNG 2:12; SNG 2:14; SNG 4:1; SNG 5:2; SNG 5:12; SNG 6:9; ISA 38:14; ISA 59:11; ISA 60:8; JER 8:7; JER 48:28; EZK 7:16; HOS 7:11; HOS 11:11; NAM 2:8; MAT 3:16; MAT 10:16; MAT 21:12; MRK 1:10; MRK 11:15; LUK 2:24; LUK 3:22; JHN 1:32; JHN 2:14; JHN 2:16
 
 
 
