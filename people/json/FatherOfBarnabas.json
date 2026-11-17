@@ -9,8 +9,7 @@
   "type": "person",
   "gender": "male",
   "offspring": [
-    "person:Barnabas",
-    "person:Mary.5"
+    "person:Barnabas"
   ],
   "localizations": {
     "eng": {
