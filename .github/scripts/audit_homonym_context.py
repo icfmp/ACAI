@@ -10,6 +10,30 @@ import json
 from pathlib import Path
 
 KINDS = {"person", "place", "deity"}
+
+
+def source_word_evidence(row):
+    """Source metadata is independent evidence, not an entity identity verdict."""
+    return {
+        "ref": row.get("ref", ""),
+        "word": row.get("text", ""),
+        "gloss": row.get("english", "") or row.get("gloss", ""),
+        "lemma": row.get("lemma", ""),
+        "stronglemma": row.get("stronglemma", ""),
+        "sdbh": row.get("sdbh", ""),
+    }
+
+
+def distinct_source_senses(rows):
+    """A mixed source sense is an editorial review signal, never a remapping."""
+    # A Macula TSV cell can contain more than one space-separated SDBH ID.
+    # Preserve the original cell in each token's evidence, but count senses,
+    # not whole attribute strings, in the pair-level diagnostic.
+    return sorted({
+        sense for row in rows for sense in row.get("sdbh", "").split()
+    })
+
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--findings", type=Path, default=Path("audit-results.json"))
@@ -40,26 +64,31 @@ def main():
             for row in csv.DictReader(f,delimiter="\t"):
                 tok=row.get("xml:id")
                 if (corpus,tok) in target:
-                    wordrows[(corpus,tok)]={
-                        "ref":row.get("ref",""),
-                        "word":row.get("text",""),
-                        "gloss":row.get("english","") or row.get("gloss",""),
-                        "lemma":row.get("lemma",""),
-                    }
+                    wordrows[(corpus,tok)] = source_word_evidence(row)
+    review_pairs = []
+    for (a, b), lst in selected:
+        rows = []
+        for k in sorted(lst):
+            d = wordrows.get(k)
+            rows.append({"token": k[1], "corpus": k[0], **(d or {})})
+        senses = distinct_source_senses(rows)
+        review_pairs.append({
+            "a": a, "b": b, "shared_exact_ids": len(lst),
+            "source_sense_ids": senses,
+            "multiple_source_senses": len(senses) > 1,
+            "tokens": rows,
+        })
     print("HOMONYM_CONTEXT_COUNTS "+json.dumps({
         "collisions_within_people_places_deities":len(items),
         "distinct_entity_pairs":len(pairs),
         "selected_pairs":len(selected),
         "source_rows_matched":len(wordrows),
         "source_rows_requested":len(target),
+        "selected_pairs_with_multiple_source_senses":sum(
+            bool(pair["multiple_source_senses"]) for pair in review_pairs),
     }))
-    for (a,b),lst in selected:
-        rows=[]
-        for k in sorted(lst):
-            d=wordrows.get(k)
-            rows.append({"token":k[1],"corpus":k[0],**(d or {})})
-        print("HOMONYM_CONTEXT_PAIR "+json.dumps({
-            "a":a,"b":b,"shared_exact_ids":len(lst),"tokens":rows
-        },ensure_ascii=False,sort_keys=True))
+    for pair in review_pairs:
+        print("HOMONYM_CONTEXT_PAIR "+json.dumps(
+            pair, ensure_ascii=False, sort_keys=True))
 if __name__=="__main__":
     main()
