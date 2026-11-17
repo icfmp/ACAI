@@ -188,15 +188,11 @@ class GroupTests(unittest.TestCase):
                 ("o010010010061", own_a, "", "own_subjref_only"),
                 ("o010010010071", "", own_a, "own_frame_only"),
                 ("o010010010081", parent, parent, "primary_parallel"),
-                ("o010010010091", parent, own_a if False else own_b, "own_frame_only"),
+                ("o010010010091", parent, "o010010010141", "primary_subjref_only"),
                 ("o010010010101", parent, "", "primary_subjref_only"),
                 ("o010010010111", "", parent, "primary_frame_only"),
                 ("o010010010121", "010010010131", "", "source_without_entity_link"),
             ]
-            # The split-field priority is deliberate: matching the
-            # secondary's explicit token outranks parent-only evidence.
-            rows[5] = ("o010010010091", parent, "o010010010141",
-                       "primary_subjref_only")
             (folder / "Parent.json").write_text(json.dumps({
                 "id": "keyterm:Parent", "primary_id": "keyterm:Parent",
                 "explicit_instances": {"wlc": [[parent]]},
