@@ -6,7 +6,7 @@ An unnamed herdsman participating in a passage (clear).
 
 
 **Key References for Herdsman**: 
-GEN 26:20, GEN 26:20. 
+GEN 26:20. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* GEN 26:20; GEN 26:20
+* GEN 26:20
 
 
 

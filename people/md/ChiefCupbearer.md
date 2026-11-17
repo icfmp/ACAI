@@ -6,7 +6,7 @@ Pharoah's chief cupbearer (clear).
 
 
 **Key References for Pharoah's Chief Cupbearer**: 
-GEN 40:7, GEN 40:8, GEN 40:9, GEN 40:9, GEN 41:9. 
+GEN 40:7, GEN 40:8, GEN 40:9, GEN 41:9. 
 
 
 
@@ -45,7 +45,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* GEN 40:7; GEN 40:8; GEN 40:9; GEN 40:9; GEN 41:9
+* GEN 40:7; GEN 40:8; GEN 40:9; GEN 41:9
 
 
 

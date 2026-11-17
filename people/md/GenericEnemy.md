@@ -6,7 +6,7 @@ An enemy participating in a passage (clear).
 
 
 **Key References for An Enemy**: 
-MIC 7:10, MIC 7:10. 
+MIC 7:10. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* MIC 7:10; MIC 7:10
+* MIC 7:10
 
 
 

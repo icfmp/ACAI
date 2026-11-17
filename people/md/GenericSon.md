@@ -6,7 +6,7 @@ An unnamed son participating in a passage (clear).
 
 
 **Key References for A Son**: 
-2KI 4:1, 2KI 4:6, 2KI 4:19, 2KI 4:19, PRO 7:1. 
+2KI 4:1, 2KI 4:6, 2KI 4:19, PRO 7:1. 
 
 
 
@@ -57,7 +57,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 2KI 4:1; 2KI 4:6; 2KI 4:19; 2KI 4:19; PRO 7:1
+* 2KI 4:1; 2KI 4:6; 2KI 4:19; PRO 7:1
 
 
 

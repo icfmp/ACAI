@@ -6,7 +6,7 @@ The daughter of Jephthah (clear).
 
 
 **Key References for Daughter of Jephthah**: 
-JDG 11:34, JDG 11:34, JDG 11:36, JDG 11:37. 
+JDG 11:34, JDG 11:36, JDG 11:37. 
 
 
 
@@ -37,7 +37,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* JDG 11:34; JDG 11:34; JDG 11:36; JDG 11:37
+* JDG 11:34; JDG 11:36; JDG 11:37
 
 
 
