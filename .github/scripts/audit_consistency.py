@@ -113,7 +113,7 @@ def scan(root: Path) -> dict:
 
         if record.get("mentioned_in_bible") is True and record.get("non_biblical") is True:
             report("contradictory_biblical_flags", rid, rel,
-                   "mentioned_in_bible=true and non_biblical=true")
+                   "mentioned_in_bible=true and non_biblical=true", "error")
 
     for (corpus, token), primaries in sorted(assignments.items()):
         if len(primaries) > 1:
