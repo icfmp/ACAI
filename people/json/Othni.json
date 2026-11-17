@@ -207,10 +207,7 @@
   "only_mentioned_in_apocrypha": false,
   "non_biblical": false,
   "lemmas": {
-    "he": [
-      "עָתְנִיאֵל",
-      "עׇתְנִיאֵל"
-    ]
+    "he": ["עׇתְנִי"]
   },
   "key_references": [
     "13026007"
