@@ -62,6 +62,27 @@ class VerseCompatibilityTests(unittest.TestCase):
                 x["pinned_last_verse"] for x in cases
             }, {"45016023", "47013013"})
 
+    def test_epistle_endings_compare_chapter_not_first_verse_digit(self):
+        # A verse can have three digits. Prefix length six erroneously
+        # incorporates the hundreds digit of its verse into "chapter".
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            folder = root / "places" / "json"
+            folder.mkdir(parents=True)
+            (folder / "Site.json").write_text(json.dumps({
+                "id": "place:Site", "primary_id": "place:Site",
+                "references": ["45016099", "45015099"],
+            }), encoding="utf-8")
+            source = root / "source.tsv"
+            source.write_text(
+                "xml:id\\tref\\n"
+                "n45016101001\\tROM 16:101!1\\n",
+                encoding="utf-8")
+            report = epistle_module.audit(root, source)
+            cases = report["absent_source_final_chapter_references"]
+            self.assertEqual([x["verse_id"] for x in cases], ["45016099"])
+            self.assertEqual(cases[0]["pinned_last_verse"], "45016101")
+
     def test_source_absence_is_counted_not_corrected(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)
