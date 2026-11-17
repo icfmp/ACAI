@@ -24,9 +24,6 @@
   "type": "person",
   "gender": "male",
   "father": "person:Alphaeus",
-  "siblings": [
-    "person:Judas"
-  ],
   "roles": [
     "Apostle",
     "Disciple"
