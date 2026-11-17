@@ -18,7 +18,6 @@
   "type": "person",
   "gender": "female",
   "father": "person:Solomon",
-  "mother": "person:AWifeOfSolomon",
   "partners": [
     "person:Ahimaaz.3"
   ],
