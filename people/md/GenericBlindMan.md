@@ -6,7 +6,7 @@ A blind man participating in a passage (clear).
 
 
 **Key References for A Blind Man**: 
-MAT 9:27, MAT 9:27, MAT 9:28, MAT 9:28, MRK 8:23. 
+MAT 9:27, MAT 9:28, MRK 8:23. 
 
 
 
@@ -43,7 +43,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* MAT 9:27; MAT 9:27; MAT 9:28; MAT 9:28; MRK 8:23
+* MAT 9:27; MAT 9:28; MRK 8:23
 
 
 

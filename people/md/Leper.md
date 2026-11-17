@@ -6,7 +6,7 @@ A person with leprosy (clear).
 
 
 **Key References for A Leper**: 
-MAT 8:2, MAT 8:2, MRK 1:40, MRK 1:40, LUK 5:12. 
+MAT 8:2, MRK 1:40, LUK 5:12. 
 
 
 
@@ -41,7 +41,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* MAT 8:2; MAT 8:2; MRK 1:40; MRK 1:40; LUK 5:12
+* MAT 8:2; MRK 1:40; LUK 5:12
 
 
 

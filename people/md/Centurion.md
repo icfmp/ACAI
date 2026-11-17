@@ -6,7 +6,7 @@ A Centurion (commander of 100 men) participating in a passage (clear).
 
 
 **Key References for A Centurion**: 
-ACT 22:26, ACT 22:26, ACT 23:17, ACT 23:18. 
+ACT 22:26, ACT 23:17, ACT 23:18. 
 
 
 
@@ -39,7 +39,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* ACT 22:26; ACT 22:26; ACT 23:17; ACT 23:18
+* ACT 22:26; ACT 23:17; ACT 23:18
 
 
 

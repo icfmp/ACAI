@@ -6,7 +6,7 @@ A horseman participating in a passage (clear).
 
 
 **Key References for A Horseman**: 
-2KI 9:18, 2KI 9:18, 2KI 9:19, 2KI 9:19. 
+2KI 9:18, 2KI 9:19. 
 
 
 
@@ -37,7 +37,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* 2KI 9:18; 2KI 9:18; 2KI 9:19; 2KI 9:19
+* 2KI 9:18; 2KI 9:19
 
 
 

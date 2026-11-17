@@ -6,7 +6,7 @@ The king of Jericho (clear).
 
 
 **Key References for King of Jericho**: 
-JOS 2:3, JOS 2:3. 
+JOS 2:3. 
 
 
 
@@ -33,7 +33,7 @@ Return to [Index](00-Index.md)
 
 ### References (Whole Bible)
 
-* JOS 2:3; JOS 2:3
+* JOS 2:3
 
 
 
