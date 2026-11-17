@@ -17,9 +17,6 @@
   },
   "type": "person",
   "gender": "male",
-  "partners": [
-    "person:Ahlai"
-  ],
   "offspring": [
     "person:Attai"
   ],

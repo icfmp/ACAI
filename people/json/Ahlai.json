@@ -16,14 +16,8 @@
     ]
   },
   "type": "person",
-  "gender": "male",
+  "gender": "female",
   "father": "person:Sheshan",
-  "partners": [
-    "person:Jarha"
-  ],
-  "offspring": [
-    "person:Attai"
-  ],
   "tribe": "group:Judah",
   "ubsdbh": [
     "000288001001000"
