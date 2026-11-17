@@ -174,6 +174,71 @@ class GroupTests(unittest.TestCase):
             self.assertEqual(record["pronominal_referents"]["SBLGNT"],
                              [["n40001001002"], ["n40001001002"]])
 
+    def test_subject_source_evidence_classes_are_exclusive(self):
+        """Read-only triage of own, parent and source-missing pointer shapes."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "keyterms" / "json"
+            folder.mkdir(parents=True)
+            own_a, own_b, parent = ("o010010010011", "o010010010021",
+                                    "o010010010031")
+            rows = [
+                ("o010010010041", own_a, own_a, "own_parallel"),
+                ("o010010010051", own_a, own_b, "own_split_fields"),
+                ("o010010010061", own_a, "", "own_subjref_only"),
+                ("o010010010071", "", own_a, "own_frame_only"),
+                ("o010010010081", parent, parent, "primary_parallel"),
+                ("o010010010091", parent, own_a if False else own_b, "own_frame_only"),
+                ("o010010010101", parent, "", "primary_subjref_only"),
+                ("o010010010111", "", parent, "primary_frame_only"),
+                ("o010010010121", "010010010131", "", "source_without_entity_link"),
+            ]
+            # The split-field priority is deliberate: matching the
+            # secondary's explicit token outranks parent-only evidence.
+            rows[5] = ("o010010010091", parent, "o010010010141",
+                       "primary_subjref_only")
+            (folder / "Parent.json").write_text(json.dumps({
+                "id": "keyterm:Parent", "primary_id": "keyterm:Parent",
+                "explicit_instances": {"wlc": [[parent]]},
+            }))
+            groups = [[token] for token, *_ in rows] + [["o010010010151"]]
+            (folder / "Secondary.json").write_text(json.dumps({
+                "id": "keyterm:Secondary", "primary_id": "keyterm:Parent",
+                "explicit_instances": {"wlc": [[own_a], [own_b]]},
+                "subject_referents": {"wlc": [
+                    entry for group in groups for entry in (group, group)]},
+            }))
+            hebrew = root / "wlc.tsv"
+            hebrew.write_text(
+                "xml:id\tref\tsubjref\tframe\n" +
+                "".join(f"{tok}\tGEN 1:1!4\t{sub.replace('o', '')}\t"
+                        f"{('A0:' + frame.replace('o', '') + ';') if frame else ''}\n"
+                        for tok, sub, frame, _ in rows),
+                encoding="utf-8",
+            )
+            greek = root / "sblgnt.tsv"
+            greek.write_text("xml:id\tref\tsubjref\tframe\n")
+            result = m.inspect(root, hebrew=hebrew, greek=greek)
+            finding = next(x for x in result["findings"]
+                           if x["id"] == "keyterm:Secondary")
+            classes = finding["source_provenance"]["subject_evidence_classes"]
+            self.assertEqual(sum(classes.values()), 10)
+            self.assertEqual(classes["own_parallel"], 1)
+            self.assertEqual(classes["own_split_fields"], 1)
+            self.assertEqual(classes["own_subjref_only"], 1)
+            self.assertEqual(classes["own_frame_only"], 1)
+            self.assertEqual(classes["primary_parallel"], 1)
+            self.assertEqual(classes["primary_subjref_only"], 2)
+            self.assertEqual(classes["primary_frame_only"], 1)
+            self.assertEqual(classes["source_without_entity_link"], 1)
+            self.assertEqual(classes["source_word_missing"], 1)
+            self.assertEqual(result["summary"]["subject_repeated_groups_examined"], 10)
+            self.assertEqual(result["summary"]["parallel_source_annotation_candidates"], 1)
+            record = json.loads((folder / "Secondary.json").read_text())
+            self.assertEqual(record["subject_referents"]["wlc"],
+                             [entry for group in groups
+                              for entry in (group, group)])
+
     def test_macula_referent_parser_never_matches_partial_ids(self):
         self.assertEqual(
             m._source_ids("A0:160090040062; A1:160090040111;", "wlc"),
